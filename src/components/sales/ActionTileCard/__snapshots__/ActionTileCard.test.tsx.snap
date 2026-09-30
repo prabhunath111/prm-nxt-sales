@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component ActionTileCard snapshot tests for ActionTileCard 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "borderRadius": 4,
+      "elevation": 4,
+      "flexDirection": "row",
+      "gap": 12,
+      "justifyContent": "space-between",
+      "minHeight": 48,
+      "paddingHorizontal": 8,
+      "shadowColor": "#000000",
+      "shadowOffset": {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.12,
+      "shadowRadius": 4,
+      "width": "100%",
+    }
+  }
+  testID="action-tile-card"
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "gap": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          {
+            "color": "#000000",
+            "fontFamily": "VoltePlay-Regular",
+            "fontSize": 14,
+            "fontWeight": "400",
+          },
+          {
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "height": 25,
+        "justifyContent": "center",
+        "width": 25,
+      }
+    }
+  >
+    <View
+      testID="image-test"
+    >
+      <Image
+        defaultSource="mockedImagePath"
+        onError={[Function]}
+        resizeMode="contain"
+        source={
+          {
+            "uri": "mockedPath",
+          }
+        }
+        style={
+          [
+            {
+              "resizeMode": "contain",
+            },
+            {
+              "borderRadius": 0,
+              "height": 100,
+              "width": 200,
+            },
+            {
+              "height": 24,
+              "width": 24,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

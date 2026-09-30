@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component EmptyData snapshot tests for EmptyData 1`] = `
+<View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "paddingHorizontal": 20,
+        "paddingVertical": 40,
+      }
+    }
+  >
+    <View
+      testID="image-test"
+    >
+      <Image
+        defaultSource="mockedImagePath"
+        onError={[Function]}
+        resizeMode="contain"
+        source={
+          {
+            "uri": "mockedPath",
+          }
+        }
+        style={
+          [
+            {
+              "resizeMode": "contain",
+            },
+            {
+              "borderRadius": 0,
+              "height": 100,
+              "width": 200,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 18,
+          "marginTop": 22,
+          "textAlign": "center",
+        }
+      }
+    >
+      strings.undefined
+    </Text>
+  </View>
+</View>
+`;

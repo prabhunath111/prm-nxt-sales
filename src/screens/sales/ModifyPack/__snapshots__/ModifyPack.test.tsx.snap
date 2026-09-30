@@ -1,0 +1,524 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component ModifyPack snapshot tests for ModifyPack 1`] = `
+<View>
+  <View
+    style={
+      {
+        "backgroundColor": "#ffffff",
+        "flex": 1,
+      }
+    }
+    testID="modifyPack-test"
+  >
+    <View
+      style={
+        [
+          {
+            "alignSelf": "center",
+            "backgroundColor": "#ffffff",
+            "elevation": 8,
+            "gap": 10,
+            "marginTop": 20,
+            "paddingHorizontal": 12,
+            "paddingVertical": 20,
+            "shadowColor": "#000000",
+            "shadowOffset": {
+              "height": -4,
+              "width": 0,
+            },
+            "shadowOpacity": 0.14,
+            "shadowRadius": 25,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {},
+            undefined,
+          ]
+        }
+        testID="text-test"
+      >
+        <View
+          style={
+            [
+              [
+                {
+                  "alignItems": "center",
+                  "flexDirection": "column",
+                  "gap": 8,
+                  "justifyContent": "flex-start",
+                  "padding": 8,
+                },
+                undefined,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                [
+                  {
+                    "color": "#000000",
+                    "fontFamily": "VoltePlay-Regular",
+                    "fontSize": 14,
+                  },
+                  [
+                    {
+                      "color": "#888888",
+                      "fontFamily": "VoltePlay-SemiBold",
+                      "fontSize": 13,
+                      "lineHeight": 20,
+                    },
+                    undefined,
+                  ],
+                ],
+                {
+                  "fontSize": 14,
+                },
+                undefined,
+              ]
+            }
+          >
+            strings.subscriberNameMp
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                [
+                  {
+                    "color": "#000000",
+                    "flexShrink": 1,
+                    "flexWrap": "wrap",
+                    "fontFamily": "VoltePlay-Medium",
+                    "fontSize": 16,
+                    "lineHeight": 25,
+                  },
+                  [
+                    {
+                      "color": "#000000",
+                      "fontFamily": "VoltePlay-Medium",
+                      "fontSize": 16,
+                      "lineHeight": 25,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                  ],
+                ],
+                {
+                  "fontSize": 16,
+                },
+                undefined,
+              ]
+            }
+          >
+            Test User
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#E8E5EC",
+              "marginHorizontal": 5,
+              "width": 1,
+            }
+          }
+        />
+        <View
+          style={
+            [
+              [
+                {
+                  "alignItems": "center",
+                  "flexDirection": "column",
+                  "gap": 8,
+                  "justifyContent": "flex-start",
+                  "padding": 8,
+                },
+                undefined,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                [
+                  {
+                    "color": "#000000",
+                    "fontFamily": "VoltePlay-Regular",
+                    "fontSize": 14,
+                  },
+                  [
+                    {
+                      "color": "#888888",
+                      "fontFamily": "VoltePlay-SemiBold",
+                      "fontSize": 13,
+                      "lineHeight": 20,
+                    },
+                    undefined,
+                  ],
+                ],
+                {
+                  "fontSize": 14,
+                },
+                undefined,
+              ]
+            }
+          >
+            strings.subscriberIdMp
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                [
+                  {
+                    "color": "#000000",
+                    "flexShrink": 1,
+                    "flexWrap": "wrap",
+                    "fontFamily": "VoltePlay-Medium",
+                    "fontSize": 16,
+                    "lineHeight": 25,
+                  },
+                  [
+                    {
+                      "color": "#000000",
+                      "fontFamily": "VoltePlay-Medium",
+                      "fontSize": 16,
+                      "lineHeight": 25,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                  ],
+                ],
+                {
+                  "fontSize": 16,
+                },
+                undefined,
+              ]
+            }
+          >
+            SUB123
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#E8E5EC",
+              "marginHorizontal": 5,
+              "width": 1,
+            }
+          }
+        />
+        <View
+          style={
+            [
+              [
+                {
+                  "alignItems": "center",
+                  "flexDirection": "column",
+                  "gap": 8,
+                  "justifyContent": "flex-start",
+                  "padding": 8,
+                },
+                undefined,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                [
+                  {
+                    "color": "#000000",
+                    "fontFamily": "VoltePlay-Regular",
+                    "fontSize": 14,
+                  },
+                  [
+                    {
+                      "color": "#888888",
+                      "fontFamily": "VoltePlay-SemiBold",
+                      "fontSize": 13,
+                      "lineHeight": 20,
+                    },
+                    undefined,
+                  ],
+                ],
+                {
+                  "fontSize": 14,
+                },
+                undefined,
+              ]
+            }
+          >
+            strings.mobileNum
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                [
+                  {
+                    "color": "#000000",
+                    "flexShrink": 1,
+                    "flexWrap": "wrap",
+                    "fontFamily": "VoltePlay-Medium",
+                    "fontSize": 16,
+                    "lineHeight": 25,
+                  },
+                  [
+                    {
+                      "color": "#000000",
+                      "fontFamily": "VoltePlay-Medium",
+                      "fontSize": 16,
+                      "lineHeight": 25,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                  ],
+                ],
+                {
+                  "fontSize": 16,
+                },
+                undefined,
+              ]
+            }
+          >
+            12******90
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          [
+            {
+              "gap": 10,
+              "paddingHorizontal": 16,
+              "width": "100%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#E20092",
+              "borderRadius": 5,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "minHeight": 40,
+              "minWidth": 200,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+          testID="button-test"
+        >
+          <View
+            style={
+              {
+                "flexShrink": 1,
+              }
+            }
+          >
+            <View>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "alignSelf": "center",
+                        "fontFamily": "VoltePlay-Medium",
+                        "lineHeight": 20,
+                        "marginTop": 0,
+                        "textAlign": "center",
+                      },
+                      undefined,
+                      undefined,
+                      {
+                        "color": "#ffffff",
+                      },
+                      false,
+                    ],
+                    {
+                      "fontSize": 18,
+                    },
+                    {
+                      "color": "#ffffff",
+                    },
+                  ]
+                }
+              >
+                strings.proceed
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0)",
+              "borderColor": "#E20092",
+              "borderRadius": 5,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "minHeight": 40,
+              "minWidth": 200,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+          testID="button-test"
+        >
+          <View
+            style={
+              {
+                "flexShrink": 1,
+              }
+            }
+          >
+            <View>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "alignSelf": "center",
+                        "fontFamily": "VoltePlay-Medium",
+                        "lineHeight": 20,
+                        "marginTop": 0,
+                        "textAlign": "center",
+                      },
+                      undefined,
+                      undefined,
+                      {
+                        "color": "#E20092",
+                      },
+                      false,
+                    ],
+                    {
+                      "fontSize": 18,
+                    },
+                    {
+                      "color": "#E20092",
+                    },
+                  ]
+                }
+              >
+                strings.cancel
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

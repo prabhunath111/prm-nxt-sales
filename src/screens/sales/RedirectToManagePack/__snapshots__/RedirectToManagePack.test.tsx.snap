@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component RedirectToManagePack snapshot tests for RedirectToManagePack 1`] = `
+<View
+  setBuiltInZoomControls={false}
+  setDisplayZoomControls={false}
+  source={
+    {
+      "html": "
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <style>
+        body { opacity: 0; }
+      </style>
+    </head>
+    <body onload="document.forms[0].submit()">
+      <form method="POST" action="https://example.com">
+        <textarea name="recomendationParam" style="display:none;">PRMNXT|12345|Test|undefined|agent|NA|NA|checksum</textarea>
+      </form>
+    </body>
+  </html>
+  ",
+    }
+  }
+  testID="RedirectToManagePack"
+/>
+`;

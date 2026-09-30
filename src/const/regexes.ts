@@ -1,0 +1,15 @@
+export const EMAIL_REGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|co\.in)$/;
+export const NUMBER_REGEX = /[^0-9]/g;
+export const NON_ZERO_LEADING_REGEX = /^0+/;
+export const LEADING_SLASH_REGEX = /^\/+/;
+export const MOBILE_REGEX = /^[6789]\d*$/;
+export const UPPER_CASE_REGEX = /([a-z])([A-Z])/;
+export const UNDER_SCORE = /\s+/;
+export const ONLY_ALPHABETS = /^[A-Za-z]+$/;
+export const ALPHABETS_WITH_SPACES = /^(?!\s+$)[A-Za-z ]+$/;
+export const ALPHA_NUMERIC = /^[A-Za-z0-9]+$/;
+export const ADDRESS_REGEX = /^[A-Za-z0-9, /]+$/;
+export const AMOUNT_NUMBER = /[^0-9.-]/g;
+export const MOBILE_NUMBER = /^\+?[1-9]\d{1,14}$/;
+export const SPACE_REGEX_GLOBAL = / /g;
+export const RUPPESS_REGEX = /[₹,]/g;

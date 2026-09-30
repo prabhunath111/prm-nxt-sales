@@ -1,0 +1,530 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PartnerApprovalCard snapshot test 1`] = `
+<View
+  testID="partnerApprovalTest"
+>
+  <View>
+    <View
+      testID="mock-list"
+    >
+      <View>
+        <View
+          style={
+            [
+              {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#E8E5EC",
+                "borderRadius": 4,
+                "elevation": 4,
+                "flexGrow": 1,
+                "height": "auto",
+                "margin": 2,
+                "marginBottom": 16,
+                "shadowColor": "#000000",
+                "shadowOffset": {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.12,
+                "shadowRadius": 4,
+              },
+              undefined,
+            ]
+          }
+          testID="partnerApprovalTest"
+        >
+          <View
+            style={
+              {
+                "gap": 12,
+                "padding": 8,
+              }
+            }
+            testID="text-test"
+          >
+            <View
+              style={
+                [
+                  [
+                    {
+                      "flexDirection": "row",
+                      "gap": 8,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#000000",
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "fontWeight": "400",
+                        "lineHeight": 16,
+                        "width": "40%",
+                      },
+                    ],
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.partnerId
+              </Text>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#000000",
+                        "flexShrink": 1,
+                        "flexWrap": "wrap",
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 16,
+                        "lineHeight": 25,
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                        "lineHeight": 16,
+                      },
+                    ],
+                    {
+                      "fontSize": 16,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                P123
+              </Text>
+            </View>
+            <View
+              style={
+                [
+                  [
+                    {
+                      "flexDirection": "row",
+                      "gap": 8,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#000000",
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "fontWeight": "400",
+                        "lineHeight": 16,
+                        "width": "40%",
+                      },
+                    ],
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.partnerName
+              </Text>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#000000",
+                        "flexShrink": 1,
+                        "flexWrap": "wrap",
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 16,
+                        "lineHeight": 25,
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                        "lineHeight": 16,
+                      },
+                    ],
+                    {
+                      "fontSize": 16,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                Partner One
+              </Text>
+            </View>
+            <View
+              style={
+                [
+                  [
+                    {
+                      "flexDirection": "row",
+                      "gap": 8,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#000000",
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "fontWeight": "400",
+                        "lineHeight": 16,
+                        "width": "40%",
+                      },
+                    ],
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.oldRmn
+              </Text>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#000000",
+                        "flexShrink": 1,
+                        "flexWrap": "wrap",
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 16,
+                        "lineHeight": 25,
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                        "lineHeight": 16,
+                      },
+                    ],
+                    {
+                      "fontSize": 16,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                1234567890
+              </Text>
+            </View>
+            <View
+              style={
+                [
+                  [
+                    {
+                      "flexDirection": "row",
+                      "gap": 8,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#000000",
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "fontWeight": "400",
+                        "lineHeight": 16,
+                        "width": "40%",
+                      },
+                    ],
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.newRmn
+              </Text>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#000000",
+                        "flexShrink": 1,
+                        "flexWrap": "wrap",
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 16,
+                        "lineHeight": 25,
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                        "lineHeight": 16,
+                      },
+                    ],
+                    {
+                      "fontSize": 16,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                0987654321
+              </Text>
+            </View>
+            <View
+              style={
+                [
+                  [
+                    {
+                      "flexDirection": "row",
+                      "gap": 8,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#000000",
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "fontWeight": "400",
+                        "lineHeight": 16,
+                        "width": "40%",
+                      },
+                    ],
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.requestDate
+              </Text>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#000000",
+                        "flexShrink": 1,
+                        "flexWrap": "wrap",
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 16,
+                        "lineHeight": 25,
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                        "lineHeight": 16,
+                      },
+                    ],
+                    {
+                      "fontSize": 16,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                2023-10-01
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "flexDirection": "row",
+                "gap": 5,
+                "padding": 5,
+              }
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "opacity": 1,
+                }
+              }
+              testID="button-test"
+            >
+              <Text>
+                strings.approve
+              </Text>
+            </View>
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "opacity": 1,
+                }
+              }
+              testID="button-test"
+            >
+              <Text>
+                strings.reject
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

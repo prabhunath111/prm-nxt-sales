@@ -1,0 +1,115 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react-native';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import { NavigationContainer } from '@react-navigation/native';
+import { STATE_KEY } from 'const';
+import CustomerService from './CustomerService';
+
+jest.mock('react-native-device-info', () => ({
+  getModel: jest.fn(() => 'mock-model'),
+  getFreeDiskStorageSync: jest.fn(() => 1024),
+  getDeviceId: jest.fn(() => 'mock-device-id'),
+  getManufacturerSync: jest.fn(() => 'mock-manufacturer'),
+  getSerialNumberSync: jest.fn(() => 'mock-serial-number'),
+  getSystemName: jest.fn(() => 'mock-system-name'),
+  getSystemVersion: jest.fn(() => 'mock-system-version'),
+  getVersion: jest.fn(() => 'mock-app-version'),
+  isEmulatorSync: jest.fn(() => false),
+  isTablet: jest.fn(() => false),
+  getReadableVersion: jest.fn(() => 'mock-readable-version'),
+}));
+
+jest.mock('@react-native-async-storage/async-storage', () => ({
+  setItem: jest.fn(),
+  getItem: jest.fn(() => Promise.resolve(null)),
+  removeItem: jest.fn(),
+}));
+
+jest.mock('@react-native-firebase/crashlytics', () => ({
+  log: jest.fn(),
+  recordError: jest.fn(),
+  setCrashlyticsCollectionEnabled: jest.fn(),
+  setUserId: jest.fn(),
+}));
+
+jest.mock('react-native-vision-camera', () => ({
+  Camera: () => null,
+  useCameraPermission: jest.fn(() => [true, null]),
+  useCameraDevice: jest.fn(() => null),
+  useCodeScanner: jest.fn(() => ({ scan: jest.fn() })),
+}));
+
+jest.mock('utils/imageHelper', () => ({
+  getImage: jest.fn(() => 'mockedImagePath'),
+  responsiveHeight: jest.fn(() => 100),
+  responsiveWidth: jest.fn(() => 200),
+  getCdnUri: jest.fn(() => 'mockedPath'),
+}));
+
+jest.mock('wrappers/inflection/InflectionProvider', () => ({
+  useInflection: () => ({
+    inflection: 'xs',
+  }),
+  BreakPoints: {
+    XL: 'xl',
+    LG: 'lg',
+    MD: 'md',
+    MD_L: 'mdL',
+    SM: 'sm',
+    XS: 'xs',
+  },
+}));
+
+jest.mock('services/moengageMixpanel', () => ({
+  MoengageMixpanel: {
+    trackEvent: jest.fn(),
+  },
+}));
+
+const mockStore = configureStore({
+  reducer: {
+    customerService: () => ({
+      subscriberRequests: { wo: [], sr: [], suspension: [], status: [] },
+      accountInfo: { subId: '12345' },
+      messages: {},
+      categories: [],
+      allCategoryInfo: [],
+      subCategories: [],
+      suspensionReason: [],
+      availableSlot: {},
+      slotSuggestions: [],
+      slotDate: [],
+      slotTime: [],
+      taskId: {},
+    }),
+    user: () => ({ isRedirection: false, info: {} }),
+    form: () => ({ [STATE_KEY.FORM_STATE]: { formDependentDefault: {}, formData: {}, subIdList: [] } }),
+    ui: () => ({ isLoading: false }),
+    evdBalanceInfo: () => ({ pageNumber: 1, paginationData: { totalPages: 1 } }),
+  },
+});
+
+describe('Test for the component CustomerService', () => {
+  test('render component CustomerService', () => {
+    render(
+      <Provider store={mockStore}>
+        <NavigationContainer>
+          <CustomerService />
+        </NavigationContainer>
+      </Provider>,
+    );
+    expect(screen.getByText('strings.raiseTheRequest')).toBeTruthy();
+  });
+
+  test('snapshot tests for CustomerService', () => {
+    const component = render(
+      <Provider store={mockStore}>
+        <NavigationContainer>
+          <CustomerService />
+        </NavigationContainer>
+      </Provider>,
+    );
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+});

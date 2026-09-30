@@ -1,0 +1,1 @@
+export * from './multiTvRegistration.type';

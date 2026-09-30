@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component Button snapshot tests for Button 1`] = `
+<View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "borderRadius": 5,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "minHeight": 40,
+        "opacity": 1,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+      }
+    }
+    testID="button-test"
+  >
+    <View
+      testID="image-test"
+    >
+      <Image
+        defaultSource="mockedImagePath"
+        onError={[Function]}
+        resizeMode="contain"
+        source={
+          {
+            "uri": "mockedPath",
+          }
+        }
+        style={
+          [
+            {
+              "resizeMode": "contain",
+            },
+            {
+              "borderRadius": 0,
+              "height": 100,
+              "width": 200,
+            },
+            {},
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

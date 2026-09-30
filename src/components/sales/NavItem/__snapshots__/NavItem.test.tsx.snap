@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component NavItem snapshot tests for NavItem 1`] = `
+<View>
+  <a
+    aria-current="page"
+    className="active"
+    href="/"
+    onClick={[Function]}
+    style={
+      {
+        "textDecorationLine": "none",
+      }
+    }
+  >
+    <View
+      id="item"
+      style={
+        [
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 10,
+          },
+          [
+            {
+              "backgroundColor": "#5F08BC",
+            },
+          ],
+        ]
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#ffffff",
+          }
+        }
+      >
+        Home
+      </Text>
+    </View>
+  </a>
+</View>
+`;

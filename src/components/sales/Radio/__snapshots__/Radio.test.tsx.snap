@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component Radio snapshot tests for Radio 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "flexDirection": "row",
+        "marginHorizontal": 10,
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "borderColor": "#16D45A",
+        "borderRadius": 10,
+        "borderWidth": 1,
+        "height": 13,
+        "justifyContent": "center",
+        "marginTop": 3,
+        "width": 13,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "backgroundColor": "#16D45A",
+          "borderRadius": 10,
+          "height": 10,
+          "width": 10,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      {
+        "flex": 1,
+        "gap": 5,
+        "marginLeft": 9,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+            "gap": 50,
+            "justifyContent": "space-between",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "width": 140,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        test
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#16D45A",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 14,
+              },
+              false,
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

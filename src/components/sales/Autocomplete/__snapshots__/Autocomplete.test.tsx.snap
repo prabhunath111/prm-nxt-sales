@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Autocomplete matches snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "space-evenly",
+      },
+      undefined,
+    ]
+  }
+  testID="autocomplete-test"
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "borderBottomColor": "#C2C2C2",
+          "borderBottomWidth": 2,
+          "flexDirection": "row",
+          "gap": 12,
+          "justifyContent": "space-between",
+          "padding": 8,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextInput
+      autoComplete="new-password"
+      editable={true}
+      keyboardType="default"
+      numberOfLines={1}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Select"
+      placeholderTextColor="#907FA2"
+      style={
+        [
+          {
+            "borderColor": "#C4C4C4",
+            "borderRadius": 3,
+            "borderWidth": 0.5,
+            "color": "#000000",
+            "minHeight": 40,
+            "outlineStyle": "none",
+            "paddingHorizontal": 10,
+            "paddingVertical": 0,
+          },
+          undefined,
+          {
+            "borderWidth": 0,
+            "flex": 1,
+            "minHeight": "auto",
+            "paddingHorizontal": 0,
+            "width": "100%",
+          },
+          undefined,
+          undefined,
+          {
+            "fontSize": 16,
+          },
+        ]
+      }
+      testID="input-test"
+      textAlignVertical="center"
+      value=""
+    />
+    <View
+      style={
+        {
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        testID="image-test"
+      >
+        <Image
+          defaultSource="mockedImagePath"
+          onError={[Function]}
+          resizeMode="contain"
+          source={
+            {
+              "uri": "mockedPath",
+            }
+          }
+          style={
+            [
+              {
+                "resizeMode": "contain",
+              },
+              {
+                "borderRadius": 0,
+                "height": 100,
+                "width": 200,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;

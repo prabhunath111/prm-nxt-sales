@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component Image snapshot tests for Image 1`] = `
+<View>
+  <View
+    testID="image-test"
+  >
+    <Image
+      defaultSource="mockedImagePath"
+      onError={[Function]}
+      resizeMode="contain"
+      source={
+        {
+          "uri": "mockedPath",
+        }
+      }
+      style={
+        [
+          {
+            "resizeMode": "contain",
+          },
+          {
+            "borderRadius": 0,
+            "height": 100,
+            "width": 200,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;

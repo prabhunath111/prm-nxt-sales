@@ -1,0 +1,737 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OfferSelectionTable snapshot tests 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#E6E6E6",
+      "borderRadius": 5,
+      "borderWidth": 0.5,
+      "display": "flex",
+      "elevation": 4,
+      "flexGrow": 1,
+      "flexShrink": 1,
+      "gap": 12,
+      "shadowColor": "#000000",
+      "shadowOffset": {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.12,
+      "shadowRadius": 4,
+    }
+  }
+  testID="OfferSelectionTable"
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F3F2F5",
+        "borderTopLeftRadius": 4,
+        "borderTopRightRadius": 4,
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "minHeight": 36,
+        "padding": 8,
+      }
+    }
+  />
+  <View
+    style={
+      {
+        "gap": 8,
+        "padding": 8,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "gap": 12,
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#220046",
+              "flex": 0.4,
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 12,
+              "fontWeight": "400",
+              "minWidth": 80,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.OFFER_TYPE
+      </Text>
+      <View
+        style={
+          {
+            "borderColor": "#E8E5EC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "flex": 0.6,
+            "minWidth": 200,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignSelf": "stretch",
+              "display": "flex",
+              "flexDirection": "column",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "gap": 0.1,
+            }
+          }
+          testID="dropdown-test-container"
+        >
+          <View
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#ffffff",
+                  "flexDirection": "row",
+                  "overflow": "hidden",
+                  "padding": 4,
+                },
+                {
+                  "borderRadius": 5,
+                },
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "width": "100%",
+                }
+              }
+            >
+              <TextInput
+                autoComplete="new-password"
+                editable={false}
+                keyboardType="default"
+                numberOfLines={1}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                placeholder="Category"
+                placeholderTextColor="#C7C0D0"
+                style={
+                  [
+                    {
+                      "borderColor": "#C4C4C4",
+                      "borderRadius": 3,
+                      "borderWidth": 0.5,
+                      "color": "#000000",
+                      "minHeight": 40,
+                      "outlineStyle": "none",
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 0,
+                    },
+                    undefined,
+                    [
+                      {
+                        "alignContent": "center",
+                        "borderWidth": 0,
+                        "flexGrow": 1,
+                        "flexShrink": 1,
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "fontWeight": "300",
+                        "minHeight": "auto",
+                        "paddingHorizontal": 0,
+                        "width": "85%",
+                      },
+                      undefined,
+                    ],
+                    undefined,
+                    undefined,
+                    {
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+                testID="input-test"
+                textAlignVertical="center"
+                value="Category 1"
+              />
+              <View
+                style={
+                  {
+                    "alignItems": "flex-end",
+                    "justifyContent": "center",
+                    "paddingRight": 4,
+                    "width": "15%",
+                  }
+                }
+              >
+                <View
+                  testID="image-test"
+                >
+                  <Image
+                    defaultSource="mockedImagePath"
+                    onError={[Function]}
+                    resizeMode="contain"
+                    source={
+                      {
+                        "uri": "mockedPath",
+                      }
+                    }
+                    style={
+                      [
+                        {
+                          "resizeMode": "contain",
+                        },
+                        {
+                          "borderRadius": 0,
+                          "height": 100,
+                          "width": 200,
+                        },
+                        undefined,
+                      ]
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "gap": 12,
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#220046",
+              "flex": 0.4,
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 12,
+              "fontWeight": "400",
+              "minWidth": 80,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.selectFTADuration
+      </Text>
+      <View
+        style={
+          {
+            "borderColor": "#E8E5EC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "flex": 0.6,
+            "minWidth": 200,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignSelf": "stretch",
+              "display": "flex",
+              "flexDirection": "column",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "gap": 0.1,
+            }
+          }
+          testID="dropdown-test-container"
+        >
+          <View
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#ffffff",
+                  "flexDirection": "row",
+                  "overflow": "hidden",
+                  "padding": 4,
+                },
+                {
+                  "borderRadius": 5,
+                },
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "width": "100%",
+                }
+              }
+            >
+              <TextInput
+                autoComplete="new-password"
+                editable={false}
+                keyboardType="default"
+                numberOfLines={1}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                placeholder="Duration"
+                placeholderTextColor="#C7C0D0"
+                style={
+                  [
+                    {
+                      "borderColor": "#C4C4C4",
+                      "borderRadius": 3,
+                      "borderWidth": 0.5,
+                      "color": "#000000",
+                      "minHeight": 40,
+                      "outlineStyle": "none",
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 0,
+                    },
+                    undefined,
+                    [
+                      {
+                        "alignContent": "center",
+                        "borderWidth": 0,
+                        "flexGrow": 1,
+                        "flexShrink": 1,
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "fontWeight": "300",
+                        "minHeight": "auto",
+                        "paddingHorizontal": 0,
+                        "width": "85%",
+                      },
+                      undefined,
+                    ],
+                    undefined,
+                    undefined,
+                    {
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+                testID="input-test"
+                textAlignVertical="center"
+                value="MONTHLY"
+              />
+              <View
+                style={
+                  {
+                    "alignItems": "flex-end",
+                    "justifyContent": "center",
+                    "paddingRight": 4,
+                    "width": "15%",
+                  }
+                }
+              >
+                <View
+                  testID="image-test"
+                >
+                  <Image
+                    defaultSource="mockedImagePath"
+                    onError={[Function]}
+                    resizeMode="contain"
+                    source={
+                      {
+                        "uri": "mockedPath",
+                      }
+                    }
+                    style={
+                      [
+                        {
+                          "resizeMode": "contain",
+                        },
+                        {
+                          "borderRadius": 0,
+                          "height": 100,
+                          "width": 200,
+                        },
+                        undefined,
+                      ]
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "gap": 12,
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#220046",
+              "flex": 0.4,
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 12,
+              "fontWeight": "400",
+              "minWidth": 80,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.OFFER_NAME
+      </Text>
+      <View
+        style={
+          {
+            "borderColor": "#E8E5EC",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "flex": 0.6,
+            "minWidth": 200,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignSelf": "stretch",
+              "display": "flex",
+              "flexDirection": "column",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "gap": 0.1,
+            }
+          }
+          testID="dropdown-test-container"
+        >
+          <View
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#ffffff",
+                  "flexDirection": "row",
+                  "overflow": "hidden",
+                  "padding": 4,
+                },
+                {
+                  "borderRadius": 5,
+                },
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "width": "100%",
+                }
+              }
+            >
+              <TextInput
+                autoComplete="new-password"
+                editable={false}
+                keyboardType="default"
+                numberOfLines={1}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                placeholder="Offer"
+                placeholderTextColor="#C7C0D0"
+                style={
+                  [
+                    {
+                      "borderColor": "#C4C4C4",
+                      "borderRadius": 3,
+                      "borderWidth": 0.5,
+                      "color": "#000000",
+                      "minHeight": 40,
+                      "outlineStyle": "none",
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 0,
+                    },
+                    undefined,
+                    [
+                      {
+                        "alignContent": "center",
+                        "borderWidth": 0,
+                        "flexGrow": 1,
+                        "flexShrink": 1,
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "fontWeight": "300",
+                        "minHeight": "auto",
+                        "paddingHorizontal": 0,
+                        "width": "85%",
+                      },
+                      undefined,
+                    ],
+                    undefined,
+                    undefined,
+                    {
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+                testID="input-test"
+                textAlignVertical="center"
+                value="Pack 1"
+              />
+              <View
+                style={
+                  {
+                    "alignItems": "flex-end",
+                    "justifyContent": "center",
+                    "paddingRight": 4,
+                    "width": "15%",
+                  }
+                }
+              >
+                <View
+                  testID="image-test"
+                >
+                  <Image
+                    defaultSource="mockedImagePath"
+                    onError={[Function]}
+                    resizeMode="contain"
+                    source={
+                      {
+                        "uri": "mockedPath",
+                      }
+                    }
+                    style={
+                      [
+                        {
+                          "resizeMode": "contain",
+                        },
+                        {
+                          "borderRadius": 0,
+                          "height": 100,
+                          "width": 200,
+                        },
+                        undefined,
+                      ]
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "gap": 2,
+          "paddingVertical": 6,
+        }
+      }
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#E10092",
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.clickToKnowPackageDetails
+      </Text>
+      <View
+        testID="image-test"
+      >
+        <Image
+          defaultSource="mockedImagePath"
+          onError={[Function]}
+          resizeMode="contain"
+          source={
+            {
+              "uri": "mockedPath",
+            }
+          }
+          style={
+            [
+              {
+                "resizeMode": "contain",
+              },
+              {
+                "borderRadius": 0,
+                "height": 14,
+                "width": 14,
+              },
+              {
+                "tintColor": "#E10092",
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;

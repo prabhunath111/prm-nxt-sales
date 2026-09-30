@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EvdRaiseRequestSuccess Component matches snapshot 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "flex": 1,
+      "gap": 15,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      [
+        {
+          "gap": 16,
+          "padding": 16,
+        },
+        {
+          "gap": 16,
+          "padding": 16,
+        },
+      ]
+    }
+    style={
+      {
+        "width": "100%",
+      }
+    }
+  >
+    <View>
+      <Text>
+        Order success message
+      </Text>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderRadius": 4,
+            "elevation": 4,
+            "flexDirection": "row",
+            "gap": 12,
+            "justifyContent": "space-between",
+            "padding": 8,
+            "shadowColor": "#000000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.12,
+            "shadowRadius": 4,
+            "width": "100%",
+          }
+        }
+      >
+        <Text>
+          strings.raiseNewRequest
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "height": 25,
+              "justifyContent": "center",
+              "width": 25,
+            }
+          }
+        />
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderRadius": 4,
+            "elevation": 4,
+            "flexDirection": "row",
+            "gap": 12,
+            "justifyContent": "space-between",
+            "padding": 8,
+            "shadowColor": "#000000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.12,
+            "shadowRadius": 4,
+            "width": "100%",
+          }
+        }
+      >
+        <Text>
+          strings.trackRequest
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "height": 25,
+              "justifyContent": "center",
+              "width": 25,
+            }
+          }
+        />
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#ffffff",
+          "elevation": 8,
+          "gap": 10,
+          "paddingHorizontal": 16,
+          "paddingVertical": 20,
+          "shadowColor": "#000000",
+          "shadowOffset": {
+            "height": -4,
+            "width": 0,
+          },
+          "shadowOpacity": 0.14,
+          "shadowRadius": 25,
+        },
+        {
+          "backgroundColor": "#ffffff",
+          "elevation": 8,
+          "gap": 10,
+          "paddingHorizontal": 16,
+          "paddingVertical": 20,
+          "shadowColor": "#000000",
+          "shadowOffset": {
+            "height": -4,
+            "width": 0,
+          },
+          "shadowOpacity": 0.14,
+          "shadowRadius": 25,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="home-button"
+    >
+      <Text>
+        strings.backToHome
+      </Text>
+    </View>
+  </View>
+</View>
+`;

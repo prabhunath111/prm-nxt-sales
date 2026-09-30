@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FosDealerBalance Component matches snapshot 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "gap": 16,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#E6E6E6",
+          "borderRadius": 5,
+          "borderWidth": 0.5,
+          "elevation": 4,
+          "padding": 12,
+          "shadowColor": "#000000",
+          "shadowOffset": {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.12,
+          "shadowRadius": 4,
+        },
+        {
+          "paddingLeft": 10,
+          "paddingRight": 10,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text>
+      strings.dealerBalance
+    </Text>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "minWidth": "30%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="strings.dealerEVDCode"
+          testID="icon-text-input"
+          value=""
+        />
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+        testID="validate-button"
+      >
+        <Text>
+          strings.validate
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

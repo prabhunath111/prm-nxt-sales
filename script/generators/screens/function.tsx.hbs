@@ -1,0 +1,37 @@
+/**
+ * {{ componentDescription }}
+ *
+ * @module components/{{pascalCase name}}
+ * @memberof - View Component
+ */
+import React, { memo } from "react";
+import { View, Text } from "react-native";
+import styles from "./{{pascalCase name}}.styles";
+
+/**
+ * Component prop types.
+ *
+ * @typedef {object} {{pascalCase name}}Props
+ * @property {string} [text] - The text to display inside the component.
+ */
+export type {{pascalCase name}}Props = {
+  text?: string
+}
+
+/**
+ * Represents a {{pascalCase name}} component.
+ *
+ * @component
+ * @param {object} props - React properties passed from composition.
+ * @param {string} [props.text] - The text to display inside the component.
+ * @returns {JSX.Element} The rendered component.
+ */
+const {{pascalCase name}} = ({ text }: {{pascalCase name}}Props) => {
+ return (
+     <View style={styles.container}>
+         <Text>{text}</Text>
+     </View>
+ )
+};
+
+export default memo({{pascalCase name}});

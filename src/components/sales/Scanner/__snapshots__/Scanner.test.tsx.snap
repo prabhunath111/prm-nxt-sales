@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component Scanner snapshot tests for Scanner 1`] = `
+<View>
+  <View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "flex": 1,
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            undefined,
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        errors.noCameraPermission
+      </Text>
+    </View>
+  </View>
+</View>
+`;

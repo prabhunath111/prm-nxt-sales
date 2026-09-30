@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component Link snapshot tests for Link 1`] = `
+<View>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#E20092",
+                "fontSize": 13,
+                "textDecorationLine": "none",
+              },
+              undefined,
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        link
+      </Text>
+    </View>
+  </View>
+</View>
+`;

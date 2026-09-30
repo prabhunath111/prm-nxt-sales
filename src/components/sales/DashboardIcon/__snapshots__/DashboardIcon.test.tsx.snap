@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardIcon Component matches snapshot 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "borderRadius": 5,
+      "borderStyle": "solid",
+      "flexDirection": "row",
+      "flexGrow": 1,
+      "justifyContent": "center",
+      "margin": 5,
+      "opacity": 1,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderRadius": 12,
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          {
+            "color": "#000000",
+            "flex": 1,
+            "fontFamily": "VoltePlay-Regular",
+            "fontSize": 14,
+            "fontWeight": "400",
+            "marginLeft": 10,
+          },
+          {
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    >
+      Modify Pack
+    </Text>
+  </View>
+</View>
+`;

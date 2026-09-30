@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'VoltePlay-Regular';
+    src: url('../src/assets/fonts/VoltePlay-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'VoltePlay-Medium';
+    src: url('../src/assets/fonts/VoltePlay-Medium.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'VoltePlay-Light';
+    src: url('../src/assets/fonts/VoltePlay-Light.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'VoltePlay-SemiBold';
+    src: url('../src/assets/fonts/VoltePlay-SemiBold.ttf') format('truetype');
+  }
+  
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  

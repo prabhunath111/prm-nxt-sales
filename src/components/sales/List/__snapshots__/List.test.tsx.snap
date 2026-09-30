@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component List snapshot tests for List 1`] = `
+<View>
+  <View
+    style={
+      [
+        {
+          "maxHeight": undefined,
+          "width": "100%",
+        },
+        false,
+        undefined,
+      ]
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={{}}
+      data={
+        [
+          {
+            "id": "1",
+            "title": "Item 1",
+          },
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      keyExtractor={[Function]}
+      nestedScrollEnabled={true}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={0.0001}
+      stickyHeaderIndices={[]}
+      viewabilityConfigCallbackPairs={[]}
+    >
+      <View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                undefined,
+                {
+                  "fontSize": 14,
+                },
+                undefined,
+              ]
+            }
+          >
+            Item 1
+          </Text>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;

@@ -1,0 +1,425 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component BingeViewDetails snapshot tests for BingeViewDetails 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "flex": 1,
+      "gap": 15,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      {
+        "alignItems": "center",
+        "gap": 24,
+        "paddingTop": 12,
+      }
+    }
+    showsVerticalScrollIndicator={false}
+    style={
+      {
+        "padding": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          [
+            {
+              "gap": 16,
+            },
+            {
+              "gap": 16,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#220046",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 18,
+              "fontWeight": "500",
+              "textAlign": "center",
+            }
+          }
+        >
+          strings.bingeFlexiLite
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#220046",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "textAlign": "center",
+            }
+          }
+        >
+          strings.enjoyOttOfChoice
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "flex-start",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "gap": 6,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#EFE8FB",
+                  "borderRadius": 25,
+                  "height": 50,
+                  "justifyContent": "center",
+                  "width": 50,
+                }
+              }
+            >
+              <Image
+                testID="image-test"
+              />
+            </View>
+            <Text
+              style={
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "paddingHorizontal": 4,
+                  "textAlign": "center",
+                }
+              }
+            >
+              strings.buyBingeFlexiLite
+            </Text>
+          </View>
+          <Image
+            testID="image-test"
+          />
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "gap": 6,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#EFE8FB",
+                  "borderRadius": 25,
+                  "height": 50,
+                  "justifyContent": "center",
+                  "width": 50,
+                }
+              }
+            >
+              <Image
+                testID="image-test"
+              />
+            </View>
+            <Text
+              style={
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "paddingHorizontal": 4,
+                  "textAlign": "center",
+                }
+              }
+            >
+              strings.selectApps
+            </Text>
+          </View>
+          <Image
+            testID="image-test"
+          />
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "gap": 6,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#EFE8FB",
+                  "borderRadius": 25,
+                  "height": 50,
+                  "justifyContent": "center",
+                  "width": 50,
+                }
+              }
+            >
+              <Image
+                testID="image-test"
+              />
+            </View>
+            <Text
+              style={
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "paddingHorizontal": 4,
+                  "textAlign": "center",
+                }
+              }
+            >
+              strings.enjoyFavoriteShows
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#EFE8FB",
+              "borderRadius": 8,
+              "paddingHorizontal": 15,
+              "paddingVertical": 8,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 13,
+                  "fontWeight": "400",
+                  "lineHeight": 16,
+                  "textAlign": "center",
+                },
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 13,
+                  "fontWeight": "400",
+                  "lineHeight": 16,
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            strings.appLinkSharing
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "gap": 6,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "gap": 6,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#424242",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 20,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              strings.four
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#424242",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              strings.devicesAtTime
+            </Text>
+          </View>
+          <View
+            style={
+              {
+                "borderLeftWidth": 1,
+                "height": "60%",
+              }
+            }
+          />
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "gap": 6,
+              }
+            }
+          >
+            <Image
+              testID="image-test"
+            />
+            <Text
+              style={
+                {
+                  "color": "#424242",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              strings.watchOnTV
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          [
+            {
+              "gap": 12,
+            },
+            {
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "gap": 12,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#220046",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "textAlign": "center",
+            }
+          }
+        >
+          strings.wideRangeApps
+        </Text>
+        <View
+          style={
+            [
+              {
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "gap": 12,
+              },
+              {
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "gap": 12,
+              },
+            ]
+          }
+        >
+          <Image
+            testID="image-test"
+          />
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      {
+        "backgroundColor": "#ffffff",
+        "elevation": 8,
+        "gap": 10,
+        "paddingHorizontal": 16,
+        "paddingVertical": 20,
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": -4,
+          "width": 0,
+        },
+        "shadowOpacity": 0.14,
+        "shadowRadius": 25,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="button-test"
+    >
+      <Text>
+        strings.add
+      </Text>
+    </View>
+  </View>
+</View>
+`;

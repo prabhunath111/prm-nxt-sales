@@ -1,0 +1,659 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component CustomerService snapshot tests for CustomerService 1`] = `
+<View
+  style={
+    {
+      "borderRadius": 0,
+      "height": "100%",
+      "padding": 10,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "display": "none",
+          "marginHorizontal": "4%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "gap": 10,
+            "justifyContent": "center",
+            "marginTop": 15,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="header-test"
+    >
+      <View
+        testID="image-test"
+      >
+        <Image
+          defaultSource="mockedImagePath"
+          onError={[Function]}
+          resizeMode="contain"
+          source={
+            {
+              "uri": "mockedPath",
+            }
+          }
+          style={
+            [
+              {
+                "resizeMode": "contain",
+              },
+              {
+                "borderRadius": 0,
+                "height": 60,
+                "width": 60,
+              },
+              {
+                "resizeMode": "contain",
+              },
+            ]
+          }
+        />
+      </View>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "display": "none",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 30,
+              },
+              undefined,
+            ],
+            {
+              "fontSize": 30,
+            },
+            undefined,
+          ]
+        }
+      >
+        forms.raiseRequest
+      </Text>
+    </View>
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          [
+            {
+              "flex": 1,
+            },
+            undefined,
+          ]
+        }
+        testID="tabs-test"
+      >
+        <View
+          style={
+            [
+              {
+                "backgroundColor": "#ffffff",
+              },
+              [
+                {
+                  "flexDirection": "row",
+                  "marginHorizontal": "2%",
+                },
+                undefined,
+              ],
+            ]
+          }
+        >
+          <RCTScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+          >
+            <View>
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": "#E20092",
+                    "borderRadius": 3,
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                    "margin": 5,
+                    "opacity": 1,
+                    "paddingHorizontal": 20,
+                    "paddingVertical": 10,
+                  }
+                }
+              >
+                <View>
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#000000",
+                          "fontSize": 10,
+                          "textAlignVertical": "center",
+                        },
+                        [
+                          {
+                            "color": "#000000",
+                            "flexShrink": 0,
+                            "fontFamily": "VoltePlay-Medium",
+                            "fontSize": 14,
+                          },
+                          {
+                            "color": "#ffffff",
+                          },
+                        ],
+                        {
+                          "fontSize": 14,
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    strings.raiseTheRequest
+                  </Text>
+                </View>
+              </View>
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "alignItems": "center",
+                    "borderRadius": 3,
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                    "margin": 5,
+                    "opacity": 1,
+                    "paddingHorizontal": 20,
+                    "paddingVertical": 10,
+                  }
+                }
+              >
+                <View>
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#000000",
+                          "fontSize": 10,
+                          "textAlignVertical": "center",
+                        },
+                        [
+                          {
+                            "color": "#000000",
+                            "flexShrink": 0,
+                            "fontFamily": "VoltePlay-Medium",
+                            "fontSize": 14,
+                          },
+                          false,
+                        ],
+                        {
+                          "fontSize": 14,
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    strings.trackTheRequest
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </RCTScrollView>
+        </View>
+        <RCTScrollView
+          contentContainerStyle={
+            {
+              "flexGrow": 1,
+            }
+          }
+          horizontal={false}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+        >
+          <View>
+            <View
+              style={
+                [
+                  {
+                    "flex": 100,
+                  },
+                  {
+                    "flexDirection": "row",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "flex": 1,
+                    },
+                    {
+                      "display": "flex",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    [
+                      {
+                        "backgroundColor": "#ffffff",
+                        "borderRadius": 5,
+                        "margin": "4%",
+                        "maxHeight": 1254,
+                        "overflow": "hidden",
+                      },
+                      [
+                        {
+                          "marginHorizontal": "2%",
+                          "marginVertical": 10,
+                          "maxHeight": "auto",
+                        },
+                        undefined,
+                      ],
+                    ]
+                  }
+                  testID="card-test"
+                >
+                  <View
+                    style={
+                      [
+                        {
+                          "alignItems": "center",
+                          "justifyContent": "center",
+                        },
+                        {
+                          "alignItems": "center",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        [
+                          {
+                            "display": "block",
+                          },
+                          undefined,
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          [
+                            {
+                              "alignItems": "center",
+                              "flexDirection": "row",
+                              "gap": 10,
+                              "justifyContent": "center",
+                              "marginTop": 15,
+                              "width": "100%",
+                            },
+                            undefined,
+                          ]
+                        }
+                        testID="header-test"
+                      >
+                        <View
+                          testID="image-test"
+                        >
+                          <Image
+                            defaultSource="mockedImagePath"
+                            onError={[Function]}
+                            resizeMode="contain"
+                            source={
+                              {
+                                "uri": "mockedPath",
+                              }
+                            }
+                            style={
+                              [
+                                {
+                                  "resizeMode": "contain",
+                                },
+                                {
+                                  "borderRadius": 0,
+                                  "height": 60,
+                                  "width": 60,
+                                },
+                                {
+                                  "resizeMode": "contain",
+                                },
+                              ]
+                            }
+                          />
+                        </View>
+                        <Text
+                          style={
+                            [
+                              {
+                                "color": "#000000",
+                                "fontSize": 10,
+                                "textAlignVertical": "center",
+                              },
+                              [
+                                {
+                                  "display": "none",
+                                  "fontFamily": "VoltePlay-Medium",
+                                  "fontSize": 30,
+                                },
+                                undefined,
+                              ],
+                              {
+                                "fontSize": 30,
+                              },
+                              undefined,
+                            ]
+                          }
+                        >
+                          forms.raiseRequest
+                        </Text>
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        {
+                          "flexGrow": 1,
+                          "paddingHorizontal": 20,
+                          "paddingTop": 10,
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          [
+                            {
+                              "display": "flex",
+                              "flexDirection": "column",
+                              "gap": 8,
+                            },
+                          ]
+                        }
+                      >
+                        <Text
+                          style={
+                            [
+                              {
+                                "color": "#000000",
+                                "fontSize": 10,
+                                "textAlignVertical": "center",
+                              },
+                              {
+                                "fontFamily": "VoltePlay-Regular",
+                                "fontSize": 16,
+                                "gap": 8,
+                                "padding": 2,
+                              },
+                              {
+                                "fontSize": 16,
+                              },
+                              {
+                                "color": "#000000",
+                              },
+                            ]
+                          }
+                        >
+                          strings.subscriberIdOrMobile
+                          <Text
+                            style={
+                              [
+                                {
+                                  "color": "#000000",
+                                  "fontSize": 10,
+                                  "textAlignVertical": "center",
+                                },
+                                {
+                                  "color": "#E24C4B",
+                                  "fontSize": 20,
+                                  "position": "absolute",
+                                },
+                              ]
+                            }
+                          >
+                             *
+                          </Text>
+                        </Text>
+                        <TextInput
+                          autoComplete="new-password"
+                          keyboardType="numeric"
+                          maxLength={10}
+                          numberOfLines={1}
+                          onChangeText={[Function]}
+                          onFocus={[Function]}
+                          placeholder="strings.enterHere"
+                          placeholderTextColor="#C2C2C2"
+                          style={
+                            [
+                              {
+                                "borderColor": "#C4C4C4",
+                                "borderRadius": 3,
+                                "borderWidth": 0.5,
+                                "color": "#000000",
+                                "minHeight": 40,
+                                "outlineStyle": "none",
+                                "paddingHorizontal": 10,
+                                "paddingVertical": 0,
+                              },
+                              undefined,
+                              [
+                                {
+                                  "backgroundColor": "#ffffff",
+                                  "borderColor": "#C4C4C4",
+                                  "borderRadius": 3,
+                                  "borderWidth": 0.5,
+                                  "color": "#000000",
+                                  "fontFamily": "VoltePlay-Medium",
+                                  "fontSize": 16,
+                                  "marginVertical": 5,
+                                  "width": "100%",
+                                },
+                              ],
+                              undefined,
+                              undefined,
+                              {
+                                "fontSize": 16,
+                              },
+                            ]
+                          }
+                          testID="input-test"
+                          textAlignVertical="center"
+                          value="12345"
+                        />
+                      </View>
+                      <View>
+                        <View
+                          testID="multipleId-test-container"
+                        />
+                      </View>
+                      <View
+                        style={
+                          [
+                            {
+                              "gap": 10,
+                              "justifyContent": "flex-start",
+                              "paddingVertical": 10,
+                            },
+                            undefined,
+                          ]
+                        }
+                      >
+                        <View
+                          accessibilityState={
+                            {
+                              "busy": undefined,
+                              "checked": undefined,
+                              "disabled": undefined,
+                              "expanded": undefined,
+                              "selected": undefined,
+                            }
+                          }
+                          accessibilityValue={
+                            {
+                              "max": undefined,
+                              "min": undefined,
+                              "now": undefined,
+                              "text": undefined,
+                            }
+                          }
+                          accessible={true}
+                          collapsable={false}
+                          focusable={true}
+                          onClick={[Function]}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            {
+                              "alignItems": "center",
+                              "backgroundColor": "#E20092",
+                              "borderRadius": 5,
+                              "flexDirection": "row",
+                              "fontFamily": "VoltePlay-Medium",
+                              "fontSize": 16,
+                              "justifyContent": "center",
+                              "minHeight": 40,
+                              "opacity": 1,
+                              "paddingHorizontal": 20,
+                              "paddingVertical": 10,
+                            }
+                          }
+                          testID="button-test"
+                        >
+                          <View
+                            style={
+                              {
+                                "flexShrink": 1,
+                              }
+                            }
+                          >
+                            <View>
+                              <Text
+                                style={
+                                  [
+                                    {
+                                      "color": "#000000",
+                                      "fontSize": 10,
+                                      "textAlignVertical": "center",
+                                    },
+                                    [
+                                      {
+                                        "alignSelf": "center",
+                                        "fontFamily": "VoltePlay-Medium",
+                                        "lineHeight": 20,
+                                        "marginTop": 0,
+                                        "textAlign": "center",
+                                      },
+                                      undefined,
+                                      undefined,
+                                      {
+                                        "color": "#ffffff",
+                                      },
+                                      false,
+                                    ],
+                                    {
+                                      "fontSize": 18,
+                                    },
+                                    {
+                                      "color": "#ffffff",
+                                    },
+                                  ]
+                                }
+                              >
+                                strings.validateId
+                              </Text>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </RCTScrollView>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

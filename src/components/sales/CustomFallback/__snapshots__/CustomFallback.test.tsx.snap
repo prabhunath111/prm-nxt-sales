@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component CustomFallback snapshot tests for CustomFallback 1`] = `
+<View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "rgba(255, 255, 255, 0)",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+    testID="fallback-test"
+  />
+</View>
+`;

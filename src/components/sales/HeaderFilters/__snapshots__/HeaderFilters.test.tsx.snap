@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderFilters Component Snapshot matches snapshot 1`] = `
+<View
+  testID="modal-wrapper"
+>
+  <View
+    style={
+      {
+        "margin": 10,
+      }
+    }
+    testID="header-filters-test-container"
+  >
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "height": 40,
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 18,
+            "fontWeight": "500",
+          }
+        }
+      >
+        strings.filters
+      </Text>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          testID="close-icon"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "borderColor": "#E8E5EC",
+          "borderRadius": 4,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "gap": 10,
+            "height": 35,
+            "width": 100,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#E10092",
+              "borderTopLeftRadius": 4,
+              "height": "100%",
+              "width": 3,
+            }
+          }
+        />
+        <Text
+          style={
+            {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+            }
+          }
+        >
+          strings.languages
+        </Text>
+      </View>
+      <RCTScrollView
+        style={
+          {
+            "height": 360,
+            "width": 300,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              {
+                "alignItems": "flex-start",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "padding": 5,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "borderColor": "#E8E5EC",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "margin": 5,
+                  "padding": 5,
+                  "width": 110,
+                }
+              }
+            >
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "opacity": 1,
+                  }
+                }
+                testID="checkbox-English"
+              >
+                <Text>
+                  English
+                </Text>
+                <Text
+                  testID="checkbox-English-state"
+                >
+                  checked
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+    <View
+      style={
+        {
+          "alignSelf": "flex-end",
+          "flexDirection": "row",
+          "gap": 10,
+          "margin": 5,
+          "marginTop": 10,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+        testID="btn-modal.close"
+      >
+        <Text>
+          modal.close
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+        testID="btn-modal.showResults"
+      >
+        <Text>
+          modal.showResults
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

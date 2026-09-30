@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/VoltePlay-Bold.ttf",
+      "sha1": "8421d15774ea1f4b6ae1cde7f028db9d5740cc90"
+    },
+    {
+      "path": "src/assets/fonts/VoltePlay-Medium.ttf",
+      "sha1": "a7d3da88e8a48b74d7c64559088cbe7abd62d4d4"
+    },
+    {
+      "path": "src/assets/fonts/VoltePlay-Regular.ttf",
+      "sha1": "6b4c73a1d27b6d7363d65ebd58ec3247dd8aeeba"
+    },
+    {
+      "path": "src/assets/fonts/VoltePlay-SemiBold.ttf",
+      "sha1": "36d0f6c27e58cc0837101afde863302d7fdae374"
+    }
+  ]
+}

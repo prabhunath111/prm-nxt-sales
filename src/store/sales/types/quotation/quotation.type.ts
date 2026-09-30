@@ -1,0 +1,40 @@
+import { ParentObject } from 'store/sales/query/common';
+
+export interface quotationType {
+  etskOfferType: ParentObject[];
+  etskLocationData: ParentObject[];
+  etskPincode: string;
+  boxType1?: ParentObject;
+  boxType2: ParentObject;
+  boxType3: ParentObject;
+  mobileNo: string | undefined;
+  email: string | undefined;
+  isQuotationNavigate: boolean;
+  etskTownLocality: ParentObject | undefined;
+  etskOfferSelected: ParentObject;
+  etskboxType: ParentObject;
+  multiTvSubID: string;
+  multiTvBoxType: ParentObject;
+  multiTVregisterFromQuote: boolean;
+  multiTvTskProps: ParentObject;
+  multiTVDetails: ParentObject;
+  tskTypesData: ParentObject;
+  boxTypeData: ParentObject[];
+  primaryTskType: string;
+  numberOfConnections: ParentObject;
+  numberOfConnectionsData: ParentObject[];
+  isPrimaryEdit: boolean;
+  isEtskEdit: boolean;
+  selectedTsk: string;
+  boxPriceFinal: string;
+  totalPrice: string;
+  urlLastPart: string;
+  isMultiTv: boolean;
+  isWalkIn: boolean;
+  redirectParams: ParentObject;
+  redirectUrl: string;
+  primaryTskTypeObject: ParentObject;
+  tSKtype1SelectedObject: ParentObject;
+  tSKtype2SelectedObject: ParentObject;
+  tSKtype3SelectedObject: ParentObject;
+}

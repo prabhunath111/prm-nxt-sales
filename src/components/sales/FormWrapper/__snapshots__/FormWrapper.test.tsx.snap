@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component FormWrapper snapshot tests for FormWrapper 1`] = `
+<View
+  style={
+    {
+      "maxHeight": "100%",
+      "width": "100%",
+    }
+  }
+  testID="form-wrapper"
+>
+  <View
+    style={
+      [
+        {
+          "display": "block",
+        },
+        {
+          "display": "block",
+        },
+      ]
+    }
+  />
+</View>
+`;

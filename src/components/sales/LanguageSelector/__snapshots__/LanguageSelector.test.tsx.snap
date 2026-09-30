@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component LanguageSelector snaphot test 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+    ]
+  }
+  testID="language-test-container"
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    testID="language-selector-pressable"
+  >
+    <View
+      testID="image-test"
+    >
+      <Image
+        defaultSource="mockedImagePath"
+        onError={[Function]}
+        resizeMode="contain"
+        source={
+          {
+            "uri": "mockedPath",
+          }
+        }
+        style={
+          [
+            {
+              "resizeMode": "contain",
+            },
+            {
+              "borderRadius": 0,
+              "height": 100,
+              "width": 200,
+            },
+            {
+              "marginRight": 10,
+              "tintColor": "#ffffff",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

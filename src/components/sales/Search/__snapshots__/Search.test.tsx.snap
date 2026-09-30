@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component Search snapshot tests for Search 1`] = `
+<View
+  style={
+    {
+      "flexDirection": "column",
+      "justifyContent": "space-evenly",
+    }
+  }
+  testID="search-test"
+>
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#F3F2F5",
+          "borderRadius": 4,
+          "display": "flex",
+          "elevation": 4,
+          "flexDirection": "row",
+          "gap": 8,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
+          "paddingVertical": 12,
+          "shadowColor": "#000000",
+          "shadowOffset": {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.12,
+          "shadowRadius": 2,
+        },
+        {},
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        testID="image-test"
+      >
+        <Image
+          defaultSource="mockedImagePath"
+          onError={[Function]}
+          resizeMode="contain"
+          source={
+            {
+              "uri": "mockedPath",
+            }
+          }
+          style={
+            [
+              {
+                "resizeMode": "contain",
+              },
+              {
+                "borderRadius": 0,
+                "height": 16,
+                "width": 16,
+              },
+              {
+                "tintColor": "#220046",
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+    <TextInput
+      autoComplete="new-password"
+      autoFocus={false}
+      editable={true}
+      keyboardType="default"
+      numberOfLines={1}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#907FA2"
+      style={
+        [
+          {
+            "borderColor": "#C4C4C4",
+            "borderRadius": 3,
+            "borderWidth": 0.5,
+            "color": "#000000",
+            "minHeight": 40,
+            "outlineStyle": "none",
+            "paddingHorizontal": 10,
+            "paddingVertical": 0,
+          },
+          undefined,
+          {
+            "backgroundColor": "#F3F2F5",
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "color": "#907FA2",
+            "flexGrow": 1,
+            "fontFamily": "VoltePlay-Medium",
+            "fontSize": 14,
+            "fontWeight": "500",
+            "minHeight": "auto",
+            "paddingHorizontal": 0,
+          },
+          undefined,
+          undefined,
+          {
+            "fontSize": 14,
+          },
+        ]
+      }
+      testID="input-test"
+      textAlignVertical="center"
+      value="Sample"
+    />
+  </View>
+</View>
+`;

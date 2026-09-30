@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component CustomerDetailsCard snapshot tests for CustomerDetailsCard 1`] = `
+<View
+  style={
+    {
+      "alignItems": "flex-start",
+      "backgroundColor": "#F7F4FC",
+      "elevation": 4,
+      "paddingHorizontal": 8,
+      "paddingTop": 2,
+      "shadowColor": "#000000",
+      "shadowOffset": {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.12,
+      "shadowRadius": 2,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+      }
+    }
+    testID="text-test"
+  >
+    <View
+      style={
+        [
+          [
+            {
+              "alignItems": "flex-start",
+              "flexShrink": 1,
+              "flexWrap": "wrap",
+              "marginRight": 12,
+              "minWidth": 100,
+              "paddingRight": 12,
+            },
+            {
+              "borderColor": "#DCDCDC",
+              "borderRightWidth": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 12,
+                  "fontWeight": "400",
+                },
+                {},
+              ],
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.subscriberId
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "flexShrink": 1,
+                "flexWrap": "wrap",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "lineHeight": 25,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                },
+                {},
+              ],
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        [
+          [
+            {
+              "alignItems": "flex-start",
+              "flexShrink": 1,
+              "flexWrap": "wrap",
+              "marginRight": 12,
+              "minWidth": 100,
+              "paddingRight": 12,
+            },
+            undefined,
+          ],
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 12,
+                  "fontWeight": "400",
+                },
+                {},
+              ],
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.customerName
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "flexShrink": 1,
+                "flexWrap": "wrap",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "lineHeight": 25,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                },
+                {},
+              ],
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

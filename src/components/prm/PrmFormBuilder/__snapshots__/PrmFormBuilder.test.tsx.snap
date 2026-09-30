@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component PrmFormBuilder snapshot tests for PrmFormBuilder 1`] = `
+<View
+  id="formContainer"
+  style={
+    [
+      [
+        {
+          "backgroundColor": "#ffffff",
+          "height": "100%",
+          "width": "100%",
+        },
+        undefined,
+      ],
+      undefined,
+    ]
+  }
+  testID="formBuilderTest"
+>
+  <RCTScrollView
+    bounces={false}
+    contentContainerStyle={
+      [
+        {
+          "flexGrow": 1,
+          "gap": 24,
+          "padding": 20,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View />
+  </RCTScrollView>
+</View>
+`;

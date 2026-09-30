@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "229798330320",
+    "project_id": "msales-b7b9c",
+    "storage_bucket": "msales-b7b9c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229798330320:android:eff51ffa00205de54ec3d5",
+        "android_client_info": {
+          "package_name": "com.tpsales"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVHDr7eRiLW2ErzPXXVbrmKaufmXHvffo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

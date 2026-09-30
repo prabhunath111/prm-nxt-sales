@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component DateAndTimeDetails snapshot tests for DateAndTimeDetails 1`] = `
+<View>
+  <View
+    style={
+      [
+        {
+          "alignItems": "flex-start",
+          "alignSelf": "center",
+          "backgroundColor": "#F8F6F6",
+          "borderRadius": 5,
+          "elevation": 4,
+          "gap": 10,
+          "marginTop": 8,
+          "overflow": "hidden",
+          "paddingHorizontal": 13,
+          "paddingVertical": 8,
+          "shadowColor": "#000000",
+          "shadowOffset": {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.12,
+          "shadowRadius": 4,
+          "width": "100%",
+        },
+        undefined,
+        false,
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "flexDirection": "row",
+          },
+          false,
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "borderRightColor": "#9f9ea4",
+              "borderRightWidth": 1,
+              "gap": 8,
+              "paddingHorizontal": 8,
+            },
+            false,
+            {
+              "paddingLeft": 0,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 12,
+              "fontWeight": "400",
+            }
+          }
+        >
+          strings.date
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "maxWidth": 120,
+              },
+              undefined,
+            ]
+          }
+        >
+          21 March 2026
+        </Text>
+      </View>
+      <View
+        style={
+          [
+            {
+              "borderRightColor": "#9f9ea4",
+              "borderRightWidth": 1,
+              "gap": 8,
+              "paddingHorizontal": 8,
+            },
+            false,
+            false,
+          ]
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 12,
+              "fontWeight": "400",
+            }
+          }
+        >
+          strings.time
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "maxWidth": 120,
+              },
+              undefined,
+            ]
+          }
+        >
+          15:51
+        </Text>
+      </View>
+      <View
+        style={
+          [
+            {
+              "borderRightColor": "#9f9ea4",
+              "borderRightWidth": 1,
+              "gap": 8,
+              "paddingHorizontal": 8,
+            },
+            {
+              "borderRightWidth": 0,
+            },
+            false,
+          ]
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 12,
+              "fontWeight": "400",
+            }
+          }
+        >
+          strings.name
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "maxWidth": 120,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;

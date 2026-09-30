@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component SalesFormBuilder snapshot tests for SalesFormBuilder 1`] = `
+<RCTSafeAreaView
+  style={
+    [
+      {
+        "backgroundColor": "#ffffff",
+        "height": "100%",
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      [
+        {
+          "backgroundColor": "#ffffff",
+          "height": "100%",
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      id="formContainer"
+      style={
+        [
+          [
+            {
+              "backgroundColor": "#ffffff",
+              "height": "100%",
+              "width": "100%",
+            },
+            undefined,
+          ],
+          undefined,
+        ]
+      }
+      testID="formBuilderTest"
+    >
+      <RCTScrollView
+        bounces={false}
+        contentContainerStyle={
+          [
+            {
+              "flexGrow": 1,
+              "gap": 10,
+              "padding": 10,
+            },
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        <View />
+      </RCTScrollView>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorPage Component snapshot test for ErrorPage 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "gap": 20,
+      "height": 1334,
+      "justifyContent": "center",
+      "paddingHorizontal": 20,
+      "verticalAlign": "middle",
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+          "fontSize": 10,
+          "textAlignVertical": "center",
+        },
+        {
+          "color": "#DCDCDC",
+          "fontSize": 70,
+          "fontWeight": "600",
+          "lineHeight": 70,
+          "textAlign": "center",
+        },
+        {
+          "fontSize": 70,
+        },
+        undefined,
+      ]
+    }
+  >
+    errors.errorHeader
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+          "fontSize": 10,
+          "textAlignVertical": "center",
+        },
+        {
+          "color": "#E24C4B",
+          "fontSize": 40,
+          "fontWeight": "600",
+          "lineHeight": 40,
+          "marginVertical": 10,
+          "textAlign": "center",
+        },
+        {
+          "fontSize": 40,
+        },
+        undefined,
+      ]
+    }
+  >
+    errors.queryFetchError
+  </Text>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#E20092",
+        "borderRadius": 5,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "minHeight": 40,
+        "opacity": 1,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+        "width": 170,
+      }
+    }
+    testID="button-test"
+  >
+    <View
+      style={
+        {
+          "flexShrink": 1,
+        }
+      }
+    >
+      <View>
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontSize": 10,
+                "textAlignVertical": "center",
+              },
+              [
+                {
+                  "alignSelf": "center",
+                  "fontFamily": "VoltePlay-Medium",
+                  "lineHeight": 20,
+                  "marginTop": 0,
+                  "textAlign": "center",
+                },
+                undefined,
+                undefined,
+                {
+                  "color": "#ffffff",
+                },
+                false,
+              ],
+              {
+                "fontSize": 18,
+              },
+              {
+                "color": "#ffffff",
+              },
+            ]
+          }
+        >
+          strings.goToHome
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

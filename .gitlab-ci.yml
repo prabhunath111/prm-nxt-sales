@@ -1,0 +1,2148 @@
+stages:
+    - build
+    - test
+    - scan
+    - fortify
+    - docker
+    - deploy 
+    - rollback
+    - restart-deployment
+
+variables:
+    DOCKER_DRIVER: overlay2
+
+# --------------------------------------------------------------------------------------------
+# ↓ development Stages ↓
+# --------------------------------------------------------------------------------------------
+
+dev_prm_nxt_sales-build:
+    stage: build
+    tags:
+        - prm-nxt-sales-service-runner
+    before_script:
+        - npm config set proxy http://10.23.26.233:8080
+        - npm config set https-proxy http://10.23.26.233:8080
+        - npm config set strict-ssl false
+        - echo "=== Checking Memory Usage ==="
+        - free -m
+        - echo "=== Checking Disk Space ==="
+        - df -h
+        - echo "=== Checking CPU Usage ==="
+        - top -bn1 | head -n 10
+        - echo "Checking npm version"
+        - npm -v
+        - pwd
+        - echo "Yarn version"
+        - yarn -v
+    script:
+        - echo "Installing dependencies..."
+        - yarn install
+        - echo "Building the application..."
+        - yarn build:web:dev
+    artifacts:
+        paths:
+            - build/
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+          changes:
+            - '**/*'
+          when: never
+        # Job will run for feature branch
+        - if: '$CI_COMMIT_BRANCH =~ /^feature\/.*$/'
+        # Job will run for bug fix branch
+        - if: '$CI_COMMIT_BRANCH =~ /^bugfix\/.*$/'
+        # Job will run for hot fix branch
+        - if: '$CI_COMMIT_BRANCH =~ /^hotfix\/.*$/'
+        # Job will run on manual pipeline run for feature branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH =~ /^feature\/.*$/'
+        # Job will run on manual pipeline run for bug fix branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH =~ /^bugfix\/.*$/'
+        # Job will run on manual pipeline run for hot fix branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH =~ /^hotfix\/.*$/'
+        # run through web interface for develop branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "develop"'
+        #  run on develop branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "develop"'
+          changes:
+            - $CI_PROJECT_DIR/deployment/dev/Dockerfile
+            - '**/*'
+        - if: '$CI_COMMIT_BRANCH != "develop"'
+          when: never
+
+dev_prm_nxt_sales-test:
+    stage: test
+    tags:
+        - prm-nxt-sales-service-runner
+    before_script:
+        - npm config set proxy http://10.23.26.233:8080
+        - npm config set https-proxy http://10.23.26.233:8080
+        - npm config set strict-ssl false
+    script:
+        - echo "Running tests and generating coverage report..."
+        - yarn install
+        - yarn run test || EXIT_CODE=$?
+        - echo "Jest exit code $EXIT_CODE" 
+    artifacts:
+        paths:
+            - coverage/
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+          changes:
+            - '**/*'
+          when: never
+        # Job will run for feature branch
+        - if: '$CI_COMMIT_BRANCH =~ /^feature\/.*$/'
+        # Job will run for bug fix branch
+        - if: '$CI_COMMIT_BRANCH =~ /^bugfix\/.*$/'
+        # Job will run for hot fix branch
+        - if: '$CI_COMMIT_BRANCH =~ /^hotfix\/.*$/'
+        # Job will run on manual pipeline run for feature branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH =~ /^feature\/.*$/'
+        # Job will run on manual pipeline run for bug fix branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH =~ /^bugfix\/.*$/'
+        # Job will run on manual pipeline run for hot fix branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH =~ /^hotfix\/.*$/'
+        # run through web interface for develop branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "develop"'
+        #  run on develop branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "develop"'
+          changes:
+            - $CI_PROJECT_DIR/deployment/dev/Dockerfile
+            - '**/*'
+        - if: '$CI_COMMIT_BRANCH != "develop"'
+          when: never
+
+dev_prm_nxt_sales-sonarqube-scan:
+    stage: scan
+    tags:
+        - runner
+    image: 
+        name: 128081702938.dkr.ecr.ap-south-1.amazonaws.com/revostry:sonar_scanner-v0.0.1
+        entrypoint: [""]
+    variables:
+        SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  
+        GIT_DEPTH: "0" 
+    cache:
+        key: "${CI_JOB_NAME}"
+        paths:
+            - .sonar/cache
+    script: 
+        - echo "Running sonar-scanner..."
+        - sonar-scanner -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info || SCAN_EXIT_STATUS=$?
+        - echo "Sonar-scanner exit status:${SCAN_EXIT_STATUS}"
+        - echo "Generating CNES report..."
+        - java -jar /revostry/sonar-report-jar/sonar-cnes-report-4.3.0.jar -s $SONAR_HOST_URL -t $SONAR_AUTH_TOKEN -p base_tataplay_org_prm-nxt_prm-nxt-sales_AZIy6mBb1r-taeCknfNW -f docx -o prm-nxt-sales-dev-sonarscan-report
+        - REPORT_GENERATION_STATUS=$?
+        - echo "CNES report generation exit status:${REPORT_GENERATION_STATUS}"
+        - echo "Exiting with status:${SCAN_EXIT_STATUS}"
+        - exit ${SCAN_EXIT_STATUS}
+    artifacts:
+        paths:
+          - prm-nxt-sales-dev-sonarscan-report/*.docx
+        when: always
+    allow_failure: true
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+          changes:
+            - '**/*'
+          when: never
+        # Job will run for feature branch
+        - if: '$CI_COMMIT_BRANCH =~ /^feature\/.*$/'
+        # Job will run for bug fix branch
+        - if: '$CI_COMMIT_BRANCH =~ /^bugfix\/.*$/'
+        # Job will run for hot fix branch
+        - if: '$CI_COMMIT_BRANCH =~ /^hotfix\/.*$/'
+        # Job will run on manual pipeline run for feature branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH =~ /^feature\/.*$/'
+        # Job will run on manual pipeline run for bug fix branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH =~ /^bugfix\/.*$/'
+        # Job will run on manual pipeline run for hot fix branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH =~ /^hotfix\/.*$/'
+        # run through web interface for develop branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "develop"'
+        #  run on develop branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "develop"'
+          changes:
+            - $CI_PROJECT_DIR/deployment/dev/Dockerfile
+            - '**/*'
+        - if: '$CI_COMMIT_BRANCH != "develop"'
+          when: never
+
+# dev_prm_nxt_sales-fortify-scan:
+#   stage: fortify
+#   tags:
+#     - fortify-sca-runner
+#   script:
+#     - export PATH="/opt/Fortify/bin:$PATH"
+#     - sourceanalyzer -version
+#     - sourceanalyzer -b "$BUILD_ID" -clean
+#     # Scan source directory, exclude node_modules and build artifacts
+#     # Incremental scan: Only analyze changed files for faster execution
+#     - |
+#       echo "Detecting changed files..."
+#       CHANGED_FILES=$(git diff --name-only --diff-filter=ACMR HEAD~1 HEAD | grep -E '^src/.*\.(js|jsx|ts|tsx)$' | tr '\n' ' ' || echo "")
+#       if [ -n "$CHANGED_FILES" ]; then
+#         echo "Changed files found: $CHANGED_FILES"
+#         echo "Running incremental scan on modified files only..."
+#         sourceanalyzer -b "$BUILD_ID" -exclude node_modules -exclude build -exclude coverage -exclude dist -exclude deployment $CHANGED_FILES
+#       else
+#         echo "No changed files detected or first commit. Running full scan..."
+#         sourceanalyzer -b "$BUILD_ID" -exclude node_modules -exclude build -exclude coverage -exclude dist -exclude deployment src/
+#       fi
+#     # Create the directory to store the FPR and PDF files
+#     - mkdir -p prm-nxt-sales
+#     # Run optimized scan with performance flags
+#     - echo "Starting Fortify scan with optimized settings..."
+#     - sourceanalyzer -b "$BUILD_ID" -scan -Xmx2G -quick -f prm-nxt-sales/prm-nxt-sales.fpr
+#     # Upload FPR to SSC and generate PDF report
+#     - echo "Uploading FPR to Fortify SSC and generating PDF report..."
+#     - |
+#       REPORT_GENERATED=false
+      
+#       # SSC Configuration (Set these as GitLab CI/CD Variables)
+#       # SSC_URL: https://fortify.tataplay.com/ssc
+#       # SSC_TOKEN: SSC Authentication Token (UnifiedLoginToken)
+#       # SSC_APP_NAME: Application name in SSC (e.g., "PRM Nxt Sales")
+#       # SSC_APP_VERSION: Application version/release (e.g., "1.0")
+      
+#       if [ -n "$SSC_URL" ] && [ -n "$SSC_TOKEN" ] && [ -n "$SSC_APP_NAME" ] && [ -n "$SSC_APP_VERSION" ]; then
+#         echo "SSC configuration detected. Uploading FPR to SSC..."
+        
+#         # Upload FPR to SSC using fortifyclient
+#         if [ -f "/opt/Fortify/bin/fortifyclient" ]; then
+#           echo "Uploading FPR to SSC using fortifyclient..."
+#           if /opt/Fortify/bin/fortifyclient uploadFPR -url "$SSC_URL" -authtoken "$SSC_TOKEN" -file prm-nxt-sales/prm-nxt-sales.fpr -project "$SSC_APP_NAME" -version "$SSC_APP_VERSION"; then
+#             echo "✓ FPR uploaded successfully to SSC"
+            
+#             # Get application version ID
+#             echo "Retrieving application version from SSC..."
+#             APP_VERSION_ID=$(curl -sk -H "Authorization: FortifyToken $SSC_TOKEN" "${SSC_URL}/api/v1/projectVersions?q=project.name:\"${SSC_APP_NAME}\"+and+name:\"${SSC_APP_VERSION}\"" 2>/dev/null | grep -o '"id":[0-9]*' | head -1 | cut -d':' -f2) || true
+            
+#             if [ -n "$APP_VERSION_ID" ]; then
+#               echo "Found SSC Application Version ID: $APP_VERSION_ID"
+              
+#               # Auto-approve artifacts if SSC_AUTO_APPROVE is set (optional)
+#               if [ "${SSC_AUTO_APPROVE:-true}" = "true" ]; then
+#                 echo "Auto-approving artifacts in SSC..."
+#                 sleep 5  # Wait for SSC to process the upload
+                
+#                 # Get the latest artifact ID
+#                 ARTIFACT_ID=$(curl -sk -H "Authorization: FortifyToken $SSC_TOKEN" "${SSC_URL}/api/v1/projectVersions/${APP_VERSION_ID}/artifacts?limit=1&orderby=uploadDate&start=0" 2>/dev/null | grep -o '"id":[0-9]*' | head -1 | cut -d':' -f2) || true
+                
+#                 if [ -n "$ARTIFACT_ID" ]; then
+#                   echo "Found artifact ID: $ARTIFACT_ID. Approving..."
+#                   APPROVE_RESPONSE=$(curl -sk -X POST -H "Authorization: FortifyToken $SSC_TOKEN" -H "Content-Type: application/json" \
+#                     -d '{"approvalComment":"Auto-approved by GitLab CI/CD Pipeline"}' \
+#                     "${SSC_URL}/api/v1/artifacts/${ARTIFACT_ID}/action/approve" 2>/dev/null) || true
+                  
+#                   if echo "$APPROVE_RESPONSE" | grep -q '"approved":true'; then
+#                     echo "✓ Artifact approved successfully"
+#                     sleep 5  # Wait for approval to propagate
+#                   else
+#                     echo "⚠ Auto-approval may have failed, check SSC manually"
+#                   fi
+#                 else
+#                   echo "⚠ Could not find artifact for auto-approval"
+#                 fi
+#               else
+#                 echo "NOTE: Auto-approval disabled. Visit $SSC_URL to approve artifacts manually."
+#               fi
+              
+#               # Try to generate PDF report (non-blocking)
+#               echo "Attempting to generate PDF report from SSC..."
+#             else
+#               echo "⚠ Could not find application version in SSC"
+#               APP_VERSION_ID=""
+          
+#             if [ -n "$APP_VERSION_ID" ]; then
+#               echo "Found SSC Application Version ID: $APP_VERSION_ID"
+              
+#               # Generate PDF report via SSC API (best effort)
+#               REPORT_ID=$(curl -sk -X POST -H "Authorization: FortifyToken $SSC_TOKEN" -H "Content-Type: application/json" \
+#                 -d '{"type":"PORTFOLIO","inputReportParameters":{"template":"Developer Workbook"}}' \
+#                 "${SSC_URL}/api/v1/projectVersions/${APP_VERSION_ID}/reports" 2>/dev/null | grep -o '"id":[0-9]*' | head -1 | cut -d':' -f2) || true
+              
+#               if [ -n "$REPORT_ID" ]; then
+#                 echo "Report generation initiated. Report ID: $REPORT_ID"
+                
+#                 # Wait for report generation (non-blocking)
+#                 for i in {1..6}; do
+#                   REPORT_STATUS=$(curl -sk -H "Authorization: FortifyToken $SSC_TOKEN" "${SSC_URL}/api/v1/reports/${REPORT_ID}" 2>/dev/null | grep -o '"status":"[^"]*"' | cut -d'"' -f4) || true
+                  
+#                   if [ "$REPORT_STATUS" = "PROCESS_COMPLETE" ]; then
+#                     echo "Report generated successfully. Downloading..."
+#                     if curl -sk -H "Authorization: FortifyToken $SSC_TOKEN" "${SSC_URL}/download/report.pdf?id=${REPORT_ID}" -o prm-nxt-sales/prm-nxt-sales-fortify-report.pdf 2>/dev/null; then
+#                       echo "✓ PDF report downloaded from SSC"
+#                       REPORT_GENERATED=true
+#                       break
+#                     fi
+#                   elif [ "$REPORT_STATUS" = "ERROR" ] || [ -z "$REPORT_STATUS" ]; then
+#                     echo "PDF generation not available (artifacts may need approval in SSC)"
+#                     break
+#                   fi
+                  
+#                   sleep 10
+#                 done
+#               else
+#                 echo "Could not initiate PDF generation (artifacts may need approval in SSC)"
+#               fi
+#             else
+#               echo "Could not find application version in SSC (artifacts may need approval)"
+#             fi
+#           else
+#             echo "✗ FPR upload failed"
+#           fi
+#         fi
+#       else
+#         echo "SSC configuration not found. Falling back to local PDF generation..."
+#       fi
+      
+#       # Fallback: Local PDF generation if SSC is not available
+#       if [ "$REPORT_GENERATED" = "false" ]; then
+#         if command -v ReportGenerator &> /dev/null; then
+#           ReportGenerator -format pdf -f prm-nxt-sales/prm-nxt-sales-fortify-report.pdf -source prm-nxt-sales/prm-nxt-sales.fpr && REPORT_GENERATED=true
+#         elif [ -f "/opt/Fortify/bin/ReportGenerator" ]; then
+#           /opt/Fortify/bin/ReportGenerator -format pdf -f prm-nxt-sales/prm-nxt-sales-fortify-report.pdf -source prm-nxt-sales/prm-nxt-sales.fpr && REPORT_GENERATED=true
+#         elif [ -f "/opt/Fortify/bin/BIRTReportGenerator" ]; then
+#           /opt/Fortify/bin/BIRTReportGenerator -format PDF -source prm-nxt-sales/prm-nxt-sales.fpr -output prm-nxt-sales -template "Developer Workbook" && REPORT_GENERATED=true
+#         fi
+#       fi
+#       if [ "$REPORT_GENERATED" = "false" ]; then
+#         if command -v FPRUtility &> /dev/null || [ -f "/opt/Fortify/bin/FPRUtility" ]; then
+#           FPRUTILITY_CMD="FPRUtility"
+#           [ -f "/opt/Fortify/bin/FPRUtility" ] && FPRUTILITY_CMD="/opt/Fortify/bin/FPRUtility"
+#           echo "Generating detailed Fortify report..."
+          
+#           # Export FPR data for detailed parsing
+#           $FPRUTILITY_CMD -project prm-nxt-sales/prm-nxt-sales.fpr -search -query "[fortify priority order]:critical" -categoryIssueCounts > prm-nxt-sales/critical_issues.txt 2>&1 || true
+#           $FPRUTILITY_CMD -project prm-nxt-sales/prm-nxt-sales.fpr -search -query "[fortify priority order]:high" -categoryIssueCounts > prm-nxt-sales/high_issues.txt 2>&1 || true
+#           $FPRUTILITY_CMD -information -categoryIssueCounts -project prm-nxt-sales/prm-nxt-sales.fpr > prm-nxt-sales/category_counts.txt 2>&1 || true
+#           $FPRUTILITY_CMD -information -listIssues -project prm-nxt-sales/prm-nxt-sales.fpr > prm-nxt-sales/all_issues.txt 2>&1 || true
+          
+#           # Generate HTML report using script
+#           chmod +x scripts/generate-fortify-html-report.sh
+#           scripts/generate-fortify-html-report.sh prm-nxt-sales "PRM Nxt Sales"
+          
+#           if command -v wkhtmltopdf &> /dev/null; then
+#             wkhtmltopdf prm-nxt-sales/prm-nxt-sales-fortify-report.html prm-nxt-sales/prm-nxt-sales-fortify-report.pdf && REPORT_GENERATED=true
+#           fi
+#         fi
+#       fi
+#       if [ "$REPORT_GENERATED" = "true" ]; then
+#         echo "PDF report generated successfully"
+#         ls -lh prm-nxt-sales/*.pdf 2>/dev/null || true
+#       else
+#         echo "PDF generation not available. FPR file and HTML report available as artifacts."
+#         echo "You can open the HTML report in a browser and print to PDF if needed."
+#       fi
+#     - echo "Fortify scan completed"
+#   artifacts:
+#     paths:
+#       - prm-nxt-sales/*.fpr
+#       - prm-nxt-sales/*.pdf
+#       - prm-nxt-sales/*.html
+#       - prm-nxt-sales/*.txt
+#     when: always
+#   rules:
+#     # Do not run on merge request
+#     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+#       when: never
+#     # Job will run for feature, bugfix, and hotfix branches
+#     - if: '$CI_COMMIT_BRANCH =~ /^(feature|bugfix|hotfix)\/.*$/'
+#     # Run on develop branch, triggered by web or code changes
+#     - if: '$CI_COMMIT_BRANCH == "develop"'
+#     # Do not run on other branches
+#     - if: '$CI_COMMIT_BRANCH != "develop"'
+#       when: never
+
+
+dev_prm_nxt_sales-docker_build:
+  stage: docker
+  tags:
+    - prm-nxt-sales-service-runner
+  before_script:
+    - mkdir -p nginx-front
+    - cp -r build/* nginx-front/
+    - ls nginx-front/ # Optional: to verify the files are there
+    
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_ECR_REGISTRY
+    - cp deployment/dev/nginx.conf . # Copy nginx.conf to the project root
+
+  script:
+    - echo "Checking for changes in Dockerfile and source files..."
+    - |
+      if [ -n "$(git diff --name-only HEAD~1 HEAD -- $CI_PROJECT_DIR/deployment/dev/Dockerfile)" ] || [ -n "$(git diff --name-only HEAD~1 HEAD -- . | grep -v '.gitlab-ci.yml')" ] ; then
+        echo "Changes detected in Dockerfile or code. Building Docker image..."
+
+        # Create a temporary directory for a clean build context
+        BUILD_CONTEXT_DIR=$(mktemp -d)
+        echo "Created temporary build context at: $BUILD_CONTEXT_DIR"
+
+        # Copy the necessary files from the main project directory into the temporary build context
+        # The 'nginx-front' folder and 'nginx.conf' now exist because of the 'before_script' section
+        cp "$CI_PROJECT_DIR/deployment/dev/Dockerfile" "$BUILD_CONTEXT_DIR/"
+        cp -r "$CI_PROJECT_DIR/nginx-front" "$BUILD_CONTEXT_DIR/"
+        cp "$CI_PROJECT_DIR/nginx.conf" "$BUILD_CONTEXT_DIR/"
+
+        # Navigate to the temporary directory to perform the build
+        cd "$BUILD_CONTEXT_DIR"
+        ls -l -a # Verify all files are in the context
+
+        # Extract and increment the version tag
+        previous_version=$(aws ecr describe-images --repository-name prmnxt_dev_msales --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text | sort -k2,2r | head -n1 | awk '{print $1}' || echo "v0")
+        echo "Previous version -> $previous_version"
+
+        numeric_version=$(echo "$previous_version" | grep -o -E '[0-9]+' | head -n1 || echo "0")
+        prefix="v"
+        new_image_tag_version=$((numeric_version + 1))
+        new_version="${prefix}$new_image_tag_version"
+        echo "New version -> $new_version"
+
+        export IMAGE_TAG="prmnxt_dev_msales-$new_version-$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID"
+
+        # Docker image build from the clean context
+        docker build -t prmnxt_dev_msales-$new_version -f Dockerfile .
+
+        # Tag and push the new image
+        docker tag prmnxt_dev_msales-$new_version 891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$IMAGE_TAG
+        docker push 891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$IMAGE_TAG
+
+        # Navigate back to the main project directory to save artifacts
+        cd "$CI_PROJECT_DIR"
+
+        # Save the IMAGE_TAG for artifacts
+        echo "$IMAGE_TAG" > ecr_image_tag.txt
+        echo "Current Build Image is ---> 891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$IMAGE_TAG"
+      else
+        echo "No relevant changes detected. Skipping Docker build."
+        docker images
+        PREVIOUS_IMAGE_TAG=$(aws ecr describe-images --repository-name prmnxt_dev_msales --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text | sort -k2,2r | head -n1 | awk '{print $1}' || echo "")
+
+        if [ -z "$PREVIOUS_IMAGE_TAG" ]; then
+          echo "No previous image found. Deployment will not proceed."
+          echo "No previous image found" > ecr_image_tag.txt
+          exit 1
+        fi
+        
+        # Save the PREVIOUS_IMAGE_TAG to a file for artifacts
+        echo "$PREVIOUS_IMAGE_TAG" > ecr_image_tag.txt
+        echo "No new image build, using previous image for deployment ---> 891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$PREVIOUS_IMAGE_TAG"
+      fi
+
+  artifacts:
+    paths:
+      - ecr_image_tag.txt
+  
+  rules:
+        # not run on merge request
+       - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+         changes: 
+           - "**/*"
+         when: never
+        # run only on develop branch
+       - if: '$CI_COMMIT_BRANCH != "develop"'
+         when: never   
+        # run through web interface for develop branch
+       - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "develop"'
+        #  run on develop branch on code changes detected
+       - if: '$CI_COMMIT_BRANCH == "develop"'
+       - changes:  
+           - $CI_PROJECT_DIR/deployment/dev/Dockerfile
+           - '**/*' 
+       - when: never
+
+# dev_prm_nxt_sales-docker_build:
+#     stage: docker
+#     tags:
+#         - prm-nxt-sales-service-runner
+#     before_script:
+#         # in dockerfile build folder used as nginx-front 
+#         - mkdir -p nginx-front 
+#         # copying build folder content in nginx-front folder
+#         - cp -r build/* nginx-front/
+#         - ls nginx-front/
+#         # copying nginx.config file in root to apply nginx rule using docker file
+#         - cp deployment/dev/nginx.conf .
+#         - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_ECR_REGISTRY
+#     script: 
+#         - echo "Checking for changes in Dockerfile and source files..."
+#         # if files are modified except CI file then only build new docker image apply new tag , and push to ecr
+#         - |
+#             if [ -n "$(git diff --name-only HEAD~1 HEAD -- $CI_PROJECT_DIR/deployment/dev/Dockerfile)" ] || [ -n "$(git diff --name-only HEAD~1 HEAD -- . | grep -v '.gitlab-ci.yml')" ] ; then
+#                 echo "Changes detected in  Dockerfile or code. Building Docker image..."
+#                 docker images
+#                 # extracting previous version tag 
+#                 previous_version=$(aws ecr describe-images --repository-name prmnxt_dev_msales --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text| sort -k2,2r | head -n1 | awk '{print $1}')
+#                 echo "Previous version -> $previous_version"
+#                 # Extract the numeric part from the version tag
+#                 numeric_version=$(echo "$previous_version" | grep -o -E '[0-9]+' | head -n1)
+#                 echo "Extracted numeric version -> $numeric_version"
+#                 # Set the prefix to always be lowercase 'v'
+#                 prefix="v"
+#                 new_image_tag_version=$((numeric_version + 1))
+#                 echo "Incremented version -> $new_image_tag_version"
+#                 # Concatenate the 'v' with the incremented version number
+#                 new_version="${prefix}$new_image_tag_version"
+#                 echo "New version -> $new_version"
+#                 export IMAGE_TAG="prmnxt_dev_msales-$new_version-$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID"
+#                 # docker image build
+#                 docker build -t prmnxt_dev_msales-$new_version -f $CI_PROJECT_DIR/deployment/dev/Dockerfile .
+#                 docker images
+#                 # apply new image tag
+#                 docker tag prmnxt_dev_msales-$new_version 891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$IMAGE_TAG
+#                 docker images
+#                 # push new docker image
+#                 docker push 891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$IMAGE_TAG
+#                 # Save the IMAGE_TAG to a file for reference 
+#                 echo $IMAGE_TAG > ecr_image_tag.txt
+#                 echo "Current Build Image is ---> 891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$IMAGE_TAG"
+#             else
+#                 echo "No relevant changes detected. Skipping Docker build."
+#                 docker images
+#                 PREVIOUS_IMAGE_TAG=$(aws ecr describe-images --repository-name prmnxt_dev_msales --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text| sort -k2,2r | head -n1 | awk '{print $1}')
+#                 # Save the IMAGE_TAG to a file for reference
+#                 echo $PREVIOUS_IMAGE_TAG > ecr_image_tag.txt
+#                 echo "No new image build, Using previous image for deployment ---> 891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$PREVIOUS_IMAGE_TAG"
+#             fi
+#     artifacts:
+#         paths:
+#             - ecr_image_tag.txt
+#     rules:
+#         # not run on merge request
+#         - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+#           changes: 
+#             - "**/*"
+#           when: never
+#         # run only on develop branch
+#         - if: '$CI_COMMIT_BRANCH != "develop"'
+#           when: never   
+#         # run through web interface for develop branch
+#         - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "develop"'
+#         #  run on develop branch on code changes detected
+#         - if: '$CI_COMMIT_BRANCH == "develop"'
+#         - changes:  
+#             - $CI_PROJECT_DIR/deployment/dev/Dockerfile
+#             - '**/*' 
+#         - when: never
+
+dev_prm_nxt_sales-deploy:
+    stage: deploy
+    environment:
+      name: development 
+    # when: manual
+    tags:
+        - prm-nxt-sales-service-runner
+    before_script:
+        - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_ECR_REGISTRY
+        - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_DEV_CLUSTER_NAME
+    script:
+        #Get nodes
+        - kubectl get nodes
+        - kubectl get po -n dev
+
+        # Create temp env file from GitLab variables
+        - |
+            cat > gitlab-secrets.env <<EOF
+            LOAD_STORYBOOK=$LOAD_STORYBOOK
+            SECRET_KEY=$SECRET_KEY
+            RAZORPAY_KEY=$RAZORPAY_KEY
+            MOENGAGE_KEY=$MOENGAGE_KEY
+            GQL_BASE_URL=$GQL_BASE_URL
+            ENVIRONMENT=$ENVIRONMENT
+            CDN_ASSETS_URL=$CDN_ASSETS_URL
+            MIXPANEL_PROJECT_TOKEN=$MIXPANEL_PROJECT_TOKEN
+            ENABLE_MOENGAGE_MIXPANEL_EVENTS=$ENABLE_MOENGAGE_MIXPANEL_EVENTS
+            ENABLE_REGISTRATION_SCHEDULER=$ENABLE_REGISTRATION_SCHEDULER
+            DASHBOARD_EXTERNAL_URL=$DASHBOARD_EXTERNAL_URL
+            REDIRECT_AD_URL=$REDIRECT_AD_URL
+            AD_URL=$AD_URL
+            AZURE_TENANT_ID=$AZURE_TENANT_ID
+            WEB_CLIENT_ID=$WEB_CLIENT_ID
+            MOBILE_CLIENT_ID=$MOBILE_CLIENT_ID
+            EOF
+
+        # Create / update kubernetes secret from GitLab variable
+        - kubectl create secret generic msales-secret -n dev --from-env-file=gitlab-secrets.env --dry-run=client -o yaml | kubectl apply -f - 
+
+        #Fetch Image tag in variable
+        - IMAGE_TAG=$(cat ecr_image_tag.txt)
+        - echo "Deploying with image 891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$IMAGE_TAG"
+        #Change Image tag in YAML
+        - sed "s/{{IMAGE_TAG}}/${IMAGE_TAG}/g" $CI_PROJECT_DIR/deployment/dev/nginx-frontend-deployment.yaml > nginx_updated-frontend-deployment.yaml
+        # destrying previous deplyment 
+        - kubectl delete -f nginx_updated-frontend-deployment.yaml -n dev
+        # creating new deployment 
+        - kubectl apply -f nginx_updated-frontend-deployment.yaml -n dev
+        - sleep 140
+        - kubectl get po -n dev
+        - kubectl get deployment -n dev
+        - POD_ID=$(kubectl get po -n dev  -l app=nginx-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - kubectl get deployment -n dev
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n dev -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n dev -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n dev
+        - kubectl get deployment nginx-frontend -n dev -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n dev
+        - rm -f gitlab-secrets.env
+    artifacts:
+        paths:
+            - ecr_image_tag.txt
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on develop branch
+        - if: '$CI_COMMIT_BRANCH != "develop"'
+          when: never   
+        # run through web interface for develop branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "develop"'
+          when: always
+        #  run on develop branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "develop"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/dev/Dockerfile
+            - '**/*'
+        - when: never
+
+dev_prm_nxt_sales-rollback:
+    stage: rollback 
+    when: manual
+    tags:
+        - prm-nxt-sales-service-runner
+    before_script:
+        - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_ECR_REGISTRY
+        - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_DEV_CLUSTER_NAME
+    script:
+        - if [ -n "$PRM_NXT_SALES_DEV_ROLLBACK_SPECIFIC_VERSION_IMG_TAG" ]; then
+            echo "Rolling back to specific image version deployment ---> 891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$PRM_NXT_SALES_DEV_ROLLBACK_SPECIFIC_VERSION_IMG_TAG";
+            kubectl set image deployment/nginx-frontend nginx-frontend=891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$PRM_NXT_SALES_DEV_ROLLBACK_SPECIFIC_VERSION_IMG_TAG -n dev || exit 1;
+          else
+            echo "No specific image version is specified for rollback, So Rolling back to the previous revision";
+            previous_version=$(aws ecr describe-images --repository-name prmnxt_dev_msales --query "imageDetails[?imageTags[?contains(@, 'prmnxt_dev_msales')]].[imageTags[0], imagePushedAt]" --output text --region ap-south-1 | sort -k2,2r | awk 'NR==2 {print $1}');
+            echo "Previous ECR image ---> 891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$previous_version";
+
+            if kubectl get deployment nginx-frontend -n dev; then
+                kubectl delete deployment nginx-frontend -n dev || exit 1;
+                kubectl create deployment nginx-frontend --image=891377194963.dkr.ecr.ap-south-1.amazonaws.com/prmnxt_dev_msales:$previous_version -n dev || exit 1;
+            else
+                echo "Deployment nginx-frontend does not exist. Unable to rollback.";
+                exit 1;
+            fi  
+          fi
+        - sleep 140
+        - kubectl get po -n dev
+        - kubectl get deployment -n dev
+        - POD_ID=$(kubectl get po -n dev  -l app=nginx-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - kubectl get deployment -n dev
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n dev -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n dev -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n dev
+        - kubectl get deployment nginx-frontend -n dev -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n dev
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on develop branch
+        - if: '$CI_COMMIT_BRANCH != "develop"'
+          when: never   
+        # run through web interface for develop branch 
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "develop"'
+          when: manual
+        #  run on develop branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "develop"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/dev/Dockerfile
+            - '**/*'
+        - when: never
+
+dev_prm_nxt_sales-restart_deployment:
+    stage: restart-deployment
+    when: manual
+    tags:
+        - prm-nxt-sales-service-runner
+    before_script:
+        - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_ECR_REGISTRY
+        - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_DEV_CLUSTER_NAME
+    script:
+        - echo "Checking current status of the pods before deletion"
+        - kubectl get po -n dev
+        - kubectl get deployment -n dev
+        # Get the ID of the existing pod
+        - POD_ID=$(kubectl get po -n dev -l app=nginx-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - echo "Current POD_ID -> $POD_ID"
+        # Check the pod status before deletion
+        - POD_STATUS=$(kubectl get po $POD_ID -n dev -o jsonpath='{.status.phase}')
+        - echo "Pod status before deletion is --> $POD_STATUS"
+        # Delete the existing pod to free up IPs
+        - echo "Deleting existing pod for nginx-frontend..."
+        - kubectl delete pod $POD_ID -n dev
+        - echo "Restarting Service Deployment"
+        - echo "Waiting for the pods to be ready..."
+        - sleep 60  # Initial sleep before checking the status
+        - MAX_RETRIES=10 
+        - RETRIES=0
+        - SUCCESS=false
+        - >
+          while [ $RETRIES -lt $MAX_RETRIES ]; do
+            # Get the new pod ID
+            POD_ID=$(kubectl get po -n dev -l app=nginx-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+            echo "New POD_ID -> $POD_ID"
+            status=$(kubectl get po $POD_ID -n dev -o jsonpath='{.status.phase}')
+            echo "New pod status is --> $POD_STATUS"
+            if [[ $status == "Running" ]]; then
+              SUCCESS=true
+              break
+            else
+              echo "New pod is not running yet. Current status -> $status. Retrying in 30 seconds..."
+              sleep 30
+            fi
+            RETRIES=$((RETRIES+1))
+            sleep 60  # Added sleep before checking the status again
+          done
+          # Added condition to check if rollout was successful and fail the job if not
+        - >
+          if [ "$SUCCESS" = true ]; then
+            echo "Deployment successfully rolled out."
+          else
+            echo "Failed to recreate deployment after $MAX_RETRIES attempts. Exiting..."
+            exit 1  # Fail the job
+          fi
+        - POD_ID=$(kubectl get po -n dev -l app=nginx-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - kubectl get po $POD_ID -n dev
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n dev -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n dev -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n dev
+        - kubectl get deployment nginx-frontend -n dev -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n dev
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on develop branch
+        - if: '$CI_COMMIT_BRANCH != "develop"'
+          when: never   
+        # run through web interface for develop branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "develop"'
+          when: manual
+        #  run on develop branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "develop"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/dev/Dockerfile
+            - '**/*'
+        - when: never
+
+
+# --------------------------------------------------------------------------------------------
+# ↓ uat Stages ↓
+# --------------------------------------------------------------------------------------------
+
+uat_prm_nxt_sales-build:
+    stage: build
+    tags:
+        - prm-nxt-sales-service-uat-runner
+    before_script:
+        - npm config set proxy http://10.23.26.233:8080
+        - npm config set https-proxy http://10.23.26.233:8080
+        - npm config set strict-ssl false
+        - echo "=== Checking Memory Usage ==="
+        - free -m
+        - echo "=== Checking Disk Space ==="
+        - df -h
+        - echo "=== Checking CPU Usage ==="
+        - top -bn1 | head -n 10
+        - echo "Checking npm version"
+        - npm -v
+        - pwd
+        - echo "Yarn version"
+        - yarn -v
+    script:
+        - echo "Installing dependencies..."
+        - yarn install
+        - echo "Building the application..."
+        - yarn build:web:uat
+        - ls -l
+    artifacts:
+        paths:
+            - build/
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+          # run only on uat branch
+        - if: '$CI_COMMIT_BRANCH != "uat"'
+          when: never   
+        # run through web interface for uat branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "uat"'
+        #  run on uat branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "uat"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/uat/Dockerfile
+            - '**/*'
+
+uat_prm_nxt_sales-test:
+    stage: test
+    tags:
+        - prm-nxt-sales-service-uat-runner
+    before_script:
+        - npm config set proxy http://10.23.26.233:8080
+        - npm config set https-proxy http://10.23.26.233:8080
+        - npm config set strict-ssl false
+    script:
+        - echo "Running tests and generating coverage report..."
+        - yarn install
+        - yarn run test || EXIT_CODE=$?
+        - echo "Jest exit code $EXIT_CODE" 
+    artifacts:
+        paths:
+            - coverage/
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+          # run only on uat branch
+        - if: '$CI_COMMIT_BRANCH != "uat"'
+          when: never   
+        # run through web interface for uat branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "uat"'
+        #  run on uat branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "uat"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/uat/Dockerfile
+            - '**/*'
+
+uat_prm_nxt_sales-sonarqube-scan:
+    stage: scan
+    tags:
+        - runner
+    image: 
+        name: 128081702938.dkr.ecr.ap-south-1.amazonaws.com/revostry:sonar_scanner-v0.0.1
+        entrypoint: [""]
+    variables:
+        SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  
+        GIT_DEPTH: "0" 
+    cache:
+        key: "${CI_JOB_NAME}"
+        paths:
+            - .sonar/cache
+    script: 
+        - echo "Running sonar-scanner..."
+        - sonar-scanner || SCAN_EXIT_STATUS=$?
+        - echo "Sonar-scanner exit status:${SCAN_EXIT_STATUS}"
+        - echo "Generating CNES report..."
+        - java -jar /revostry/sonar-report-jar/sonar-cnes-report-4.3.0.jar -s $SONAR_HOST_URL -t $SONAR_AUTH_TOKEN -p base_tataplay_org_prm-nxt_prm-nxt-sales_AZIy6mBb1r-taeCknfNW -f docx -o prm-nxt-sales-uat-sonarscan-report
+        - REPORT_GENERATION_STATUS=$?
+        - echo "CNES report generation exit status:${REPORT_GENERATION_STATUS}"
+        - echo "Exiting with status:${SCAN_EXIT_STATUS}"
+        - exit ${SCAN_EXIT_STATUS}
+    artifacts:
+        paths:
+        - prm-nxt-sales-uat-sonarscan-report/*.docx
+        when: always
+    allow_failure: true
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+          # run only on uat branch
+        - if: '$CI_COMMIT_BRANCH != "uat"'
+          when: never   
+        # run through web interface for uat branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "uat"'
+        #  run on uat branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "uat"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/uat/Dockerfile
+            - '**/*'
+
+uat_prm_nxt_sales-docker_build:
+  stage: docker
+  tags:
+    - prm-nxt-sales-service-uat-runner
+
+  before_script:
+    - mkdir -p msales-mumbai-frontend
+    - cp -r build/* msales-mumbai-frontend/
+    - cp deployment/uat/nginx.conf .
+    - aws ecr get-login-password | docker login --username AWS --password-stdin $PRM_NXT_SALES_ECR_REGISTRY
+
+  script:
+    - |
+      set -euo pipefail
+
+      echo "Checking system resources..."
+      free -h
+      df -h /
+      docker system df
+      docker ps -a
+      docker images
+
+      echo "Preparing Docker build context..."
+      ls -lh
+      ls -lh msales-mumbai-frontend || echo " msales-mumbai-frontend missing!"
+
+      echo "Fetching previous image version from ECR..."
+
+      # Safe ECR fetch (won’t fail if no images exist)
+      set +e
+      previous_version=$(aws ecr describe-images \
+        --repository-name uat-msales-mumbai-frontend \
+        --query "imageDetails[*].[imageTags[0], imagePushedAt]" \
+        --output text 2>/dev/null | sort -k2,2r | head -n1 | awk '{print $1}')
+      set -e
+
+      previous_version=${previous_version:-v0}
+      echo "Previous version -> $previous_version"
+
+      numeric_version=$(echo "$previous_version" | sed 's/[^0-9]*//g')
+      numeric_version=${numeric_version:-0}
+      echo "Extracted numeric version -> $numeric_version"
+
+      new_version="v$((numeric_version + 1))"
+      echo "New version -> $new_version"
+
+      IMAGE_TAG="uat-msales-mumbai-frontend-${new_version}-${CI_COMMIT_SHORT_SHA}-${CI_PIPELINE_ID}"
+      echo "Generated image tag -> $IMAGE_TAG"
+
+      echo "==> Starting Docker build..."
+      docker build \
+        -t uat-msales-mumbai-frontend-${new_version} \
+        -f deployment/uat/Dockerfile .
+
+      echo "==> Tagging image..."
+      docker tag \
+        uat-msales-mumbai-frontend-${new_version} \
+        891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:${IMAGE_TAG}
+
+      echo "==> Pushing image to ECR..."
+      docker push \
+        891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:${IMAGE_TAG}
+
+      echo "${IMAGE_TAG}" > ecr_image_tag.txt
+      echo " Image pushed successfully:"
+      echo "891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:${IMAGE_TAG}"
+
+  artifacts:
+    paths:
+      - ecr_image_tag.txt
+
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+
+    - if: '$CI_COMMIT_BRANCH == "uat"'
+      changes:
+        - deployment/uat/Dockerfile
+        - "**/*"
+
+# uat_prm_nxt_sales-docker_build:
+#   stage: docker
+#   tags:
+#     - prm-nxt-sales-service-uat-runner
+#   before_script:
+#     - mkdir -p msales-mumbai-frontend
+#     - cp -r build/* msales-mumbai-frontend/
+#     - cp deployment/uat/nginx.conf .
+#     - aws ecr get-login-password | docker login --username AWS --password-stdin $PRM_NXT_SALES_ECR_REGISTRY
+#   script:
+#     - |
+#       set -euo pipefail
+
+#       echo "Checking for changes in Dockerfile and source files..."
+#       echo "Checking system resources..."
+#       free -h
+#       df -h /
+#       docker system df
+#       docker ps -a
+#       docker images
+
+#       echo "Preparing Docker build context..."
+#       ls -lh
+#       ls -lh msales-mumbai-frontend || echo " msales-mumbai-frontend missing!"
+#       echo "Checking for relevant changes..."
+
+#       if [ "$CI_COMMIT_BEFORE_SHA" = "0000000000000000000000000000000000000000" ] || \
+#         git diff --name-only $CI_COMMIT_BEFORE_SHA $CI_COMMIT_SHA -- deployment/uat/Dockerfile | grep -q . || \
+#         git diff --name-only $CI_COMMIT_BEFORE_SHA $CI_COMMIT_SHA -- . | grep -v '.gitlab-ci.yml' | grep -q .; then
+
+#         previous_version=$(aws ecr describe-images --repository-name uat-msales-mumbai-frontend --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text | sort -k2,2r | head -n1 | awk '{print $1}')
+#         echo "Previous version -> $previous_version"
+
+#         numeric_version=$(echo "$previous_version" | grep -o -E '[0-9]+' | head -n1 || echo "0")
+#         echo "Extracted numeric version -> $numeric_version"
+
+#         prefix="v"
+#         new_image_tag_version=$((numeric_version + 1))
+#         echo "Incremented version -> $new_image_tag_version"
+
+#         new_version="${prefix}${new_image_tag_version}"
+#         echo "New version -> $new_version"
+
+#         export IMAGE_TAG="uat-msales-mumbai-frontend-$new_version-$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID"
+
+#         echo "==> Starting Docker build..."
+#         docker build -t uat-msales-mumbai-frontend-$new_version -f $CI_PROJECT_DIR/deployment/uat/Dockerfile . || {
+#           echo " Docker build failed"
+#           exit 1
+#         }
+
+#         echo "==> Tagging and pushing image..."
+#         docker tag uat-msales-mumbai-frontend-$new_version 891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$IMAGE_TAG
+#         docker push 891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$IMAGE_TAG
+
+#         echo $IMAGE_TAG > ecr_image_tag.txt
+#         echo " Image pushed: 891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$IMAGE_TAG"
+#       else
+#         echo "No relevant changes detected. Skipping Docker build."
+#         docker images
+#         PREVIOUS_IMAGE_TAG=$(aws ecr describe-images --repository-name uat-msales-mumbai-frontend --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text | sort -k2,2r | head -n1 | awk '{print $1}')
+#         echo $PREVIOUS_IMAGE_TAG > ecr_image_tag.txt
+#         echo "Using previous image: 891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$PREVIOUS_IMAGE_TAG"
+#       fi
+#   artifacts:
+#     paths:
+#       - ecr_image_tag.txt
+#   rules:
+#     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+#       changes:
+#         - "**/*"
+#       when: never
+#     - if: '$CI_COMMIT_BRANCH != "uat"'
+#       when: never
+#     - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "uat"'
+#     - if: '$CI_COMMIT_BRANCH == "uat"'
+#     - changes:
+#         - $CI_PROJECT_DIR/deployment/uat/Dockerfile
+#         - '**/*'
+
+
+# uat_prm_nxt_sales-docker_build:
+#     stage: docker 
+#     tags:
+#         - prm-nxt-sales-service-uat-runner
+#     before_script:
+#         # in dockerfile build folder used as msales-mumbai-frontend 
+#         - mkdir -p msales-mumbai-frontend 
+#         # copying build folder content in msales-mumbai-frontend folder
+#         - cp -r build/* msales-mumbai-frontend/
+#         - ls msales-mumbai-frontend/
+#         # copying nginx.config file in root to apply nginx rule using docker file
+#         - cp deployment/uat/nginx.conf .
+#         - aws ecr get-login-password | docker login --username AWS --password-stdin $PRM_NXT_SALES_ECR_REGISTRY
+
+#     script:
+#       - |
+#         set -euo pipefail
+#         echo "Checking for changes in Dockerfile and source files..."
+
+#         echo "Checking system resources..."
+#         free -h
+#         df -h /
+#         docker system df
+#         docker ps -a
+#         docker images
+
+#         if [ -n "$(git diff --name-only HEAD~1 HEAD -- $CI_PROJECT_DIR/deployment/uat/Dockerfile)" ] || [ -n "$(git diff --name-only HEAD~1 HEAD -- . | grep -v '.gitlab-ci.yml')" ]; then
+#             echo "Changes detected in Dockerfile or code. Building Docker image..."
+            
+#             previous_version=$(aws ecr describe-images --repository-name uat-msales-mumbai-frontend --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text | sort -k2,2r | head -n1 | awk '{print $1}')
+#             echo "Previous version -> $previous_version"
+
+#             numeric_version=$(echo "$previous_version" | grep -o -E '[0-9]+' | head -n1)
+#             echo "Extracted numeric version -> $numeric_version"
+
+#             prefix="v"
+#             new_image_tag_version=$((numeric_version + 1))
+#             echo "Incremented version -> $new_image_tag_version"
+
+#             new_version="${prefix}${new_image_tag_version}"
+#             echo "New version -> $new_version"
+
+#             export IMAGE_TAG="uat-msales-mumbai-frontend-$new_version-$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID"
+
+#             echo "Running Docker build..."
+#             docker build -t uat-msales-mumbai-frontend-$new_version -f $CI_PROJECT_DIR/deployment/uat/Dockerfile . || { echo "Docker build failed"; exit 1; }
+
+#             echo "Tagging and pushing image..."
+#             docker tag uat-msales-mumbai-frontend-$new_version 891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$IMAGE_TAG
+#             docker push 891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$IMAGE_TAG
+
+#             echo $IMAGE_TAG > ecr_image_tag.txt
+#             echo "Image pushed: 891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$IMAGE_TAG"
+#         else
+#             echo "No relevant changes detected. Skipping Docker build."
+#             docker images
+#             PREVIOUS_IMAGE_TAG=$(aws ecr describe-images --repository-name uat-msales-mumbai-frontend --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text | sort -k2,2r | head -n1 | awk '{print $1}')
+#             echo $PREVIOUS_IMAGE_TAG > ecr_image_tag.txt
+#             echo "Using previous image: 891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$PREVIOUS_IMAGE_TAG"
+#         fi
+
+
+#     artifacts:
+#         paths:
+#             - ecr_image_tag.txt
+#     rules:
+#         # not run on merge request
+#         - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+#           changes: 
+#             - "**/*"
+#           when: never
+#         # run only on uat branch
+#         - if: '$CI_COMMIT_BRANCH != "uat"'
+#           when: never   
+#         # run through web interface for uat branch
+#         - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "uat"'
+#         #  run on uat branch on code changes detected
+#         - if: '$CI_COMMIT_BRANCH == "uat"'
+#         - changes:  
+#             - $CI_PROJECT_DIR/deployment/uat/Dockerfile
+#             - '**/*' 
+
+uat_prm_nxt_sales-deploy:
+    stage: deploy 
+    # when: manual
+    tags:
+        - prm-nxt-sales-service-uat-runner
+    before_script:
+        - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_ECR_REGISTRY
+        - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_UAT_CLUSTER_NAME
+    script:
+        #Get nodes
+        - kubectl get nodes
+        - kubectl get po -n uat
+        #Fetch Image tag in variable
+        - IMAGE_TAG=$(cat ecr_image_tag.txt)
+        - echo "Deploying with image 891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$IMAGE_TAG"
+        #Change Image tag in YAML
+        - sed "s/{{IMAGE_TAG}}/${IMAGE_TAG}/g" $CI_PROJECT_DIR/deployment/uat/nginx-frontend-deployment.yaml > nginx_updated-frontend-deployment.yaml
+        - kubectl apply -f nginx_updated-frontend-deployment.yaml -n uat
+        - sleep 70
+        - POD_ID=$(kubectl get po -n uat  -l app=uat-msales-mumbai-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - kubectl get deployment -n uat
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n uat -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n uat -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n uat
+        - kubectl get deployment uat-msales-mumbai-frontend -n uat -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n uat
+    artifacts:
+        paths:
+            - ecr_image_tag.txt
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on uat branch
+        - if: '$CI_COMMIT_BRANCH != "uat"'
+          when: never   
+        # run through web interface for uat branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "uat"'
+          when: always
+        #  run on uat branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "uat"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/uat/Dockerfile
+            - '**/*'
+        - when: never
+
+uat_prm_nxt_sales-rollback:
+    stage: rollback 
+    when: manual
+    tags:
+        - prm-nxt-sales-service-uat-runner
+    before_script:
+        - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_ECR_REGISTRY
+        - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_UAT_CLUSTER_NAME
+    script:
+        - if [ -n "$PRM_NXT_SALES_UAT_ROLLBACK_SPECIFIC_VERSION_IMG_TAG" ]; then
+            echo "Rolling back to specific image version deployment ---> 891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$PRM_NXT_SALES_UAT_ROLLBACK_SPECIFIC_VERSION_IMG_TAG";
+            kubectl set image deployment/uat-msales-mumbai-frontend uat-msales-mumbai-frontend=891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$PRM_NXT_SALES_UAT_ROLLBACK_SPECIFIC_VERSION_IMG_TAG -n uat || exit 1;
+          else
+            echo "No specific image version is specified for rollback, So Rolling back to the previous revision";
+            previous_version=$(aws ecr describe-images --repository-name uat-msales-mumbai-frontend --query "imageDetails[?imageTags[?contains(@, 'uat-msales-mumbai-frontend')]].[imageTags[0], imagePushedAt]" --output text --region ap-south-1 | sort -k2,2r | awk 'NR==2 {print $1}');
+            echo "Previous ECR image ---> 891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$previous_version";
+
+            if kubectl get deployment uat-msales-mumbai-frontend -n uat; then
+                kubectl delete deployment uat-msales-mumbai-frontend -n uat || exit 1;
+                kubectl create deployment uat-msales-mumbai-frontend --image=891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:$previous_version -n uat || exit 1;
+            else
+                echo "Deployment uat-msales-mumbai-frontend does not exist. Unable to rollback.";
+                exit 1;
+            fi  
+          fi
+        - sleep 140
+        - kubectl get po -n uat
+        - kubectl get deployment -n uat
+        - POD_ID=$(kubectl get po -n uat  -l app=uat-msales-mumbai-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - kubectl get deployment -n uat
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n uat -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n uat -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n uat
+        - kubectl get deployment uat-msales-mumbai-frontend -n uat -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n uat
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on uat branch
+        - if: '$CI_COMMIT_BRANCH != "uat"'
+          when: never   
+        # run through web interface for uat branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "uat"'
+          when: manual
+        #  run on uat branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "uat"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/uat/Dockerfile
+            - '**/*'
+        - when: never
+
+uat_prm_nxt_sales-restart_deployment:
+    stage: restart-deployment
+    when: manual
+    tags:
+        - prm-nxt-sales-service-uat-runner
+    before_script:
+        - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_ECR_REGISTRY
+        - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_UAT_CLUSTER_NAME
+    script:
+        - echo "Restarting Service Deployment"
+        - kubectl rollout restart deployment/uat-msales-mumbai-frontend -n uat
+        - echo "Waiting for the pods to be ready..."
+        # Initial sleep before checking the status
+        - sleep 60  
+        - MAX_RETRIES=10 
+        - RETRIES=0
+        - SUCCESS=false
+        - >
+          while [ $RETRIES -lt $MAX_RETRIES ]; do
+            status=$(kubectl rollout status deployment/uat-msales-mumbai-frontend -n uat)
+            echo $status
+            if [[ $status == *"successfully rolled out"* ]]; then
+              SUCCESS=true
+              break
+            elif [[ $status == *"waiting for deployment"* || $status == *"pending termination"* ]]; then
+              echo "Still waiting for rollout... retrying in 30s"
+            fi
+            RETRIES=$((RETRIES+1))
+            # Added sleep before checking the status again
+            sleep 30  
+          done
+          # Added condition to check if rollout was successful and fail the job if not
+        - >
+          if [ "$SUCCESS" = true ]; then
+            echo "Deployment successfully rolled out."
+          else
+            echo "Failed to recreate deployment after $MAX_RETRIES attempts. Exiting..."
+            exit 1  # Fail the job
+          fi
+
+        - POD_ID=$(kubectl get po -n uat -l app=uat-msales-mumbai-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - kubectl get po $POD_ID -n uat
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n uat -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n uat -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n uat
+        - kubectl get deployment uat-msales-mumbai-frontend -n uat -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n uat
+        - echo "Deployment got restarted with pod ---> $POD_ID"
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on uat branch
+        - if: '$CI_COMMIT_BRANCH != "uat"'
+          when: never   
+        # run through web interface for uat branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "uat"'
+          when: manual
+        #  run on uat branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "uat"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/uat/Dockerfile
+            - '**/*'
+        - when: never
+
+# --------------------------------------------------------------------------------------------
+# ↓ pre_prod Stages ↓
+# --------------------------------------------------------------------------------------------
+
+preprod_prm_nxt_sales-build:
+    stage: build
+    tags:
+        - prm-nxt-sales-service-preprod-runner
+    before_script:
+        - npm config set proxy http://10.23.26.233:8080
+        - npm config set https-proxy http://10.23.26.233:8080
+        - npm config set strict-ssl false
+        - echo "=== Checking Memory Usage ==="
+        - free -m
+        - echo "=== Checking Disk Space ==="
+        - df -h
+        - echo "=== Checking CPU Usage ==="
+        - top -bn1 | head -n 10
+        - echo "Checking npm version"
+        - npm -v
+        - pwd
+        - echo "Yarn version"
+        - yarn -v
+    script:
+        - echo "Installing dependencies..."
+        - yarn install
+        - echo "Building the application..."
+        - yarn build:web:stage
+        - ls -l
+    artifacts:
+        paths:
+            - build/
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+          # run only on preprod branch
+        - if: '$CI_COMMIT_BRANCH != "stage"'
+          when: never   
+        # run through web interface for preprod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "stage"'
+        #  run on pre_prod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "stage"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/preprod/Dockerfile
+            - '**/*'
+
+preprod_prm_nxt_sales-test:
+    stage: test
+    tags:
+        - prm-nxt-sales-service-preprod-runner
+    before_script:
+        - npm config set proxy http://10.23.26.233:8080
+        - npm config set https-proxy http://10.23.26.233:8080
+        - npm config set strict-ssl false
+    script:
+        - echo "Running tests and generating coverage report..."
+        - yarn install
+        - yarn run test || EXIT_CODE=$?
+        - echo "Jest exit code $EXIT_CODE" 
+    artifacts:
+        paths:
+            - coverage/
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+          # run only on preprod branch
+        - if: '$CI_COMMIT_BRANCH != "stage"'
+          when: never   
+        # run through web interface for preprod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "stage"'
+        #  run on preprod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "stage"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/preprod/Dockerfile
+            - '**/*'
+            
+preprod_prm_nxt_sales-sonarqube-scan:
+    stage: scan
+    tags:
+        - runner
+    image: 
+        name: 128081702938.dkr.ecr.ap-south-1.amazonaws.com/revostry:sonar_scanner-v0.0.1
+        entrypoint: [""]
+    variables:
+        SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  
+        GIT_DEPTH: "0" 
+    cache:
+        key: "${CI_JOB_NAME}"
+        paths:
+            - .sonar/cache
+    script: 
+        - echo "Running sonar-scanner..."
+        - sonar-scanner || SCAN_EXIT_STATUS=$?
+        - echo "Sonar-scanner exit status:${SCAN_EXIT_STATUS}"
+        - echo "Generating CNES report..."
+        - java -jar /revostry/sonar-report-jar/sonar-cnes-report-4.3.0.jar -s $SONAR_HOST_URL -t $SONAR_AUTH_TOKEN -p base_tataplay_org_prm-nxt_prm-nxt-sales_AZIy6mBb1r-taeCknfNW -f docx -o prm-nxt-sales-pre_prod-sonarscan-report
+        - REPORT_GENERATION_STATUS=$?
+        - echo "CNES report generation exit status:${REPORT_GENERATION_STATUS}"
+        - echo "Exiting with status:${SCAN_EXIT_STATUS}"
+        - exit ${SCAN_EXIT_STATUS}
+    artifacts:
+        paths:
+        - prm-nxt-sales-pre_prod-sonarscan-report/*.docx
+        when: always
+    allow_failure: true
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+          # run only on preprod branch
+        - if: '$CI_COMMIT_BRANCH != "stage"'
+          when: never   
+        # run through web interface for preprod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "stage"'
+        #  run on preprod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "stage"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/preprod/Dockerfile
+            - '**/*'
+
+preprod_prm_nxt_sales-docker_build:
+    stage: docker 
+    tags:
+        - prm-nxt-sales-service-preprod-runner
+    before_script:
+        # in dockerfile build folder used as pre-prod-msales-mumbai-frontend
+        - mkdir -p pre-prod-msales-mumbai-frontend
+        # copying build folder content in pre-prod-msales-mumbai-frontendfolder
+        - cp -r build/* pre-prod-msales-mumbai-frontend
+        - ls pre-prod-msales-mumbai-frontend
+        # copying nginx.config file in root to apply nginx rule using docker file
+        - cp deployment/preprod/nginx.conf .
+        - aws ecr get-login-password | docker login --username AWS --password-stdin $PRM_NXT_SALES_PROD_ECR_REGISTRY
+    script:
+        - echo "Checking for changes in Dockerfile and source files..."
+        # if files are modified except CI file then only build new docker image apply new tag , and push to ecr
+        - |
+            if [ -n "$(git diff --name-only HEAD~1 HEAD -- $CI_PROJECT_DIR/deployment/preprod/Dockerfile)" || [ -n "$(git diff --name-only HEAD~1 HEAD -- . | grep -v '.gitlab-ci.yml')"  ] ;  then
+                echo "Changes detected in  Dockerfile or code. Building Docker image..."
+                docker images
+                # extracting previous version tag 
+                previous_version=$(aws ecr describe-images --repository-name pre-prod-msales-mumbai-frontend --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text| sort -k2,2r | head -n1 | awk '{print $1}')
+                echo "Previous version -> $previous_version"
+                # Extract the numeric part from the version tag
+                numeric_version=$(echo "$previous_version" | grep -o -E '[0-9]+' | head -n1)
+                echo "Extracted numeric version -> $numeric_version"
+                # Set the prefix to always be lowercase 'v'
+                prefix="v"
+                new_image_tag_version=$((numeric_version + 1))
+                echo "Incremented version -> $new_image_tag_version"
+                # Concatenate the 'v' with the incremented version number
+                new_version="${prefix}$new_image_tag_version"
+                echo "New version -> $new_version"
+                export IMAGE_TAG="pre-prod-msales-mumbai-frontend-$new_version-$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID"
+                # docker image build
+                docker build -t pre-prod-msales-mumbai-frontend-$new_version -f $CI_PROJECT_DIR/deployment/preprod/Dockerfile .
+                docker images
+                # apply new image tag
+                docker tag pre-prod-msales-mumbai-frontend-$new_version 588738605243.dkr.ecr.ap-south-1.amazonaws.com/pre-prod-msales-mumbai-frontend:$IMAGE_TAG
+                docker images
+                # push new docker image
+                docker push 588738605243.dkr.ecr.ap-south-1.amazonaws.com/pre-prod-msales-mumbai-frontend:$IMAGE_TAG
+                # Save the IMAGE_TAG to a file for reference 
+                echo $IMAGE_TAG > ecr_image_tag.txt
+                echo "Current Build Image is ---> 588738605243.dkr.ecr.ap-south-1.amazonaws.com/pre-prod-msales-mumbai-frontend:$IMAGE_TAG"
+            else
+                echo "No relevant changes detected. Skipping Docker build."
+                docker images
+                PREVIOUS_IMAGE_TAG=$(aws ecr describe-images --repository-name pre-prod-msales-mumbai-frontend --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text | sort -k2,2r | head -n1 | awk '{print $1}')
+                # Save the IMAGE_TAG to a file for reference
+                echo $PREVIOUS_IMAGE_TAG > ecr_image_tag.txt
+                echo "No new image build, Using previous image for deployment ---> 588738605243.dkr.ecr.ap-south-1.amazonaws.com/pre-prod-msales-mumbai-frontend:$PREVIOUS_IMAGE_TAG"
+            fi
+    artifacts:
+        paths:
+            - ecr_image_tag.txt
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on preprod branch
+        - if: '$CI_COMMIT_BRANCH != "stage"'
+          when: never   
+        # run through web interface for preprod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "stage"'
+        #  run on preprod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "stage"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/preprod/Dockerfile
+            - '**/*' 
+
+preprod_prm_nxt_sales-deploy:
+    stage: deploy 
+    when: manual
+    tags:
+        - prm-nxt-sales-service-preprod-runner
+    before_script:
+        - aws ecr get-login-password | docker login --username AWS --password-stdin $PRM_NXT_SALES_PROD_ECR_REGISTRY
+        - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_PREPROD_CLUSTER_NAME
+    script:
+        #Get nodes
+        - kubectl get nodes
+        - kubectl get po -n preprod
+        #Fetch Image tag in variable
+        - IMAGE_TAG=$(cat ecr_image_tag.txt)
+        - echo "Deploying with image 588738605243.dkr.ecr.ap-south-1.amazonaws.com/pre-prod-msales-mumbai-frontend:$IMAGE_TAG"
+        #Change Image tag in YAML
+        - sed "s/{{IMAGE_TAG}}/${IMAGE_TAG}/g" $CI_PROJECT_DIR/deployment/preprod/pre-prod-msales-mumbai-frontend-deployment.yaml > pre-prod-msales_updated-mumbai-frontend-deployment.yaml
+        - kubectl apply -f pre-prod-msales_updated-mumbai-frontend-deployment.yaml -n preprod
+        - sleep 70
+        - POD_ID=$(kubectl get po -n preprod  -l app=pre-prod-msales-mumbai-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - echo "$POD_ID"
+        - kubectl get deployment -n preprod
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n preprod -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n preprod -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n preprod
+        - kubectl get deployment pre-prod-msales-mumbai-frontend -n preprod -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n preprod
+    artifacts:
+        paths:
+            - ecr_image_tag.txt
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on preprod branch
+        - if: '$CI_COMMIT_BRANCH != "stage"'
+          when: never   
+        # run through web interface for preprod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "stage"'
+          when: manual
+        #  run on preprod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "stage"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/preprod/Dockerfile
+            - '**/*'
+        - when: never
+
+preprod_prm_nxt_sales-rollback:
+    stage: rollback 
+    when: manual
+    tags:
+        - prm-nxt-sales-service-preprod-runner
+    before_script:
+        - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_PROD_ECR_REGISTRY
+        - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_PREPROD_CLUSTER_NAME
+    script:
+        - if [ -n "$PRM_NXT_SALES_PREPROD_ROLLBACK_SPECIFIC_VERSION_IMG_TAG" ]; then
+            echo "Rolling back to specific image version deployment ---> 588738605243.dkr.ecr.ap-south-1.amazonaws.com/pre-prod-msales-mumbai-frontend:$PRM_NXT_SALES_PREPROD_ROLLBACK_SPECIFIC_VERSION_IMG_TAG";
+            kubectl set image deployment/pre-prod-msales-mumbai-frontend pre-prod-msales-mumbai-frontend=588738605243.dkr.ecr.ap-south-1.amazonaws.com/pre-prod-msales-mumbai-frontend:$PRM_NXT_SALES_PREPROD_ROLLBACK_SPECIFIC_VERSION_IMG_TAG -n preprod || exit 1;
+          else
+            echo "No specific image version is specified for rollback, So Rolling back to the previous revision";
+            previous_version=$(aws ecr describe-images --repository-name pre-prod-msales-mumbai-frontend --query "imageDetails[?imageTags[?contains(@, 'pre-prod-msales-mumbai-frontend')]].[imageTags[0], imagePushedAt]" --output text --region ap-south-1 | sort -k2,2r | awk 'NR==2 {print $1}');
+            echo "Previous ECR image ---> 588738605243.dkr.ecr.ap-south-1.amazonaws.com/pre-prod-msales-mumbai-frontend:$previous_version";
+
+            if kubectl get deployment pre-prod-msales-mumbai-frontend -n preprod; then
+                kubectl delete deployment pre-prod-msales-mumbai-frontend -n preprod || exit 1;
+                kubectl create deployment pre-prod-msales-mumbai-frontend --image=588738605243.dkr.ecr.ap-south-1.amazonaws.com/pre-prod-msales-mumbai-frontend:$previous_version -n preprod || exit 1;
+            else
+                echo "Deployment pre-prod-msales-mumbai-frontend does not exist. Unable to rollback.";
+                exit 1;
+            fi  
+          fi
+        - sleep 140
+        - kubectl get po -n preprod
+        - kubectl get deployment -n preprod
+        - POD_ID=$(kubectl get po -n preprod  -l app=pre-prod-msales-mumbai-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - kubectl get deployment -n preprod
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n preprod -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n preprod -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n preprod
+        - kubectl get deployment pre-prod-msales-mumbai-frontend -n preprod -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n preprod
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on preprod branch
+        - if: '$CI_COMMIT_BRANCH != "stage"'
+          when: never   
+        # run through web interface for preprod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "stage"'
+          when: manual
+        #  run on preprod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "stage"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/preprod/Dockerfile
+            - '**/*'
+        - when: never
+
+preprod_prm_nxt_sales-restart_deployment:
+    stage: restart-deployment
+    when: manual
+    tags:
+        - prm-nxt-sales-service-preprod-runner
+    before_script:
+        - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_PROD_ECR_REGISTRY
+        - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_PREPROD_CLUSTER_NAME
+    script:
+        - echo "Restarting Service Deployment"
+        - kubectl rollout restart deployment/pre-prod-msales-mumbai-frontend -n preprod
+        - echo "Waiting for the pods to be ready..."
+        # Initial sleep before checking the status
+        - sleep 60  
+        - MAX_RETRIES=10 
+        - RETRIES=0
+        - SUCCESS=false
+        - >
+          while [ $RETRIES -lt $MAX_RETRIES ]; do
+            status=$(kubectl rollout status deployment/pre-prod-msales-mumbai-frontend -n preprod)
+            echo $status
+            if [[ $status == *"successfully rolled out"* ]]; then
+              SUCCESS=true
+              break
+            elif [[ $status == *"waiting for deployment"* || $status == *"pending termination"* ]]; then
+              echo "Still waiting for rollout... retrying in 30s"
+            fi
+            RETRIES=$((RETRIES+1))
+            # Added sleep before checking the status again
+            sleep 30  
+          done
+          # Added condition to check if rollout was successful and fail the job if not
+        - >
+          if [ "$SUCCESS" = true ]; then
+            echo "Deployment successfully rolled out."
+          else
+            echo "Failed to recreate deployment after $MAX_RETRIES attempts. Exiting..."
+            exit 1  # Fail the job
+          fi
+
+        - POD_ID=$(kubectl get po -n preprod -l app=pre-prod-msales-mumbai-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - kubectl get po $POD_ID -n preprod
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n preprod -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n preprod -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n preprod
+        - kubectl get deployment pre-prod-msales-mumbai-frontend -n preprod -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n preprod
+        - echo "Deployment got restarted with pod ---> $POD_ID"
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on preprod branch
+        - if: '$CI_COMMIT_BRANCH != "stage"'
+          when: never   
+        # run through web interface for preprod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "stage"'
+          when: manual
+        #  run on preprod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "stage"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/preprod/Dockerfile
+            - '**/*'
+        - when: never
+
+
+# --------------------------------------------------------------------------------------------
+# ↓ prod Stages ↓
+# --------------------------------------------------------------------------------------------
+
+prod_prm_nxt_sales-build:
+    stage: build
+    tags:
+        - prm-nxt-sales-service-prod-runner
+    before_script:
+        - npm config set proxy http://10.23.26.233:8080
+        - npm config set https-proxy http://10.23.26.233:8080
+        - npm config set strict-ssl false
+        - yarn config set httpProxy http://10.23.26.233:8080
+        - yarn config set httpsProxy http://10.23.26.233:8080
+        - echo "=== Checking Memory Usage ==="
+        - free -m
+        - echo "=== Checking Disk Space ==="
+        - df -h
+        - echo "=== Checking CPU Usage ==="
+        - top -bn1 | head -n 10
+        - echo "Checking npm version"
+        - npm -v
+        - pwd
+        - echo "Yarn version"
+        - yarn -v
+    script:
+        - echo "Installing dependencies..."
+        - yarn install
+        - echo "Building the application..."
+        - yarn build:web:prod
+        - ls -l
+    artifacts:
+        paths:
+            - build/
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+          # run only on prod branch
+        - if: '$CI_COMMIT_BRANCH != "main"'
+          when: never   
+        # run through web interface for prod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main"'
+        #  run on prod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "main"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/prod/Dockerfile
+            - '**/*'
+
+prod_prm_nxt_sales-test:
+    stage: test
+    tags:
+        - prm-nxt-sales-service-prod-runner
+    before_script:
+        - npm config set proxy http://10.23.26.233:8080
+        - npm config set https-proxy http://10.23.26.233:8080
+        - npm config set strict-ssl false
+    script:
+        - echo "Running tests and generating coverage report..."
+        - yarn install
+        - yarn run test || EXIT_CODE=$?
+        - echo "Jest exit code $EXIT_CODE" 
+    artifacts:
+        paths:
+            - coverage/
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+          # run only on prod branch
+        - if: '$CI_COMMIT_BRANCH != "main"'
+          when: never   
+        # run through web interface for prod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main"'
+        #  run on prod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "main"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/prod/Dockerfile
+            - '**/*'
+            
+prod_prm_nxt_sales-sonarqube-scan:
+    stage: scan
+    tags:
+        - runner
+    image: 
+        name: 128081702938.dkr.ecr.ap-south-1.amazonaws.com/revostry:sonar_scanner-v0.0.1
+        entrypoint: [""]
+    variables:
+        SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  
+        GIT_DEPTH: "0" 
+    cache:
+        key: "${CI_JOB_NAME}"
+        paths:
+            - .sonar/cache
+    script: 
+        - echo "Running sonar-scanner..."
+        - sonar-scanner || SCAN_EXIT_STATUS=$?
+        - echo "Sonar-scanner exit status:${SCAN_EXIT_STATUS}"
+        - echo "Generating CNES report..."
+        - java -jar /revostry/sonar-report-jar/sonar-cnes-report-4.3.0.jar -s $SONAR_HOST_URL -t $SONAR_AUTH_TOKEN -p base_tataplay_org_prm-nxt_prm-nxt-sales_AZIy6mBb1r-taeCknfNW -f docx -o prm-nxt-sales-prod-sonarscan-report
+        - REPORT_GENERATION_STATUS=$?
+        - echo "CNES report generation exit status:${REPORT_GENERATION_STATUS}"
+        - echo "Exiting with status:${SCAN_EXIT_STATUS}"
+        - exit ${SCAN_EXIT_STATUS}
+    artifacts:
+        paths:
+        - prm-nxt-sales-prod-sonarscan-report/*.docx
+        when: always
+    allow_failure: true
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+          # run only on prod branch
+        - if: '$CI_COMMIT_BRANCH != "main"'
+          when: never   
+        # run through web interface for prod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main"'
+        #  run on prod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "main"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/prod/Dockerfile
+            - '**/*'
+
+prod_prm_nxt_sales-docker_build:
+    stage: docker 
+    tags:
+        - prm-nxt-sales-service-prod-runner
+    before_script:
+        # in dockerfile build folder used as prod-msales-mumbai-frontend 
+        - mkdir -p prod-msales-mumbai-frontend 
+        # copying build folder content in prod-msales-mumbai-frontend folder
+        - cp -r build/* prod-msales-mumbai-frontend/
+        - ls prod-msales-mumbai-frontend/
+        # copying nginx.config file in root to apply nginx rule using docker file
+        - cp deployment/prod/nginx.conf .
+        - aws ecr get-login-password | docker login --username AWS --password-stdin $PRM_NXT_SALES_PROD_ECR_REGISTRY
+    script:
+        - echo "Checking for changes in Dockerfile and source files..."
+        # if files are modified except CI file then only build new docker image apply new tag , and push to ecr
+        - |
+            if [ -n "$(git diff --name-only HEAD~1 HEAD -- $CI_PROJECT_DIR/deployment/prod/Dockerfile)" ] || [ -n "$(git diff --name-only HEAD~1 HEAD -- . | grep -v '.gitlab-ci.yml')" ] ; then
+                echo "Changes detected in  Dockerfile or code. Building Docker image..."
+                docker images
+                # extracting previous version tag 
+                previous_version=$(aws ecr describe-images --repository-name prod-msales-mumbai-frontend --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text| sort -k2,2r | head -n1 | awk '{print $1}')
+                echo "Previous version -> $previous_version"
+                # Extract the numeric part from the version tag
+                numeric_version=$(echo "$previous_version" | grep -o -E '[0-9]+' | head -n1)
+                echo "Extracted numeric version -> $numeric_version"
+                # Set the prefix to always be lowercase 'v'
+                prefix="v"
+                new_image_tag_version=$((numeric_version + 1))
+                echo "Incremented version -> $new_image_tag_version"
+                # Concatenate the 'v' with the incremented version number
+                new_version="${prefix}$new_image_tag_version"
+                echo "New version -> $new_version"
+                export IMAGE_TAG="prod-msales-mumbai-frontend-$new_version-$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID"
+                # docker image build
+                docker build -t prod-msales-mumbai-frontend-$new_version -f $CI_PROJECT_DIR/deployment/prod/Dockerfile .
+                docker images
+                # apply new image tag
+                docker tag prod-msales-mumbai-frontend-$new_version 588738605243.dkr.ecr.ap-south-1.amazonaws.com/prod-msales-mumbai-frontend:$IMAGE_TAG
+                docker images
+                # push new docker image
+                docker push 588738605243.dkr.ecr.ap-south-1.amazonaws.com/prod-msales-mumbai-frontend:$IMAGE_TAG
+                # Save the IMAGE_TAG to a file for reference 
+                echo $IMAGE_TAG > ecr_image_tag.txt
+                echo "Current Build Image is ---> 588738605243.dkr.ecr.ap-south-1.amazonaws.com/prod-msales-mumbai-frontend:$IMAGE_TAG"
+            else
+                echo "No relevant changes detected. Skipping Docker build."
+                docker images
+                PREVIOUS_IMAGE_TAG=$(aws ecr describe-images --repository-name prod-msales-mumbai-frontend --query "imageDetails[*].[imageTags[0], imagePushedAt]" --output text | sort -k2,2r | head -n1 | awk '{print $1}')
+                # Save the IMAGE_TAG to a file for reference
+                echo $PREVIOUS_IMAGE_TAG > ecr_image_tag.txt
+                echo "No new image build, Using previous image for deployment ---> 588738605243.dkr.ecr.ap-south-1.amazonaws.com/prod-msales-mumbai-frontend:$PREVIOUS_IMAGE_TAG"
+            fi
+    artifacts:
+        paths:
+            - ecr_image_tag.txt
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on prod branch
+        - if: '$CI_COMMIT_BRANCH != "main"'
+          when: never   
+        # run through web interface for prod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main"'
+        #  run on prod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "main"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/prod/Dockerfile
+            - '**/*' 
+
+
+prod_prm_nxt_sales-deploy:
+    stage: deploy 
+    when: manual
+    tags:
+        - prm-nxt-sales-service-prod-runner
+    before_script:
+        - aws ecr get-login-password | docker login --username AWS --password-stdin $PRM_NXT_SALES_PROD_ECR_REGISTRY
+        - sudo aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_PROD_CLUSTER_NAME
+    script:
+        #Get nodes
+        - kubectl get nodes
+        - kubectl get po -n prod
+        #Fetch Image tag in variable
+        - IMAGE_TAG=$(cat ecr_image_tag.txt)
+        - echo "Deploying with image 588738605243.dkr.ecr.ap-south-1.amazonaws.com/prod-msales-mumbai-frontend:$IMAGE_TAG"
+        #Change Image tag in YAML
+        - sed "s/{{IMAGE_TAG}}/${IMAGE_TAG}/g" $CI_PROJECT_DIR/deployment/prod/prod-msales-mumbai-frontend-deployment.yaml > prod-msales_updated-mumbai-frontend-deployment.yaml
+        - kubectl apply -f prod-msales_updated-mumbai-frontend-deployment.yaml -n prod
+        - sleep 70
+        - POD_ID=$(kubectl get po -n prod  -l app=prod-msales-mumbai-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - kubectl get deployment -n prod
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n prod -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n prod -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n prod
+        - kubectl get deployment prod-msales-mumbai-frontend -n prod -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n prod
+    artifacts:
+        paths:
+            - ecr_image_tag.txt
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on prod branch
+        - if: '$CI_COMMIT_BRANCH != "main"'
+          when: never   
+        # run through web interface for prod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main"'
+          when: manual
+        #  run on prod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "main"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/prod/Dockerfile
+            - '**/*'
+        - when: never
+
+prod_prm_nxt_sales-rollback:
+    stage: rollback 
+    when: manual
+    tags:
+        - prm-nxt-sales-service-prod-runner
+    before_script:
+        - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_PROD_ECR_REGISTRY
+        - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_PROD_CLUSTER_NAME
+    script:
+        - if [ -n "$PRM_NXT_SALES_PROD_ROLLBACK_SPECIFIC_VERSION_IMG_TAG" ]; then
+            echo "Rolling back to specific image version deployment ---> 588738605243.dkr.ecr.ap-south-1.amazonaws.com/prod-msales-mumbai-frontend:$PRM_NXT_SALES_PROD_ROLLBACK_SPECIFIC_VERSION_IMG_TAG";
+            kubectl set image deployment/prod-msales-mumbai-frontend prod-msales-mumbai-frontend=588738605243.dkr.ecr.ap-south-1.amazonaws.com/prod-msales-mumbai-frontend:$PRM_NXT_SALES_PROD_ROLLBACK_SPECIFIC_VERSION_IMG_TAG -n prod || exit 1;
+          else
+            echo "No specific image version is specified for rollback, So Rolling back to the previous revision";
+            previous_version=$(aws ecr describe-images --repository-name prod-msales-mumbai-frontend --query "imageDetails[?imageTags[?contains(@, 'prod-msales-mumbai-frontend')]].[imageTags[0], imagePushedAt]" --output text --region ap-south-1 | sort -k2,2r | awk 'NR==2 {print $1}');
+            echo "Previous ECR image ---> 588738605243.dkr.ecr.ap-south-1.amazonaws.com/prod-msales-mumbai-frontend:$previous_version";
+
+            if kubectl get deployment prod-msales-mumbai-frontend -n prod; then
+                kubectl delete deployment prod-msales-mumbai-frontend -n prod || exit 1;
+                kubectl create deployment prod-msales-mumbai-frontend --image=588738605243.dkr.ecr.ap-south-1.amazonaws.com/prod-msales-mumbai-frontend:$previous_version -n prod || exit 1;
+            else
+                echo "Deployment prod-msales-mumbai-frontend does not exist. Unable to rollback.";
+                exit 1;
+            fi  
+          fi
+        - sleep 140
+        - kubectl get po -n prod
+        - kubectl get deployment -n prod
+        - POD_ID=$(kubectl get po -n prod  -l app=prod-msales-mumbai-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - kubectl get deployment -n prod
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n prod -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n prod -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n prod
+        - kubectl get deployment prod-msales-mumbai-frontend -n prod -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n prod
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on prod branch
+        - if: '$CI_COMMIT_BRANCH != "main"'
+          when: never   
+        # run through web interface for prod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main"'
+          when: manual
+        #  run on prod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "main"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/prod/Dockerfile
+            - '**/*'
+        - when: never
+
+prod_prm_nxt_sales-restart_deployment:
+    stage: restart-deployment
+    when: manual
+    tags:
+        - prm-nxt-sales-service-prod-runner
+    before_script:
+        - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $PRM_NXT_SALES_PROD_ECR_REGISTRY
+        - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_EKS_PROD_CLUSTER_NAME
+    script:
+        - echo "Restarting Service Deployment"
+        - kubectl rollout restart deployment/prod-msales-mumbai-frontend -n prod
+        - echo "Waiting for the pods to be ready..."
+        # Initial sleep before checking the status
+        - sleep 60  
+        - MAX_RETRIES=10 
+        - RETRIES=0
+        - SUCCESS=false
+        - >
+          while [ $RETRIES -lt $MAX_RETRIES ]; do
+            status=$(kubectl rollout status deployment/prod-msales-mumbai-frontend -n prod)
+            echo $status
+            if [[ $status == *"successfully rolled out"* ]]; then
+              SUCCESS=true
+              break
+            elif [[ $status == *"waiting for deployment"* || $status == *"pending termination"* ]]; then
+              echo "Still waiting for rollout... retrying in 30s"
+            fi
+            RETRIES=$((RETRIES+1))
+            # Added sleep before checking the status again
+            sleep 30  
+          done
+          # Added condition to check if rollout was successful and fail the job if not
+        - >
+          if [ "$SUCCESS" = true ]; then
+            echo "Deployment successfully rolled out."
+          else
+            echo "Failed to recreate deployment after $MAX_RETRIES attempts. Exiting..."
+            exit 1  # Fail the job
+          fi
+
+        - POD_ID=$(kubectl get po -n prod -l app=prod-msales-mumbai-frontend --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1:].metadata.name}')
+        - kubectl get po $POD_ID -n prod
+        # Check the pod status
+        - POD_STATUS=$(kubectl get po $POD_ID -n prod -o jsonpath='{.status.phase}')
+        - echo "Pod status is --> $POD_STATUS"
+        # Check the container readiness status
+        - CONTAINER_STATUS=$(kubectl get po $POD_ID -n prod -o jsonpath='{.status.containerStatuses[*].ready}')
+        - echo "Container readiness status is --> $CONTAINER_STATUS"
+        # Fail the stage if the pod is not running
+        - |
+            if [[ "$POD_STATUS" != "Running" || $(echo "$CONTAINER_STATUS" | grep -v "true") ]]; then 
+                echo "Deployment failed:Pod is not running or not ready. Status:$POD_STATUS, Readiness:$CONTAINER_STATUS"; 
+            exit 1; 
+            fi
+        - kubectl describe po $POD_ID -n prod
+        - kubectl get deployment prod-msales-mumbai-frontend -n prod -o jsonpath='{.spec.template.spec.containers[0].image}'
+        - kubectl get po $POD_ID -n prod
+        - echo "Deployment got restarted with pod ---> $POD_ID"
+    rules:
+        # not run on merge request
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'   
+          changes: 
+            - "**/*"
+          when: never
+        # run only on prod branch
+        - if: '$CI_COMMIT_BRANCH != "main"'
+          when: never   
+        # run through web interface for prod branch
+        - if: '$CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main"'
+          when: manual
+        #  run on prod branch on code changes detected
+        - if: '$CI_COMMIT_BRANCH == "main"'
+        - changes:  
+            - $CI_PROJECT_DIR/deployment/prod/Dockerfile
+            - '**/*'
+        - when: never

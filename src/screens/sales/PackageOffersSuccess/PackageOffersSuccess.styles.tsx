@@ -1,0 +1,156 @@
+import { StyleSheet } from 'react-native';
+import { Colors, Forms, Sizing, Typography } from 'styles';
+
+const styles = StyleSheet.create<any>({
+  mainContainer: {
+    flex: Sizing.layout.x1,
+    backgroundColor: Colors.neutral.white,
+    justifyContent: 'center',
+  },
+
+  container: {
+    width: Sizing.layoutP.xp100,
+    alignItems: 'center',
+    paddingHorizontal: Sizing.layout.x10,
+    paddingVertical: Sizing.layout.x20,
+  },
+
+  borderContainer: {
+    borderWidth: Sizing.x1,
+    borderColor: Colors.violet.borderGrey,
+    borderRadius: Sizing.x8,
+    paddingHorizontal: Sizing.layout.x16,
+    paddingVertical: Sizing.layout.x12,
+    margin: Sizing.layout.x10,
+    gap: Sizing.layout.x16,
+  },
+  borderContainer_md: {
+    flex: Sizing.flexSize.x100,
+  },
+  borderContainer_lg: {
+    flex: Sizing.flexSize.x100,
+  },
+  borderContainer_xl: {
+    flex: Sizing.flexSize.x100,
+  },
+  refreshContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  heavyRefresh: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: Sizing.layout.x5,
+    borderWidth: Sizing.x1,
+    borderColor: Colors.appColors.lightPink,
+    borderRadius: Sizing.x4,
+    paddingHorizontal: Sizing.layout.x16,
+    paddingVertical: Sizing.layout.x8,
+  },
+  heavyRefreshText: {
+    ...Typography.semibold.x14,
+    color: Colors.primary.brand,
+  },
+  packChangesText: {
+    ...Typography.fontSize.x14,
+    color: Colors.neutral.black,
+  },
+  moreActionText: {
+    ...Typography.fontName.regular,
+    ...Typography.fontSize.x16,
+    ...Typography.fontWeight.x500,
+    color: Colors.violet.darkViolet,
+  },
+  subIdText: {
+    ...Typography.fontName.semibold,
+    ...Typography.fontWeight.x600,
+  },
+  moduleContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: Sizing.layout.x10,
+  },
+  iconStyle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: Sizing.layout.x10,
+  },
+  moduleText: {
+    ...Typography.fontSize.x14,
+    color: Colors.neutral.black,
+  },
+  viewMore: {
+    alignSelf: 'center',
+    marginBottom: Sizing.layout.x5,
+    color: Colors.primary.brand,
+  },
+  buttonContainer: {
+    ...Forms.buttonContainer.shadowContainer,
+    width: Sizing.layoutP.xp100,
+  },
+  buttonContainer_md: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: Sizing.layout.x20,
+  },
+  buttonContainer_lg: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: Sizing.layout.x20,
+  },
+  buttonContainer_xl: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: Sizing.layout.x20,
+  },
+  cardsContainer: {
+    width: Sizing.layoutP.xp100,
+    marginTop: Sizing.layout.x20,
+  },
+  cardsContainer_md: {
+    width: Sizing.layoutP.xp50,
+  },
+  cardsContainer_lg: {
+    width: Sizing.layoutP.xp50,
+  },
+  cardsContainer_xl: {
+    width: Sizing.layoutP.xp50,
+  },
+  buttonStyle: {},
+  buttonStyle_md: {
+    minWidth: Sizing.layoutP.xp50,
+  },
+  buttonStyle_lg: {
+    minWidth: Sizing.layoutP.xp50,
+  },
+  buttonStyle_xl: {
+    minWidth: Sizing.layoutP.xp50,
+  },
+  cardDetailsContainer: {
+    width: Sizing.layoutP.xp100,
+    alignSelf: 'center',
+  },
+  cardDetailsContainer_md: {
+    paddingHorizontal: Sizing.layout.x10,
+    paddingTop: Sizing.layout.x20,
+    paddingbottom: Sizing.layout.x10,
+    width: Sizing.layoutP.xp50,
+  },
+  cardDetailsContainer_lg: {
+    paddingHorizontal: Sizing.layout.x10,
+    paddingTop: Sizing.layout.x20,
+    paddingbottom: Sizing.layout.x10,
+    width: Sizing.layoutP.xp50,
+  },
+  cardDetailsContainer_xl: {
+    paddingHorizontal: Sizing.layout.x10,
+    paddingTop: Sizing.layout.x20,
+    paddingbottom: Sizing.layout.x10,
+    width: Sizing.layoutP.xp50,
+  },
+});
+
+export default styles;

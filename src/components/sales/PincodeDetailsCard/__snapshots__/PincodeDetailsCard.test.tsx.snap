@@ -1,0 +1,363 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PincodeDetailsCard renders differently when currentRoute is TSK_VOUCHER_DETAILS 1`] = `
+<View
+  style={
+    {
+      "alignItems": "flex-start",
+      "backgroundColor": "#FBF8FF",
+      "borderRadius": 5,
+      "elevation": 4,
+      "gap": 10,
+      "overflow": "hidden",
+      "paddingHorizontal": 13,
+      "paddingVertical": 8,
+      "shadowColor": "#000000",
+      "shadowOffset": {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.12,
+      "shadowRadius": 4,
+      "width": "100%",
+    }
+  }
+  testID="PincodeDetailsCard"
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          {
+            "color": "#220046",
+            "fontFamily": "VoltePlay-Regular",
+            "fontSize": 14,
+            "fontWeight": "400",
+            "marginRight": 8,
+          },
+          {
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    >
+      strings.pincode
+    </Text>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "maxWidth": 120,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        123456
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        testID="image-test"
+      >
+        <Image
+          defaultSource="mockedImagePath"
+          onError={[Function]}
+          resizeMode="contain"
+          source={
+            {
+              "uri": "mockedPath",
+            }
+          }
+          style={
+            [
+              {
+                "resizeMode": "contain",
+              },
+              {
+                "borderRadius": 0,
+                "height": 12,
+                "width": 12,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#E20092",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.change
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`PincodeDetailsCard snapshot test 1`] = `
+<View
+  style={
+    {
+      "alignItems": "flex-start",
+      "backgroundColor": "#FBF8FF",
+      "borderRadius": 5,
+      "elevation": 4,
+      "gap": 10,
+      "overflow": "hidden",
+      "paddingHorizontal": 13,
+      "paddingVertical": 8,
+      "shadowColor": "#000000",
+      "shadowOffset": {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.12,
+      "shadowRadius": 4,
+      "width": "100%",
+    }
+  }
+  testID="PincodeDetailsCard"
+>
+  <View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#220046",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 14,
+              "fontWeight": "400",
+              "marginRight": 8,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.pincode
+      </Text>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          testID="image-test"
+        >
+          <Image
+            defaultSource="mockedImagePath"
+            onError={[Function]}
+            resizeMode="contain"
+            source={
+              {
+                "uri": "mockedPath",
+              }
+            }
+            style={
+              [
+                {
+                  "resizeMode": "contain",
+                },
+                {
+                  "borderRadius": 0,
+                  "height": 12,
+                  "width": 12,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontSize": 10,
+                "textAlignVertical": "center",
+              },
+              {
+                "color": "#E20092",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 14,
+                "fontWeight": "500",
+              },
+              {
+                "fontSize": 14,
+              },
+              undefined,
+            ]
+          }
+        >
+          strings.change
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "maxWidth": 120,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        123456
+      </Text>
+    </View>
+  </View>
+</View>
+`;

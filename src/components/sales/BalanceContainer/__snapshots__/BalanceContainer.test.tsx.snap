@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component BalanceContainer snapshot tests for BalanceContainer 1`] = `
+<View
+  style={
+    {
+      "alignItems": "flex-start",
+      "backgroundColor": "#FBF8FF",
+      "borderRadius": 5,
+      "elevation": 4,
+      "gap": 10,
+      "paddingHorizontal": 13,
+      "paddingVertical": 8,
+      "shadowColor": "#000000",
+      "shadowOffset": {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.12,
+      "shadowRadius": 4,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+          "fontSize": 10,
+          "textAlignVertical": "center",
+        },
+        {
+          "color": "#220046",
+          "fontFamily": "VoltePlay-Regular",
+          "fontSize": 14,
+          "fontWeight": "400",
+        },
+        {
+          "fontSize": 14,
+        },
+        undefined,
+      ]
+    }
+  >
+    strings.myNewBalance
+  </Text>
+  <View
+    style={
+      {
+        "flex": 1,
+        "flexDirection": "row",
+        "gap": 10,
+      }
+    }
+  >
+    <View
+      testID="image-test"
+    >
+      <Image
+        defaultSource="mockedImagePath"
+        onError={[Function]}
+        resizeMode="contain"
+        source={
+          {
+            "uri": "mockedPath",
+          }
+        }
+        style={
+          [
+            {
+              "resizeMode": "contain",
+            },
+            {
+              "borderRadius": 0,
+              "height": 16,
+              "width": 16,
+            },
+            {
+              "resizeMode": "contain",
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          {
+            "fontFamily": "VoltePlay-Medium",
+            "fontSize": 18,
+            "fontWeight": "500",
+          },
+          {
+            "fontSize": 18,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;

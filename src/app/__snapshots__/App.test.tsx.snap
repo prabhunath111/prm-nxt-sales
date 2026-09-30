@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component App snapshot tests for App 1`] = `
+<View
+  testID="loader-test"
+/>
+`;

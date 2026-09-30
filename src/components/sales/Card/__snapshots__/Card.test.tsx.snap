@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component Card snapshot tests for Card 1`] = `
+<View>
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#ffffff",
+          "borderRadius": 5,
+          "margin": "4%",
+          "maxHeight": 1254,
+          "overflow": "hidden",
+        },
+        {
+          "backgroundColor": "#ffffff",
+          "borderRadius": 5,
+          "margin": "4%",
+          "maxHeight": 1254,
+          "overflow": "hidden",
+        },
+      ]
+    }
+    testID="card-test"
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;

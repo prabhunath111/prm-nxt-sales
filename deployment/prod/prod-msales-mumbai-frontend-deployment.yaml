@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod-msales-mumbai-frontend
+  namespace: prod
+spec:
+  replicas: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: prod-msales-mumbai-frontend
+  template:
+    metadata:
+      labels:
+        app: prod-msales-mumbai-frontend
+    spec:
+      containers:
+      - name: prod-msales-mumbai-frontend
+        image: "588738605243.dkr.ecr.ap-south-1.amazonaws.com/prod-msales-mumbai-frontend:{{IMAGE_TAG}}"
+        ports:
+        - containerPort: 3000
+      nodeSelector:
+        eks.amazonaws.com/nodegroup: msales-prod-node-1
+

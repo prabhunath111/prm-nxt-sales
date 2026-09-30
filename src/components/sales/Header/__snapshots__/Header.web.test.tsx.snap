@@ -1,0 +1,601 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component (Web) snapshot test for web layout 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#2b003e",
+      "borderBottomColor": "rgba(0,0,0,0.2)",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "height": 64,
+      "paddingHorizontal": 20,
+      "position": "relative",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "zIndex": 10,
+      }
+    }
+  >
+    <View
+      iconName="icons/tataPlayHome.png"
+      style={
+        {
+          "height": 26,
+          "width": 84,
+        }
+      }
+      testID="image-icons/tataPlayHome.png"
+    />
+    <Text
+      style={
+        {
+          "color": "#ffffff",
+          "fontSize": 18,
+          "fontWeight": "700",
+        }
+      }
+    >
+      mSales
+    </Text>
+  </View>
+  <View
+    pointerEvents="box-none"
+    style={
+      {
+        "alignItems": "center",
+        "bottom": 0,
+        "justifyContent": "center",
+        "left": 0,
+        "pointerEvents": "box-none",
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "zIndex": 5,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "flex-end",
+          "backgroundColor": "transparent",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "paddingHorizontal": 14,
+              "paddingVertical": 10,
+            },
+            false,
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            height={25}
+            iconName="icons/icons_home.png"
+            isDimension={false}
+            style={
+              {
+                "color": "#FFFFFF",
+                "tintColor": "#FFFFFF",
+              }
+            }
+            testID="image-icons/icons_home.png"
+            width={25}
+          />
+          <Text
+            style={
+              [
+                {
+                  "color": "#F2C8F7",
+                  "fontSize": 15,
+                  "marginLeft": 8,
+                },
+                {
+                  "color": "#ffffff",
+                  "fontWeight": "600",
+                },
+              ]
+            }
+          >
+            strings.home
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#F2C8F7",
+              "height": "60%",
+              "marginHorizontal": 10,
+              "width": 1,
+            }
+          }
+          testID="vLine"
+        />
+        <View
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderRadius": 3,
+                "height": 2,
+                "marginTop": 6,
+                "width": 60,
+              },
+              {
+                "backgroundColor": "#ffffff",
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "paddingHorizontal": 14,
+              "paddingVertical": 10,
+            },
+            {
+              "borderLeftColor": "rgba(255,255,255,0.08)",
+              "borderLeftWidth": 1,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            height={25}
+            iconName="icons/myActions.png"
+            isDimension={false}
+            style={
+              {
+                "color": "#F2C8F7",
+                "tintColor": "#F2C8F7",
+              }
+            }
+            testID="image-icons/myActions.png"
+            width={25}
+          />
+          <Text
+            style={
+              [
+                {
+                  "color": "#F2C8F7",
+                  "fontSize": 15,
+                  "marginLeft": 8,
+                },
+                false,
+              ]
+            }
+          >
+            strings.myActions
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#F2C8F7",
+              "height": "60%",
+              "marginHorizontal": 10,
+              "width": 1,
+            }
+          }
+          testID="vLine"
+        />
+        <View
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderRadius": 3,
+                "height": 2,
+                "marginTop": 6,
+                "width": 60,
+              },
+              false,
+            ]
+          }
+        />
+      </View>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "paddingHorizontal": 14,
+              "paddingVertical": 10,
+            },
+            {
+              "borderLeftColor": "rgba(255,255,255,0.08)",
+              "borderLeftWidth": 1,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            height={25}
+            iconName="icons/transactionHome.png"
+            isDimension={false}
+            style={
+              {
+                "color": "#F2C8F7",
+                "tintColor": "#F2C8F7",
+              }
+            }
+            testID="image-icons/transactionHome.png"
+            width={25}
+          />
+          <Text
+            style={
+              [
+                {
+                  "color": "#F2C8F7",
+                  "fontSize": 15,
+                  "marginLeft": 8,
+                },
+                false,
+              ]
+            }
+          >
+            strings.transactions
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#F2C8F7",
+              "height": "60%",
+              "marginHorizontal": 10,
+              "width": 1,
+            }
+          }
+          testID="vLine"
+        />
+        <View
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderRadius": 3,
+                "height": 2,
+                "marginTop": 6,
+                "width": 60,
+              },
+              false,
+            ]
+          }
+        />
+      </View>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "paddingHorizontal": 14,
+              "paddingVertical": 10,
+            },
+            {
+              "borderLeftColor": "rgba(255,255,255,0.08)",
+              "borderLeftWidth": 1,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            height={25}
+            iconName="icons/helpDesk.png"
+            isDimension={false}
+            style={
+              {
+                "color": "#F2C8F7",
+                "tintColor": "#F2C8F7",
+              }
+            }
+            testID="image-icons/helpDesk.png"
+            width={25}
+          />
+          <Text
+            style={
+              [
+                {
+                  "color": "#F2C8F7",
+                  "fontSize": 15,
+                  "marginLeft": 8,
+                },
+                false,
+              ]
+            }
+          >
+            strings.help
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderRadius": 3,
+                "height": 2,
+                "marginTop": 6,
+                "width": 60,
+              },
+              false,
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginLeft": "auto",
+        "zIndex": 10,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "marginRight": 16,
+          "position": "relative",
+        }
+      }
+    >
+      <View
+        height={25}
+        iconName="icons/bell.png"
+        isDimension={false}
+        style={
+          {
+            "tintColor": "#ffffff",
+          }
+        }
+        testID="image-icons/bell.png"
+        width={25}
+      />
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "backgroundColor": "#545454",
+            "borderRadius": 50,
+            "height": 50,
+            "width": 50,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

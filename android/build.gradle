@@ -1,0 +1,48 @@
+buildscript {
+    ext {
+        buildToolsVersion = "35.0.0"
+        minSdkVersion = 23
+        compileSdkVersion = 35
+        targetSdkVersion = 35
+        ndkVersion = "26.1.10909125"
+        kotlinVersion = "1.9.22"
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.7.0")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+        classpath("com.google.gms:google-services:4.4.1")
+        classpath("com.google.firebase:firebase-crashlytics-gradle:2.9.9")
+        classpath("com.p9:language-translation-plugin:1.0.0")
+    }
+}
+plugins {
+    id "com.android.application" version "8.0.0" apply false
+  id "com.android.library"    version "8.0.0" apply false
+  id "org.jetbrains.kotlin.android" version "1.8.0" apply false
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: "com.facebook.react.rootproject"
+apply plugin: 'com.p9.translation'
+StringTranslationExtension.sourceDirectory =project.projectDir.parent+ "/src/locales"
+StringTranslationExtension.secretKey = "1584-883A-B62C-5D59-7DBE-9E35-2FA8-C151"
+StringTranslationExtension.qualityofTranslation = "3"
+StringTranslationExtension.inputLanguage = "English"
+StringTranslationExtension.languageList = ['Hindi', 'Tamil', 'Malayalam']
+StringTranslationExtension.files=["en.json"];
+tasks.whenTaskAdded { task ->
+    if (task.name == 'assembleDebug') {
+        task.dependsOn 'translateMyString'
+    }
+}

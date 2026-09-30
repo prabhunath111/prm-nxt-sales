@@ -1,0 +1,437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiFilters snapshot tests for MultiFilters 1`] = `
+<View
+  style={
+    {
+      "borderColor": "#E8E5EC",
+      "borderRadius": 4,
+      "borderWidth": 1,
+      "flex": 1,
+      "flexDirection": "row",
+    }
+  }
+  testID="multiFilterTest"
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#F3F2F5",
+        "width": "30%",
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "backgroundColor": "#ffffff",
+          "borderLeftColor": "#E20092",
+          "borderLeftWidth": 3,
+          "opacity": 1,
+          "paddingLeft": 4,
+          "paddingVertical": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 14,
+              "fontWeight": "400",
+            },
+            {
+              "fontFamily": "VoltePlay-Medium",
+              "fontWeight": "500",
+            },
+          ]
+        }
+      >
+        Languages
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+          "paddingLeft": 4,
+          "paddingVertical": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 14,
+              "fontWeight": "400",
+            },
+            false,
+          ]
+        }
+      >
+        Genre
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+          "paddingLeft": 4,
+          "paddingVertical": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 14,
+              "fontWeight": "400",
+            },
+            false,
+          ]
+        }
+      >
+        Box Type
+      </Text>
+    </View>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={{}}
+    data={
+      [
+        {
+          "id": "en",
+          "name": "English",
+        },
+        {
+          "id": "hi",
+          "name": "Hindi",
+          "secondaryName": "HindiSec",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    showsVerticalScrollIndicator={false}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "borderColor": "#E8E5EC",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "margin": 5,
+                "minHeight": 38,
+                "opacity": 1,
+                "paddingRight": 5,
+                "paddingVertical": 8,
+                "width": "45%",
+              }
+            }
+          >
+            <View
+              style={
+                [
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": "rgba(255, 255, 255, 0)",
+                    "borderColor": "#E20092",
+                    "borderRadius": 3,
+                    "borderWidth": 1,
+                    "height": 18,
+                    "justifyContent": "center",
+                    "marginHorizontal": 8,
+                    "width": 18,
+                  },
+                  false,
+                ]
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "column",
+                  "flexWrap": "wrap",
+                  "gap": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "#000000",
+                    "flexShrink": 1,
+                    "flexWrap": "wrap",
+                    "fontFamily": "VoltePlay-Medium",
+                    "fontSize": 12,
+                    "fontWeight": "500",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              >
+                English
+              </Text>
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "borderColor": "#E8E5EC",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "margin": 5,
+                "minHeight": 38,
+                "opacity": 1,
+                "paddingRight": 5,
+                "paddingVertical": 8,
+                "width": "45%",
+              }
+            }
+          >
+            <View
+              style={
+                [
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": "rgba(255, 255, 255, 0)",
+                    "borderColor": "#E20092",
+                    "borderRadius": 3,
+                    "borderWidth": 1,
+                    "height": 18,
+                    "justifyContent": "center",
+                    "marginHorizontal": 8,
+                    "width": 18,
+                  },
+                  false,
+                ]
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "column",
+                  "flexWrap": "wrap",
+                  "gap": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "#000000",
+                    "flexShrink": 1,
+                    "flexWrap": "wrap",
+                    "fontFamily": "VoltePlay-Medium",
+                    "fontSize": 12,
+                    "fontWeight": "500",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              >
+                Hindi
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "#000000",
+                    "flexShrink": 1,
+                    "flexWrap": "wrap",
+                    "fontFamily": "VoltePlay-Medium",
+                    "fontSize": 12,
+                    "fontWeight": "500",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              >
+                HindiSec
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

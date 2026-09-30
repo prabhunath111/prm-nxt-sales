@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EtskMultiTvSummary Component matches snapshot 1`] = `
+<RCTSafeAreaView
+  style={
+    [
+      {
+        "backgroundColor": "#ffffff",
+        "flexGrow": 1,
+        "height": "100%",
+        "width": "100%",
+      },
+    ]
+  }
+  testID="EtskMultiTvSummary"
+>
+  <RCTScrollView
+    showsVerticalScrollIndicator={true}
+    style={
+      {
+        "backgroundColor": "#ffffff",
+        "flexGrow": 1,
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          [
+            {
+              "padding": 14,
+            },
+            undefined,
+            {
+              "padding": 14,
+            },
+          ]
+        }
+      >
+        <Text>
+          CustomerDetailsCard
+        </Text>
+        <View
+          style={
+            [
+              undefined,
+            ]
+          }
+        >
+          <Text>
+            strings.SUMMARY
+          </Text>
+          <View>
+            <Text>
+              strings.customerTOPay
+            </Text>
+            <Text>
+              ₹640
+            </Text>
+            <View
+              style={
+                {
+                  "backgroundColor": "#F7F4FC",
+                  "borderBottomLeftRadius": 8,
+                  "borderBottomRightRadius": 8,
+                  "flex": 1,
+                  "paddingBottom": 16,
+                  "paddingHorizontal": 16,
+                  "paddingTop": 4,
+                }
+              }
+            >
+              <View>
+                <Text
+                  style={
+                    {
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 4,
+                    }
+                  }
+                >
+                  strings.boxPackInfo
+                </Text>
+                <View
+                  style={
+                    {
+                      "backgroundColor": "#ffffff",
+                      "elevation": 4,
+                      "shadowColor": "#000000",
+                      "shadowOffset": {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.5,
+                      "shadowRadius": 4,
+                    }
+                  }
+                >
+                  <View>
+                    <View>
+                      <Text>
+                        strings.secondaryBox
+                      </Text>
+                      <Text>
+                        BoxInfoTab
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View>
+            <Text>
+              strings.customerInformation
+            </Text>
+            <Text />
+            <View
+              style={
+                {
+                  "backgroundColor": "#F7F4FC",
+                  "borderBottomLeftRadius": 8,
+                  "borderBottomRightRadius": 8,
+                  "flex": 1,
+                  "paddingBottom": 16,
+                  "paddingHorizontal": 16,
+                  "paddingTop": 4,
+                }
+              }
+            >
+              <Text>
+                TextContainer
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "elevation": 8,
+        "gap": 5,
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": -4,
+          "width": 0,
+        },
+        "shadowOpacity": 0.14,
+        "shadowRadius": 25,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "gap": 4,
+            "width": "100%",
+          },
+          {
+            "gap": 4,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View>
+        <Text>
+          strings.REQUIRED_AMOUNT
+        </Text>
+        <Text>
+          ₹640
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "gap": 12,
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+          testID="button-strings.proceed"
+        >
+          <Text>
+            strings.proceed
+          </Text>
+        </View>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+          testID="button-strings.cancel"
+        >
+          <Text>
+            strings.cancel
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

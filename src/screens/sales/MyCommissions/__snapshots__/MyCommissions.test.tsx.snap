@@ -1,0 +1,622 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyCommissions Component Tests matches snapshot 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignSelf": "center",
+        "gap": 16,
+        "marginTop": 16,
+        "paddingHorizontal": null,
+        "width": "60%",
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          undefined,
+          {
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    >
+      2025-09-19
+    </Text>
+    <BVLinearGradient
+      colors={
+        [
+          4285202653,
+          4280418374,
+        ]
+      }
+      endPoint={
+        {
+          "x": 1,
+          "y": 0,
+        }
+      }
+      locations={null}
+      startPoint={
+        {
+          "x": 0,
+          "y": 0,
+        }
+      }
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          {
+            "borderRadius": 5,
+          },
+        ]
+      }
+      testID="gradient-test"
+    >
+      <View
+        style={
+          [
+            {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 8,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontSize": 10,
+                "textAlignVertical": "center",
+              },
+              [
+                {
+                  "color": "#000000",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 14,
+                },
+                {
+                  "color": "#ffffff",
+                },
+              ],
+              {
+                "fontSize": 14,
+              },
+              undefined,
+            ]
+          }
+        >
+          strings.strings.totalCommission
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontSize": 10,
+                "textAlignVertical": "center",
+              },
+              [
+                {
+                  "color": "#000000",
+                  "flexShrink": 1,
+                  "flexWrap": "wrap",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 16,
+                  "lineHeight": 25,
+                },
+                {
+                  "color": "#ffffff",
+                },
+              ],
+              {
+                "fontSize": 16,
+              },
+              undefined,
+            ]
+          }
+        >
+          2500
+        </Text>
+      </View>
+    </BVLinearGradient>
+    <View>
+      <RCTScrollView
+        contentContainerStyle={
+          {
+            "flexGrow": 1,
+            "minWidth": "100%",
+          }
+        }
+        horizontal={true}
+        nestedScrollEnabled={true}
+        showsHorizontalScrollIndicator={true}
+        style={
+          {
+            "width": "100%",
+          }
+        }
+        testID="dynamicTable"
+      >
+        <View>
+          <View
+            style={
+              [
+                {
+                  "minWidth": 870,
+                },
+                {
+                  "borderColor": "#E8E5EC",
+                  "borderLeftWidth": 1,
+                  "borderRightWidth": 1,
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "backgroundColor": "#220046",
+                  "borderTopLeftRadius": 4,
+                  "borderTopRightRadius": 4,
+                  "flexDirection": "row",
+                  "flexShrink": 0,
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "flexShrink": 0,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 5,
+                      "paddingVertical": 8,
+                    },
+                    {
+                      "alignItems": "center",
+                      "flexBasis": "50%",
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                    },
+                    {
+                      "borderRightColor": "#E8E5EC",
+                      "borderRightWidth": 1,
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#ffffff",
+                          "flexShrink": 1,
+                          "flexWrap": "wrap",
+                          "fontFamily": "VoltePlay-Medium",
+                          "fontSize": 14,
+                          "fontWeight": "600",
+                        },
+                        false,
+                      ]
+                    }
+                  >
+                    strings.months
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  [
+                    {
+                      "flexShrink": 0,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 5,
+                      "paddingVertical": 8,
+                    },
+                    {
+                      "alignItems": "center",
+                      "flexBasis": "50%",
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                    },
+                    false,
+                  ]
+                }
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#ffffff",
+                          "flexShrink": 1,
+                          "flexWrap": "wrap",
+                          "fontFamily": "VoltePlay-Medium",
+                          "fontSize": 14,
+                          "fontWeight": "600",
+                        },
+                        false,
+                      ]
+                    }
+                  >
+                    strings.commissions
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                [
+                  {
+                    "maxHeight": 450,
+                    "minHeight": 200,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              <RCTScrollView
+                data={
+                  [
+                    {
+                      "commissions": "1000",
+                      "month": "January",
+                    },
+                    {
+                      "commissions": "1500",
+                      "month": "February",
+                    },
+                  ]
+                }
+                getItem={[Function]}
+                getItemCount={[Function]}
+                keyExtractor={[Function]}
+                nestedScrollEnabled={true}
+                onContentSizeChange={[Function]}
+                onEndReached={[Function]}
+                onEndReachedThreshold={0.5}
+                onLayout={[Function]}
+                onMomentumScrollBegin={[Function]}
+                onMomentumScrollEnd={[Function]}
+                onScroll={[Function]}
+                onScrollBeginDrag={[Function]}
+                onScrollEndDrag={[Function]}
+                removeClippedSubviews={false}
+                renderItem={[Function]}
+                scrollEventThrottle={0.0001}
+                showsVerticalScrollIndicator={true}
+                stickyHeaderIndices={[]}
+                testID="dynamic-table-flatlist"
+                viewabilityConfigCallbackPairs={[]}
+              >
+                <View>
+                  <View
+                    onFocusCapture={[Function]}
+                    onLayout={[Function]}
+                    style={null}
+                  >
+                    <View
+                      style={
+                        [
+                          {
+                            "borderBottomColor": "#E8E5EC",
+                            "borderBottomWidth": 1,
+                            "flexDirection": "row",
+                            "flexShrink": 0,
+                            "width": "100%",
+                          },
+                          false,
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          [
+                            {
+                              "flexShrink": 0,
+                              "justifyContent": "center",
+                              "paddingHorizontal": 5,
+                              "paddingVertical": 8,
+                            },
+                            {
+                              "alignItems": "center",
+                              "flexBasis": "50%",
+                              "flexGrow": 0,
+                              "flexShrink": 0,
+                            },
+                            {
+                              "borderRightColor": "#E8E5EC",
+                              "borderRightWidth": 1,
+                            },
+                          ]
+                        }
+                      >
+                        <Text
+                          style={
+                            [
+                              {
+                                "color": "#000000",
+                                "flexShrink": 1,
+                                "flexWrap": "wrap",
+                                "fontFamily": "VoltePlay-Regular",
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "wordBreak": "break-word",
+                              },
+                              false,
+                            ]
+                          }
+                        >
+                          <Text
+                            style={
+                              [
+                                {
+                                  "alignSelf": "center",
+                                  "color": "#000000",
+                                  "flexShrink": 1,
+                                  "flexWrap": "wrap",
+                                  "fontFamily": "VoltePlay-Regular",
+                                  "fontSize": 12,
+                                  "fontWeight": "400",
+                                  "textAlign": "center",
+                                  "wordBreak": "break-word",
+                                },
+                                {},
+                              ]
+                            }
+                          >
+                            January
+                          </Text>
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          [
+                            {
+                              "flexShrink": 0,
+                              "justifyContent": "center",
+                              "paddingHorizontal": 5,
+                              "paddingVertical": 8,
+                            },
+                            {
+                              "alignItems": "center",
+                              "flexBasis": "50%",
+                              "flexGrow": 0,
+                              "flexShrink": 0,
+                            },
+                            false,
+                          ]
+                        }
+                      >
+                        <Text
+                          style={
+                            [
+                              {
+                                "color": "#000000",
+                                "flexShrink": 1,
+                                "flexWrap": "wrap",
+                                "fontFamily": "VoltePlay-Regular",
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "wordBreak": "break-word",
+                              },
+                              false,
+                            ]
+                          }
+                        >
+                          <Text
+                            style={
+                              [
+                                {
+                                  "alignSelf": "center",
+                                  "color": "#000000",
+                                  "flexShrink": 1,
+                                  "flexWrap": "wrap",
+                                  "fontFamily": "VoltePlay-Regular",
+                                  "fontSize": 12,
+                                  "fontWeight": "400",
+                                  "textAlign": "center",
+                                  "wordBreak": "break-word",
+                                },
+                                {},
+                              ]
+                            }
+                          >
+                            1000
+                          </Text>
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    onFocusCapture={[Function]}
+                    onLayout={[Function]}
+                    style={null}
+                  >
+                    <View
+                      style={
+                        [
+                          {
+                            "borderBottomColor": "#E8E5EC",
+                            "borderBottomWidth": 1,
+                            "flexDirection": "row",
+                            "flexShrink": 0,
+                            "width": "100%",
+                          },
+                          {
+                            "backgroundColor": "#ffffff",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          [
+                            {
+                              "flexShrink": 0,
+                              "justifyContent": "center",
+                              "paddingHorizontal": 5,
+                              "paddingVertical": 8,
+                            },
+                            {
+                              "alignItems": "center",
+                              "flexBasis": "50%",
+                              "flexGrow": 0,
+                              "flexShrink": 0,
+                            },
+                            {
+                              "borderRightColor": "#E8E5EC",
+                              "borderRightWidth": 1,
+                            },
+                          ]
+                        }
+                      >
+                        <Text
+                          style={
+                            [
+                              {
+                                "color": "#000000",
+                                "flexShrink": 1,
+                                "flexWrap": "wrap",
+                                "fontFamily": "VoltePlay-Regular",
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "wordBreak": "break-word",
+                              },
+                              false,
+                            ]
+                          }
+                        >
+                          <Text
+                            style={
+                              [
+                                {
+                                  "alignSelf": "center",
+                                  "color": "#000000",
+                                  "flexShrink": 1,
+                                  "flexWrap": "wrap",
+                                  "fontFamily": "VoltePlay-Regular",
+                                  "fontSize": 12,
+                                  "fontWeight": "400",
+                                  "textAlign": "center",
+                                  "wordBreak": "break-word",
+                                },
+                                {},
+                              ]
+                            }
+                          >
+                            February
+                          </Text>
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          [
+                            {
+                              "flexShrink": 0,
+                              "justifyContent": "center",
+                              "paddingHorizontal": 5,
+                              "paddingVertical": 8,
+                            },
+                            {
+                              "alignItems": "center",
+                              "flexBasis": "50%",
+                              "flexGrow": 0,
+                              "flexShrink": 0,
+                            },
+                            false,
+                          ]
+                        }
+                      >
+                        <Text
+                          style={
+                            [
+                              {
+                                "color": "#000000",
+                                "flexShrink": 1,
+                                "flexWrap": "wrap",
+                                "fontFamily": "VoltePlay-Regular",
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "wordBreak": "break-word",
+                              },
+                              false,
+                            ]
+                          }
+                        >
+                          <Text
+                            style={
+                              [
+                                {
+                                  "alignSelf": "center",
+                                  "color": "#000000",
+                                  "flexShrink": 1,
+                                  "flexWrap": "wrap",
+                                  "fontFamily": "VoltePlay-Regular",
+                                  "fontSize": 12,
+                                  "fontWeight": "400",
+                                  "textAlign": "center",
+                                  "wordBreak": "break-word",
+                                },
+                                {},
+                              ]
+                            }
+                          >
+                            1500
+                          </Text>
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </RCTScrollView>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </View>
+</View>
+`;

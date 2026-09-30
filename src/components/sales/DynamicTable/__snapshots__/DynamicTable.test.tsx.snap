@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DynamicTable Component snapshot match 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    {
+      "flexGrow": 1,
+      "minWidth": "100%",
+    }
+  }
+  horizontal={true}
+  nestedScrollEnabled={true}
+  showsHorizontalScrollIndicator={true}
+  style={false}
+  testID="dynamicTable"
+>
+  <View>
+    <View
+      style={
+        [
+          {
+            "minWidth": 0,
+          },
+          {
+            "borderColor": "#E8E5EC",
+            "borderLeftWidth": 1,
+            "borderRightWidth": 1,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "backgroundColor": "#220046",
+            "borderTopLeftRadius": 4,
+            "borderTopRightRadius": 4,
+            "flexDirection": "row",
+            "flexShrink": 0,
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          [
+            {
+              "maxHeight": 450,
+              "minHeight": 200,
+            },
+            undefined,
+          ]
+        }
+      >
+        <RCTScrollView
+          data={[]}
+          getItem={[Function]}
+          getItemCount={[Function]}
+          keyExtractor={[Function]}
+          nestedScrollEnabled={true}
+          onContentSizeChange={[Function]}
+          onEndReached={[Function]}
+          onEndReachedThreshold={0.5}
+          onLayout={[Function]}
+          onMomentumScrollBegin={[Function]}
+          onMomentumScrollEnd={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onScrollEndDrag={[Function]}
+          removeClippedSubviews={false}
+          renderItem={[Function]}
+          scrollEventThrottle={0.0001}
+          showsVerticalScrollIndicator={true}
+          stickyHeaderIndices={[]}
+          testID="dynamic-table-flatlist"
+          viewabilityConfigCallbackPairs={[]}
+        >
+          <View />
+        </RCTScrollView>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

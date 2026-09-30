@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uat-msales-mumbai-frontend
+  namespace: uat
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: uat-msales-mumbai-frontend
+  template:
+    metadata:
+      labels:
+        app: uat-msales-mumbai-frontend
+    spec:
+      containers:
+      - name: uat-msales-mumbai-frontend
+        image: "891377194963.dkr.ecr.ap-south-1.amazonaws.com/uat-msales-mumbai-frontend:{{IMAGE_TAG}}"
+        ports:
+        - containerPort: 3000
+        securityContext:
+          runAsUser: 100
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+
+      affinity:
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            preference:
+              matchExpressions:
+              - key: eks.amazonaws.com/nodegroup
+                operator: In
+                values:
+                - prmnxt_uat_msales_mum_node_group_AL_1

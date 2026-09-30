@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component TableWrapper snapshot tests for TableWrapper 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flexGrow": 1,
+      "justifyContent": "center",
+    }
+  }
+  testID="table-test"
+/>
+`;

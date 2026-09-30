@@ -1,0 +1,969 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BingeRetailerDashboard snapshot test 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "flexGrow": 1,
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+>
+  <RCTScrollView
+    showsVerticalScrollIndicator={true}
+  >
+    <View>
+      <View
+        style={
+          [
+            {
+              "justifyContent": "center",
+            },
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        <BVLinearGradient
+          colors={
+            [
+              4280418374,
+              4280418374,
+              4292935826,
+            ]
+          }
+          endPoint={
+            {
+              "x": 1,
+              "y": 1,
+            }
+          }
+          locations={null}
+          startPoint={
+            {
+              "x": 1,
+              "y": 0,
+            }
+          }
+          style={
+            [
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              },
+              {
+                "borderRadius": undefined,
+                "padding": 14,
+                "width": "100%",
+              },
+            ]
+          }
+          testID="gradient-test"
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "marginBottom": 20,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "flex": 1,
+                }
+              }
+            >
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+              >
+                <View
+                  style={
+                    {
+                      "gap": 12,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      [
+                        {
+                          "alignItems": "flex-start",
+                          "borderBottomWidth": 2,
+                          "borderColor": "#C7C0D0",
+                          "borderWidth": 0,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "padding": 8,
+                        },
+                        [
+                          {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#DCDCDC",
+                            "borderRadius": 8,
+                            "borderWidth": 1,
+                            "height": 40,
+                          },
+                        ],
+                        undefined,
+                      ]
+                    }
+                  >
+                    <TextInput
+                      autoComplete="new-password"
+                      keyboardType="default"
+                      numberOfLines={1}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholder="strings.selectDate"
+                      placeholderTextColor="#C2C2C2"
+                      readOnly={true}
+                      style={
+                        [
+                          {
+                            "borderColor": "#C4C4C4",
+                            "borderRadius": 3,
+                            "borderWidth": 0.5,
+                            "color": "#000000",
+                            "minHeight": 40,
+                            "outlineStyle": "none",
+                            "paddingHorizontal": 10,
+                            "paddingVertical": 0,
+                          },
+                          undefined,
+                          [
+                            {
+                              "borderWidth": 0,
+                              "flexGrow": 1,
+                              "flexShrink": 100,
+                              "minHeight": "auto",
+                              "paddingHorizontal": 6,
+                              "paddingVertical": 0,
+                            },
+                            undefined,
+                          ],
+                          undefined,
+                          undefined,
+                          {
+                            "fontSize": 16,
+                          },
+                        ]
+                      }
+                      testID="date-input"
+                      textAlignVertical="center"
+                      value=""
+                    />
+                    <View
+                      accessibilityState={
+                        {
+                          "busy": undefined,
+                          "checked": undefined,
+                          "disabled": undefined,
+                          "expanded": undefined,
+                          "selected": undefined,
+                        }
+                      }
+                      accessibilityValue={
+                        {
+                          "max": undefined,
+                          "min": undefined,
+                          "now": undefined,
+                          "text": undefined,
+                        }
+                      }
+                      accessible={true}
+                      collapsable={false}
+                      focusable={true}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        {
+                          "alignItems": "center",
+                          "justifyContent": "center",
+                          "paddingHorizontal": 6,
+                        }
+                      }
+                    >
+                      <View
+                        testID="image-test"
+                      >
+                        <Image
+                          defaultSource="mockedImagePath"
+                          onError={[Function]}
+                          resizeMode="contain"
+                          source={
+                            {
+                              "uri": "icons/pinkCalendar.png",
+                            }
+                          }
+                          style={
+                            [
+                              {
+                                "resizeMode": "contain",
+                              },
+                              {
+                                "borderRadius": 0,
+                                "height": 5,
+                                "width": 5,
+                              },
+                              [
+                                {
+                                  "height": 20,
+                                  "resizeMode": "contain",
+                                  "width": 20,
+                                },
+                                undefined,
+                              ],
+                            ]
+                          }
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "backgroundColor": "#E20092",
+                  "borderRadius": 8,
+                  "marginLeft": 10,
+                  "opacity": 1,
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#ffffff",
+                      "fontFamily": "VoltePlay-Medium",
+                      "fontSize": 16,
+                      "fontWeight": "600",
+                    },
+                    {
+                      "fontSize": 16,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                Submit
+              </Text>
+            </View>
+          </View>
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                {
+                  "alignSelf": "flex-start",
+                  "color": "#ffffff",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                  "marginBottom": 10,
+                },
+                {
+                  "fontSize": 16,
+                },
+                undefined,
+              ]
+            }
+          >
+            strings.SUMMARY
+          </Text>
+          <BVLinearGradient
+            colors={
+              [
+                4291408857,
+                4291408857,
+                4291408857,
+                4294440188,
+              ]
+            }
+            endPoint={
+              {
+                "x": 1,
+                "y": 1,
+              }
+            }
+            locations={null}
+            startPoint={
+              {
+                "x": 1,
+                "y": 0,
+              }
+            }
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                },
+                {
+                  "borderRadius": 12,
+                  "flexDirection": "row",
+                  "flexWrap": "wrap",
+                  "justifyContent": "space-between",
+                  "padding": 10,
+                },
+              ]
+            }
+            testID="gradient-test"
+          >
+            <View
+              style={
+                {
+                  "backgroundColor": "#FCFCFC",
+                  "borderRadius": 10,
+                  "marginBottom": 12,
+                  "padding": 12,
+                  "width": "48%",
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#220046",
+                      "fontFamily": "VoltePlay-Regular",
+                      "fontSize": 14,
+                      "fontWeight": "400",
+                    },
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.monthlyEarning
+              </Text>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#000000",
+                      "fontFamily": "VoltePlay-SemiBold",
+                      "fontSize": 18,
+                      "fontWeight": "600",
+                      "marginTop": 5,
+                    },
+                    {
+                      "fontSize": 18,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                1000
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": "#FCFCFC",
+                  "borderRadius": 10,
+                  "marginBottom": 12,
+                  "padding": 12,
+                  "width": "48%",
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#220046",
+                      "fontFamily": "VoltePlay-Regular",
+                      "fontSize": 14,
+                      "fontWeight": "400",
+                    },
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.packSoldThisMonth
+              </Text>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#000000",
+                      "fontFamily": "VoltePlay-SemiBold",
+                      "fontSize": 18,
+                      "fontWeight": "600",
+                      "marginTop": 5,
+                    },
+                    {
+                      "fontSize": 18,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                50
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": "#FCFCFC",
+                  "borderRadius": 10,
+                  "marginBottom": 12,
+                  "padding": 12,
+                  "width": "48%",
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#220046",
+                      "fontFamily": "VoltePlay-Regular",
+                      "fontSize": 14,
+                      "fontWeight": "400",
+                    },
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.earningForTheDay
+              </Text>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#000000",
+                      "fontFamily": "VoltePlay-SemiBold",
+                      "fontSize": 18,
+                      "fontWeight": "600",
+                      "marginTop": 5,
+                    },
+                    {
+                      "fontSize": 18,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                100
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": "#FCFCFC",
+                  "borderRadius": 10,
+                  "marginBottom": 12,
+                  "padding": 12,
+                  "width": "48%",
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#220046",
+                      "fontFamily": "VoltePlay-Regular",
+                      "fontSize": 14,
+                      "fontWeight": "400",
+                    },
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.dayCount
+              </Text>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#000000",
+                      "fontFamily": "VoltePlay-SemiBold",
+                      "fontSize": 18,
+                      "fontWeight": "600",
+                      "marginTop": 5,
+                    },
+                    {
+                      "fontSize": 18,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                5
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": "#FCFCFC",
+                  "borderRadius": 10,
+                  "marginBottom": 12,
+                  "padding": 12,
+                  "width": "48%",
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#220046",
+                      "fontFamily": "VoltePlay-Regular",
+                      "fontSize": 14,
+                      "fontWeight": "400",
+                    },
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.lastMonthEarning
+              </Text>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#000000",
+                      "fontFamily": "VoltePlay-SemiBold",
+                      "fontSize": 18,
+                      "fontWeight": "600",
+                      "marginTop": 5,
+                    },
+                    {
+                      "fontSize": 18,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                900
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": "#FCFCFC",
+                  "borderRadius": 10,
+                  "marginBottom": 12,
+                  "padding": 12,
+                  "width": "48%",
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#220046",
+                      "fontFamily": "VoltePlay-Regular",
+                      "fontSize": 14,
+                      "fontWeight": "400",
+                    },
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.lastMonthCount
+              </Text>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    {
+                      "color": "#000000",
+                      "fontFamily": "VoltePlay-SemiBold",
+                      "fontSize": 18,
+                      "fontWeight": "600",
+                      "marginTop": 5,
+                    },
+                    {
+                      "fontSize": 18,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                45
+              </Text>
+            </View>
+          </BVLinearGradient>
+        </BVLinearGradient>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "elevation": 8,
+        "gap": 5,
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": -4,
+          "width": 0,
+        },
+        "shadowOpacity": 0.14,
+        "shadowRadius": 25,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "flexDirection": "row",
+            "gap": 10,
+            "minWidth": 180,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E20092",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "minHeight": 40,
+            "minWidth": 300,
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+          }
+        }
+        testID="button-test"
+      >
+        <View
+          style={
+            {
+              "flexShrink": 1,
+            }
+          }
+        >
+          <View>
+            <Text
+              style={
+                [
+                  {
+                    "color": "#000000",
+                    "fontSize": 10,
+                    "textAlignVertical": "center",
+                  },
+                  [
+                    {
+                      "alignSelf": "center",
+                      "fontFamily": "VoltePlay-Medium",
+                      "lineHeight": 20,
+                      "marginTop": 0,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                    undefined,
+                    {
+                      "color": "#ffffff",
+                    },
+                    false,
+                  ],
+                  {
+                    "fontSize": 16,
+                  },
+                  {
+                    "color": "#ffffff",
+                  },
+                ]
+              }
+            >
+              strings.back
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0)",
+            "borderColor": "#E20092",
+            "borderRadius": 5,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "minHeight": 40,
+            "minWidth": 300,
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+          }
+        }
+        testID="button-test"
+      >
+        <View
+          style={
+            {
+              "flexShrink": 1,
+            }
+          }
+        >
+          <View>
+            <Text
+              style={
+                [
+                  {
+                    "color": "#000000",
+                    "fontSize": 10,
+                    "textAlignVertical": "center",
+                  },
+                  [
+                    {
+                      "alignSelf": "center",
+                      "fontFamily": "VoltePlay-Medium",
+                      "lineHeight": 20,
+                      "marginTop": 0,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                    undefined,
+                    {
+                      "color": "#E20092",
+                    },
+                    false,
+                  ],
+                  {
+                    "fontSize": 16,
+                  },
+                  {
+                    "color": "#E20092",
+                  },
+                ]
+              }
+            >
+              strings.cancel
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

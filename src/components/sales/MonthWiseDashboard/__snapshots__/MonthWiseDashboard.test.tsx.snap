@@ -1,0 +1,445 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component MonthWiseDashboard snapshot tests for MonthWiseDashboard 1`] = `
+<RCTScrollView
+  showsVerticalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        {
+          "backgroundColor": "#ffffff",
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "gap": 12,
+              "paddingHorizontal": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                {
+                  "color": "#000000",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 13,
+                },
+                {
+                  "fontSize": 14,
+                },
+                undefined,
+              ]
+            }
+          >
+            strings.infoLastUpdatedOn
+             
+            2026-03-27
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "color": "#000000",
+                    "fontSize": 10,
+                    "textAlignVertical": "center",
+                  },
+                  {
+                    "color": "#564372",
+                    "fontFamily": "VoltePlay-Medium",
+                    "fontSize": 14,
+                    "fontWeight": "700",
+                    "lineHeight": 18,
+                  },
+                  {
+                    "fontSize": 14,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              strings.selectDashboardFor
+            </Text>
+            <View
+              style={
+                {
+                  "alignSelf": "stretch",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                  "gap": 0.1,
+                }
+              }
+              testID="dropdown-test-container"
+            >
+              <View
+                onLayout={[Function]}
+                style={
+                  [
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#ffffff",
+                      "flexDirection": "row",
+                      "overflow": "hidden",
+                      "padding": 4,
+                    },
+                    {
+                      "alignSelf": "flex-end",
+                      "backgroundColor": "rgba(255, 255, 255, 0)",
+                      "borderBottomWidth": 1,
+                      "borderColor": "#C4C4C4",
+                      "borderRadius": 4,
+                      "borderWidth": 1,
+                      "color": "#000000",
+                      "height": 35,
+                      "width": 140,
+                    },
+                  ]
+                }
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <TextInput
+                    autoComplete="new-password"
+                    editable={false}
+                    keyboardType="default"
+                    numberOfLines={1}
+                    onChangeText={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Select"
+                    placeholderTextColor="#8E81A1"
+                    style={
+                      [
+                        {
+                          "borderColor": "#C4C4C4",
+                          "borderRadius": 3,
+                          "borderWidth": 0.5,
+                          "color": "#000000",
+                          "minHeight": 40,
+                          "outlineStyle": "none",
+                          "paddingHorizontal": 10,
+                          "paddingVertical": 0,
+                        },
+                        undefined,
+                        [
+                          {
+                            "alignContent": "center",
+                            "borderWidth": 0,
+                            "flexGrow": 1,
+                            "flexShrink": 1,
+                            "fontFamily": "VoltePlay-Regular",
+                            "fontSize": 14,
+                            "fontWeight": "300",
+                            "minHeight": "auto",
+                            "paddingHorizontal": 0,
+                            "width": "85%",
+                          },
+                          {
+                            "backgroundColor": "rgba(255, 255, 255, 0)",
+                            "height": 35,
+                          },
+                        ],
+                        undefined,
+                        undefined,
+                        {
+                          "fontSize": 14,
+                        },
+                      ]
+                    }
+                    testID="input-test"
+                    textAlignVertical="center"
+                    value=""
+                  />
+                  <View
+                    style={
+                      {
+                        "alignItems": "flex-end",
+                        "justifyContent": "center",
+                        "paddingRight": 4,
+                        "width": "15%",
+                      }
+                    }
+                  >
+                    <View
+                      testID="image-test"
+                    >
+                      <Image
+                        defaultSource="mockedImagePath"
+                        onError={[Function]}
+                        resizeMode="contain"
+                        source={
+                          {
+                            "uri": "mockedPath",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "resizeMode": "contain",
+                            },
+                            {
+                              "borderRadius": 0,
+                              "height": 100,
+                              "width": 200,
+                            },
+                            undefined,
+                          ]
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#E6E6E6",
+              "height": 1,
+              "marginVertical": 12,
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "marginHorizontal": 16,
+              "marginVertical": 4,
+            }
+          }
+        >
+          <View
+            testID="mock-chart-wrapper"
+          />
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#E6E6E6",
+              "height": 1,
+              "marginVertical": 12,
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "alignItems": "flex-start",
+              "gap": 12,
+              "paddingHorizontal": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                {
+                  "color": "#564372",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                  "lineHeight": 18,
+                },
+                {
+                  "fontSize": 14,
+                },
+                undefined,
+              ]
+            }
+          >
+            strings.filterBy
+          </Text>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "borderColor": "#C4C4C4",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "gap": 35,
+                "height": 35,
+                "justifyContent": "space-between",
+                "paddingHorizontal": 10,
+              }
+            }
+            testID="dashboard-filter-pressable"
+          >
+            <Text
+              style={
+                [
+                  {
+                    "color": "#000000",
+                    "fontSize": 10,
+                    "textAlignVertical": "center",
+                  },
+                  {
+                    "color": "#8E81A1",
+                    "fontFamily": "VoltePlay-Regular",
+                    "fontSize": 12,
+                    "lineHeight": 13,
+                  },
+                  {
+                    "fontSize": 14,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              strings.parameter
+            </Text>
+            <View
+              testID="image-test"
+            >
+              <Image
+                defaultSource="mockedImagePath"
+                onError={[Function]}
+                resizeMode="contain"
+                source={
+                  {
+                    "uri": "mockedPath",
+                  }
+                }
+                style={
+                  [
+                    {
+                      "resizeMode": "contain",
+                    },
+                    {
+                      "borderRadius": 0,
+                      "height": 100,
+                      "width": 200,
+                    },
+                    undefined,
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#ffffff",
+              "elevation": 6,
+              "margin": 16,
+              "shadowColor": "#C4C4C4",
+              "shadowOffset": {
+                "height": 4,
+                "width": 0,
+              },
+              "shadowOpacity": 0.4,
+              "shadowRadius": 5.65,
+            }
+          }
+        >
+          <View
+            testID="mock-table-wrapper"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component FormHeader snapshot tests for FormHeader 1`] = `
+<View>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "gap": 10,
+          "justifyContent": "center",
+          "marginTop": 15,
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+    testID="header-test"
+  >
+    <View
+      testID="image-test"
+    >
+      <Image
+        defaultSource="mockedImagePath"
+        onError={[Function]}
+        resizeMode="contain"
+        source={
+          {
+            "uri": "mockedPath",
+          }
+        }
+        style={
+          [
+            {
+              "resizeMode": "contain",
+            },
+            {
+              "borderRadius": 0,
+              "height": 60,
+              "width": 60,
+            },
+            {
+              "resizeMode": "contain",
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          [
+            {
+              "display": "none",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 30,
+            },
+            undefined,
+          ],
+          {
+            "fontSize": 30,
+          },
+          undefined,
+        ]
+      }
+    >
+      forms.customerRecharge
+    </Text>
+  </View>
+</View>
+`;

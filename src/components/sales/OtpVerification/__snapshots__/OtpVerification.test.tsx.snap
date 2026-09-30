@@ -1,0 +1,596 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OtpVerification snapshot tests 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "width": "100%",
+    }
+  }
+  testID="OTP-test-id"
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+          "fontSize": 10,
+          "textAlignVertical": "center",
+        },
+        {
+          "color": "#220046",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 24,
+          "fontWeight": "600",
+        },
+        {
+          "fontSize": 24,
+        },
+        undefined,
+      ]
+    }
+  >
+    strings.oneTimePassword
+  </Text>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginTop": 30,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          {
+            "color": "#564372",
+            "fontFamily": "VoltePlay-SemiBold",
+            "fontSize": 14,
+            "fontWeight": "600",
+          },
+          {
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    >
+      strings.enterOtp
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "gap": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#564372",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 14,
+              "fontWeight": "400",
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.undefined
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#564372",
+              "fontFamily": "VoltePlay-SemiBold",
+              "fontSize": 14,
+              "fontWeight": "600",
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        123XXXX890
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginVertical": 12,
+        "width": "100%",
+      }
+    }
+  >
+    <TextInput
+      autoComplete="new-password"
+      autoFocus={true}
+      keyboardType="numeric"
+      maxLength={1}
+      numberOfLines={1}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+      placeholderTextColor="#907FA2"
+      style={
+        {
+          "borderBottomWidth": 1,
+          "borderColor": "#C2C2C2",
+          "color": "#000000",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 16,
+          "height": 40,
+          "textAlign": "center",
+          "width": 40,
+        }
+      }
+      testID="input-test"
+      textAlignVertical="center"
+      value=""
+    />
+    <TextInput
+      autoComplete="new-password"
+      autoFocus={false}
+      keyboardType="numeric"
+      maxLength={1}
+      numberOfLines={1}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+      placeholderTextColor="#907FA2"
+      style={
+        {
+          "borderBottomWidth": 1,
+          "borderColor": "#C2C2C2",
+          "color": "#000000",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 16,
+          "height": 40,
+          "textAlign": "center",
+          "width": 40,
+        }
+      }
+      testID="input-test"
+      textAlignVertical="center"
+      value=""
+    />
+    <TextInput
+      autoComplete="new-password"
+      autoFocus={false}
+      keyboardType="numeric"
+      maxLength={1}
+      numberOfLines={1}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+      placeholderTextColor="#907FA2"
+      style={
+        {
+          "borderBottomWidth": 1,
+          "borderColor": "#C2C2C2",
+          "color": "#000000",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 16,
+          "height": 40,
+          "textAlign": "center",
+          "width": 40,
+        }
+      }
+      testID="input-test"
+      textAlignVertical="center"
+      value=""
+    />
+    <TextInput
+      autoComplete="new-password"
+      autoFocus={false}
+      keyboardType="numeric"
+      maxLength={1}
+      numberOfLines={1}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+      placeholderTextColor="#907FA2"
+      style={
+        {
+          "borderBottomWidth": 1,
+          "borderColor": "#C2C2C2",
+          "color": "#000000",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 16,
+          "height": 40,
+          "textAlign": "center",
+          "width": 40,
+        }
+      }
+      testID="input-test"
+      textAlignVertical="center"
+      value=""
+    />
+    <TextInput
+      autoComplete="new-password"
+      autoFocus={false}
+      keyboardType="numeric"
+      maxLength={1}
+      numberOfLines={1}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+      placeholderTextColor="#907FA2"
+      style={
+        {
+          "borderBottomWidth": 1,
+          "borderColor": "#C2C2C2",
+          "color": "#000000",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 16,
+          "height": 40,
+          "textAlign": "center",
+          "width": 40,
+        }
+      }
+      testID="input-test"
+      textAlignVertical="center"
+      value=""
+    />
+    <TextInput
+      autoComplete="new-password"
+      autoFocus={false}
+      keyboardType="numeric"
+      maxLength={1}
+      numberOfLines={1}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+      placeholderTextColor="#907FA2"
+      style={
+        {
+          "borderBottomWidth": 1,
+          "borderColor": "#C2C2C2",
+          "color": "#000000",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 16,
+          "height": 40,
+          "textAlign": "center",
+          "width": 40,
+        }
+      }
+      testID="input-test"
+      textAlignVertical="center"
+      value=""
+    />
+  </View>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+          "fontSize": 10,
+          "textAlignVertical": "center",
+        },
+        {
+          "alignSelf": "flex-start",
+          "color": "#6B00DD",
+          "fontFamily": "VoltePlay-Regular",
+          "fontSize": 14,
+          "fontWeight": "400",
+        },
+        {
+          "fontSize": 14,
+        },
+        undefined,
+      ]
+    }
+  >
+    strings.resendOtpIn
+     
+    30
+    s
+  </Text>
+  <View>
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          {
+            "alignSelf": "center",
+            "color": "#220046",
+            "fontFamily": "VoltePlay-Medium",
+            "fontSize": 16,
+            "marginTop": 8,
+          },
+          {
+            "fontSize": 16,
+          },
+          undefined,
+        ]
+      }
+    >
+      strings.or
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "marginTop": 25,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#6B00DD",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 16,
+              "textDecorationColor": "#6B00DD",
+              "textDecorationLine": "underline",
+            },
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.clickHeretoApproveViaDist
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "marginTop": 35,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#E20092",
+          "borderRadius": 5,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "minHeight": 40,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+      testID="button-test"
+    >
+      <View
+        style={
+          {
+            "flexShrink": 1,
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                [
+                  {
+                    "alignSelf": "center",
+                    "fontFamily": "VoltePlay-Medium",
+                    "lineHeight": 20,
+                    "marginTop": 0,
+                    "textAlign": "center",
+                  },
+                  undefined,
+                  undefined,
+                  {
+                    "color": "#ffffff",
+                  },
+                  false,
+                ],
+                {
+                  "fontSize": 18,
+                },
+                {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            strings.submit
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "borderRadius": 5,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginTop": 8,
+          "minHeight": 40,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+      testID="button-test"
+    >
+      <View
+        style={
+          {
+            "flexShrink": 1,
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                [
+                  {
+                    "alignSelf": "center",
+                    "fontFamily": "VoltePlay-Medium",
+                    "lineHeight": 20,
+                    "marginTop": 0,
+                    "textAlign": "center",
+                  },
+                  undefined,
+                  undefined,
+                  {
+                    "color": "#E20092",
+                  },
+                  false,
+                ],
+                {
+                  "fontSize": 18,
+                },
+                {
+                  "color": "#E20092",
+                },
+              ]
+            }
+          >
+            strings.back
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

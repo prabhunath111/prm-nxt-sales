@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component ActionRequestPo snapshot tests for ActionRequestPo 1`] = `
+[
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#ffffff",
+          "flex": 1,
+          "paddingHorizontal": 12,
+          "width": "100%",
+        },
+        {
+          "backgroundColor": "#ffffff",
+          "flex": 1,
+          "paddingHorizontal": 12,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#ffffff",
+            "gap": 12,
+            "paddingTop": 12,
+            "paddingVertival": 12,
+          },
+          {
+            "backgroundColor": "#ffffff",
+            "gap": 12,
+            "paddingTop": 12,
+            "paddingVertival": 12,
+          },
+        ]
+      }
+    >
+      <TextInput
+        onChangeText={[Function]}
+        placeholder="strings.search"
+        value=""
+      />
+    </View>
+    <Text>
+      errors.noDataFound
+    </Text>
+  </View>,
+  <View
+    style={
+      {
+        "backgroundColor": "#ffffff",
+        "elevation": 8,
+        "gap": 10,
+        "justifyContent": "center",
+        "paddingHorizontal": 16,
+        "paddingVertical": 2,
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": -4,
+          "width": 0,
+        },
+        "shadowOpacity": 0.14,
+        "shadowRadius": 25,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <Text>
+        strings.cancel
+      </Text>
+    </View>
+  </View>,
+]
+`;

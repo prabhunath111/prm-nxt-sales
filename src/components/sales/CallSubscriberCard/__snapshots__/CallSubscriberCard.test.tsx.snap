@@ -1,0 +1,737 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component CallSubscriberCard snapshot tests for CallSubscriberCard 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#ffffff",
+        "borderRadius": 8,
+        "elevation": 4,
+        "paddingHorizontal": 12,
+        "paddingVertical": 8,
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.12,
+        "shadowRadius": 4,
+        "width": "100%",
+      },
+      {
+        "width": "50%",
+      },
+    ]
+  }
+>
+  <View
+    style={{}}
+    testID="text-test"
+  >
+    <View
+      style={
+        [
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+            undefined,
+          ],
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 14,
+                  "fontWeight": "400",
+                  "width": 180,
+                },
+                {
+                  "width": 230,
+                },
+              ],
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.subscriberId
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "flexShrink": 1,
+                "flexWrap": "wrap",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "lineHeight": 25,
+              },
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "width": 180,
+              },
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        SUB123
+      </Text>
+    </View>
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#E8E5EC",
+            "height": 1,
+            "marginVertical": 5,
+          },
+          {
+            "marginVertical": 1,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+            undefined,
+          ],
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 14,
+                  "fontWeight": "400",
+                  "width": 180,
+                },
+                {
+                  "width": 230,
+                },
+              ],
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.mobileNumber
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "flexShrink": 1,
+                "flexWrap": "wrap",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "lineHeight": 25,
+              },
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "width": 180,
+              },
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        ****1234
+      </Text>
+    </View>
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#E8E5EC",
+            "height": 1,
+            "marginVertical": 5,
+          },
+          {
+            "marginVertical": 1,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+            undefined,
+          ],
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 14,
+                  "fontWeight": "400",
+                  "width": 180,
+                },
+                {
+                  "width": 230,
+                },
+              ],
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.subscriberName
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "flexShrink": 1,
+                "flexWrap": "wrap",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "lineHeight": 25,
+              },
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "width": 180,
+              },
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        John Doe
+      </Text>
+    </View>
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#E8E5EC",
+            "height": 1,
+            "marginVertical": 5,
+          },
+          {
+            "marginVertical": 1,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+            undefined,
+          ],
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 14,
+                  "fontWeight": "400",
+                  "width": 180,
+                },
+                {
+                  "width": 230,
+                },
+              ],
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.status
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "flexShrink": 1,
+                "flexWrap": "wrap",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "lineHeight": 25,
+              },
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "width": 180,
+              },
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        Active
+      </Text>
+    </View>
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#E8E5EC",
+            "height": 1,
+            "marginVertical": 5,
+          },
+          {
+            "marginVertical": 1,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+            undefined,
+          ],
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 14,
+                  "fontWeight": "400",
+                  "width": 180,
+                },
+                {
+                  "width": 230,
+                },
+              ],
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.curBalance
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "flexShrink": 1,
+                "flexWrap": "wrap",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "lineHeight": 25,
+              },
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "width": 180,
+              },
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        100
+      </Text>
+    </View>
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#E8E5EC",
+            "height": 1,
+            "marginVertical": 5,
+          },
+          {
+            "marginVertical": 1,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+            undefined,
+          ],
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 14,
+                  "fontWeight": "400",
+                  "width": 180,
+                },
+                {
+                  "width": 230,
+                },
+              ],
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.validity
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "flexShrink": 1,
+                "flexWrap": "wrap",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "lineHeight": 25,
+              },
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "width": 180,
+              },
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        2024-12-31
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#E20092",
+        "borderRadius": 5,
+        "flexDirection": "row",
+        "height": 35,
+        "justifyContent": "center",
+        "marginTop": 8,
+        "minHeight": 35,
+        "opacity": 1,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+        "width": "100%",
+      }
+    }
+    testID="button-test"
+  >
+    <View
+      style={
+        {
+          "flexShrink": 1,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "gap": 8,
+          }
+        }
+      >
+        <View
+          testID="image-test"
+        >
+          <Image
+            defaultSource="mockedImagePath"
+            onError={[Function]}
+            resizeMode="contain"
+            source={
+              {
+                "uri": "mockedPath",
+              }
+            }
+            style={
+              [
+                {
+                  "resizeMode": "contain",
+                },
+                {
+                  "borderRadius": 0,
+                  "height": 100,
+                  "width": 200,
+                },
+                {
+                  "marginHorizontal": 5,
+                  "padding": 10,
+                },
+              ]
+            }
+          />
+        </View>
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontSize": 10,
+                "textAlignVertical": "center",
+              },
+              [
+                {
+                  "alignSelf": "center",
+                  "fontFamily": "VoltePlay-Medium",
+                  "lineHeight": 20,
+                  "marginTop": 0,
+                  "textAlign": "center",
+                },
+                undefined,
+                {
+                  "fontSize": 14,
+                },
+                {
+                  "color": "#ffffff",
+                },
+                false,
+              ],
+              {
+                "fontSize": 18,
+              },
+              {
+                "color": "#ffffff",
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;

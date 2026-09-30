@@ -1,0 +1,431 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrainingModule matches snapshot 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          [
+            {
+              "marginTop": 12,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#ffffff",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "paddingVertical": 12,
+                },
+                {
+                  "borderBottomColor": "#220046",
+                  "borderBottomWidth": 2,
+                },
+              ]
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "color": "#000000",
+                    "fontSize": 10,
+                    "textAlignVertical": "center",
+                  },
+                  [
+                    {
+                      "color": "#E20092",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                    },
+                    {
+                      "color": "#220046",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                    },
+                  ],
+                  {
+                    "fontSize": 16,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              strings.userGuide
+            </Text>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "paddingVertical": 12,
+                },
+                false,
+              ]
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "color": "#000000",
+                    "fontSize": 10,
+                    "textAlignVertical": "center",
+                  },
+                  [
+                    {
+                      "color": "#E20092",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                    },
+                    false,
+                  ],
+                  {
+                    "fontSize": 16,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              strings.trainingVideo
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "marginTop": 10,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#EFEFEF",
+                "borderRadius": 12,
+                "borderWidth": 1,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#EFEFEF",
+                  "borderRadius": 12,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                testID="training-item-0"
+              >
+                <View
+                  style={
+                    [
+                      {
+                        "backgroundColor": "#FCFCFC",
+                        "flexDirection": "row",
+                        "paddingBottom": 15,
+                        "paddingHorizontal": 16,
+                      },
+                      {
+                        "paddingTop": 13,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "flex": 1,
+                        "flexDirection": "row",
+                      }
+                    }
+                  >
+                    <View
+                      testID="image-test"
+                    >
+                      <Image
+                        defaultSource="mockedImagePath"
+                        onError={[Function]}
+                        resizeMode="contain"
+                        source={
+                          {
+                            "uri": "mockedPath",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "resizeMode": "contain",
+                            },
+                            {
+                              "borderRadius": 0,
+                              "height": 100,
+                              "width": 200,
+                            },
+                            {
+                              "marginRight": 13,
+                            },
+                          ]
+                        }
+                      />
+                    </View>
+                    <Text
+                      style={
+                        [
+                          {
+                            "color": "#000000",
+                            "fontSize": 10,
+                            "textAlignVertical": "center",
+                          },
+                          {
+                            "alignSelf": "center",
+                            "color": "#000000",
+                            "fontFamily": "VoltePlay-Medium",
+                            "fontSize": 14,
+                          },
+                          {
+                            "fontSize": 14,
+                          },
+                          undefined,
+                        ]
+                      }
+                    >
+                      User Guide 1
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      {
+        "backgroundColor": "#ffffff",
+        "elevation": 8,
+        "gap": 10,
+        "justifyContent": "center",
+        "paddingHorizontal": 16,
+        "paddingVertical": 4,
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": -4,
+          "width": 0,
+        },
+        "shadowOpacity": 0.14,
+        "shadowRadius": 25,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "rgba(255, 255, 255, 0)",
+          "borderColor": "#E20092",
+          "borderRadius": 3,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "minHeight": 40,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 13,
+        }
+      }
+      testID="button-test"
+    >
+      <View
+        style={
+          {
+            "flexShrink": 1,
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                [
+                  {
+                    "alignSelf": "center",
+                    "fontFamily": "VoltePlay-Medium",
+                    "lineHeight": 20,
+                    "marginTop": 0,
+                    "textAlign": "center",
+                  },
+                  undefined,
+                  undefined,
+                  {
+                    "color": "#E20092",
+                  },
+                  false,
+                ],
+                {
+                  "fontSize": 18,
+                },
+                {
+                  "color": "#E20092",
+                },
+              ]
+            }
+          >
+            strings.back
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

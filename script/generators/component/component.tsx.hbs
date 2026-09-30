@@ -1,0 +1,42 @@
+/**
+ * {{ componentDescription }}
+ *
+ * @module components/{{pascalCase name}}
+ * @memberof CommonComponent
+ */
+
+import React from "react";
+import {View, Text} from "react-native";
+import styles from "./{{pascalCase name}}.styles";
+
+/**
+ * Component type definitions
+ *
+ * @typedef {object} {{pascalCase name}}Props
+ * @property {string} [text] - The content for the component
+ */
+
+export type {{pascalCase name}}Props = {
+  text?: string
+}
+
+/**
+ * Represents a {{pascalCase name}} component
+ *
+ * @param {object} props - React properties passed from composition
+ * @param {string} [props.text] - The content for the component
+ * @returns {JSX.Element} The rendered {{pascalCase name}} component
+ *
+ * @example
+ * <{{pascalCase name}} text="Hello World!" />
+ */
+ 
+const {{pascalCase name}} = ( { text }: {{pascalCase name}}Props) => {
+ return (
+     <View style={styles.container}>
+         <Text>{text}</Text>
+     </View>
+ )
+};
+
+export default {{pascalCase name}};

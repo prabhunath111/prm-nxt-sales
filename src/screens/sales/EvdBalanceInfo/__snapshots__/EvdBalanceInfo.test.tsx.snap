@@ -1,0 +1,1134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component EvdBalanceInfo snapshot tests for EvdBalanceInfo 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "flex": 1,
+          "gap": 10,
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+    testID="tabs-test"
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#ffffff",
+          },
+          [
+            {
+              "elevation": 6,
+              "flexDirection": "row",
+              "shadowColor": "#C4C4C4",
+              "shadowOffset": {
+                "height": 4,
+                "width": 0,
+              },
+              "shadowOpacity": 0.4,
+              "shadowRadius": 5.65,
+              "width": "100%",
+            },
+            undefined,
+          ],
+        ]
+      }
+    >
+      <RCTScrollView
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+      >
+        <View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "borderBottomColor": "#220046",
+                "borderBottomWidth": 3,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "margin": 10,
+                "marginHorizontal": 15,
+                "opacity": 1,
+                "paddingVertical": 14,
+              }
+            }
+          >
+            <View>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#E20092",
+                        "flexShrink": 0,
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 14,
+                        "justifyContent": "space-between",
+                      },
+                      {
+                        "color": "#220046",
+                      },
+                    ],
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                strings.myEvdBalance
+              </Text>
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "margin": 10,
+                "marginHorizontal": 15,
+                "opacity": 1,
+                "paddingVertical": 14,
+              }
+            }
+          >
+            <View>
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontSize": 10,
+                      "textAlignVertical": "center",
+                    },
+                    [
+                      {
+                        "color": "#E20092",
+                        "flexShrink": 0,
+                        "fontFamily": "VoltePlay-Medium",
+                        "fontSize": 14,
+                        "justifyContent": "space-between",
+                      },
+                      false,
+                    ],
+                    {
+                      "fontSize": 14,
+                    },
+                    undefined,
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+    <RCTScrollView
+      contentContainerStyle={{}}
+      horizontal={false}
+      showsHorizontalScrollIndicator={true}
+      showsVerticalScrollIndicator={true}
+    >
+      <View>
+        <View
+          style={
+            [
+              {
+                "flex": 100,
+              },
+              {
+                "flexDirection": "row",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              [
+                {
+                  "flex": 1,
+                },
+                {
+                  "display": "flex",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "gap": 16,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "gap": 10,
+                    "paddingLeft": 10,
+                    "paddingRight": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    [
+                      {
+                        "backgroundColor": "#F7F4FC",
+                        "borderRadius": 5,
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 10,
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#000000",
+                          "fontSize": 10,
+                          "textAlignVertical": "center",
+                        },
+                        [
+                          {
+                            "color": "#000000",
+                            "fontFamily": "VoltePlay-Regular",
+                            "fontSize": 14,
+                          },
+                          [
+                            undefined,
+                            undefined,
+                          ],
+                        ],
+                        {
+                          "fontSize": 14,
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    strings.strings.currentBalance
+                  </Text>
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#000000",
+                          "fontSize": 10,
+                          "textAlignVertical": "center",
+                        },
+                        [
+                          {
+                            "color": "#000000",
+                            "flexShrink": 1,
+                            "flexWrap": "wrap",
+                            "fontFamily": "VoltePlay-Medium",
+                            "fontSize": 16,
+                            "lineHeight": 25,
+                          },
+                          {},
+                        ],
+                        {
+                          "fontSize": 16,
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    ₹
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  {
+                    "gap": 10,
+                    "paddingLeft": 10,
+                    "paddingRight": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#ffffff",
+                      "borderRadius": 4,
+                      "elevation": 4,
+                      "flexDirection": "row",
+                      "gap": 12,
+                      "justifyContent": "space-between",
+                      "minHeight": 48,
+                      "paddingHorizontal": 8,
+                      "shadowColor": "#000000",
+                      "shadowOffset": {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.12,
+                      "shadowRadius": 4,
+                      "width": "100%",
+                    }
+                  }
+                  testID="action-tile-card"
+                >
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "gap": 8,
+                      }
+                    }
+                  >
+                    <View
+                      testID="image-test"
+                    >
+                      <Image
+                        defaultSource="mockedImagePath"
+                        onError={[Function]}
+                        resizeMode="contain"
+                        source={
+                          {
+                            "uri": "mockedPath",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "resizeMode": "contain",
+                            },
+                            {
+                              "borderRadius": 0,
+                              "height": 100,
+                              "width": 200,
+                            },
+                            [
+                              {
+                                "height": 24,
+                                "width": 24,
+                              },
+                              undefined,
+                            ],
+                          ]
+                        }
+                      />
+                    </View>
+                    <Text
+                      style={
+                        [
+                          {
+                            "color": "#000000",
+                            "fontSize": 10,
+                            "textAlignVertical": "center",
+                          },
+                          {
+                            "color": "#000000",
+                            "fontFamily": "VoltePlay-Regular",
+                            "fontSize": 14,
+                            "fontWeight": "400",
+                          },
+                          {
+                            "fontSize": 14,
+                          },
+                          undefined,
+                        ]
+                      }
+                    >
+                      strings.rechargeTransaction
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "height": 25,
+                        "justifyContent": "center",
+                        "width": 25,
+                      }
+                    }
+                  >
+                    <View
+                      testID="image-test"
+                    >
+                      <Image
+                        defaultSource="mockedImagePath"
+                        onError={[Function]}
+                        resizeMode="contain"
+                        source={
+                          {
+                            "uri": "mockedPath",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "resizeMode": "contain",
+                            },
+                            {
+                              "borderRadius": 0,
+                              "height": 100,
+                              "width": 200,
+                            },
+                            {
+                              "height": 24,
+                              "width": 24,
+                            },
+                          ]
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  {
+                    "gap": 10,
+                    "paddingLeft": 10,
+                    "paddingRight": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#ffffff",
+                      "borderRadius": 4,
+                      "elevation": 4,
+                      "flexDirection": "row",
+                      "gap": 12,
+                      "justifyContent": "space-between",
+                      "minHeight": 48,
+                      "paddingHorizontal": 8,
+                      "shadowColor": "#000000",
+                      "shadowOffset": {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.12,
+                      "shadowRadius": 4,
+                      "width": "100%",
+                    }
+                  }
+                  testID="action-tile-card"
+                >
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "gap": 8,
+                      }
+                    }
+                  >
+                    <View
+                      testID="image-test"
+                    >
+                      <Image
+                        defaultSource="mockedImagePath"
+                        onError={[Function]}
+                        resizeMode="contain"
+                        source={
+                          {
+                            "uri": "mockedPath",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "resizeMode": "contain",
+                            },
+                            {
+                              "borderRadius": 0,
+                              "height": 100,
+                              "width": 200,
+                            },
+                            [
+                              {
+                                "height": 24,
+                                "width": 24,
+                              },
+                              undefined,
+                            ],
+                          ]
+                        }
+                      />
+                    </View>
+                    <Text
+                      style={
+                        [
+                          {
+                            "color": "#000000",
+                            "fontSize": 10,
+                            "textAlignVertical": "center",
+                          },
+                          {
+                            "color": "#000000",
+                            "fontFamily": "VoltePlay-Regular",
+                            "fontSize": 14,
+                            "fontWeight": "400",
+                          },
+                          {
+                            "fontSize": 14,
+                          },
+                          undefined,
+                        ]
+                      }
+                    >
+                      strings.otfCreditDetails
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "height": 25,
+                        "justifyContent": "center",
+                        "width": 25,
+                      }
+                    }
+                  >
+                    <View
+                      testID="image-test"
+                    >
+                      <Image
+                        defaultSource="mockedImagePath"
+                        onError={[Function]}
+                        resizeMode="contain"
+                        source={
+                          {
+                            "uri": "mockedPath",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "resizeMode": "contain",
+                            },
+                            {
+                              "borderRadius": 0,
+                              "height": 100,
+                              "width": 200,
+                            },
+                            {
+                              "height": 24,
+                              "width": 24,
+                            },
+                          ]
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  {
+                    "gap": 10,
+                    "paddingLeft": 10,
+                    "paddingRight": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#ffffff",
+                      "borderRadius": 4,
+                      "elevation": 4,
+                      "flexDirection": "row",
+                      "gap": 12,
+                      "justifyContent": "space-between",
+                      "minHeight": 48,
+                      "paddingHorizontal": 8,
+                      "shadowColor": "#000000",
+                      "shadowOffset": {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.12,
+                      "shadowRadius": 4,
+                      "width": "100%",
+                    }
+                  }
+                  testID="action-tile-card"
+                >
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "gap": 8,
+                      }
+                    }
+                  >
+                    <View
+                      testID="image-test"
+                    >
+                      <Image
+                        defaultSource="mockedImagePath"
+                        onError={[Function]}
+                        resizeMode="contain"
+                        source={
+                          {
+                            "uri": "mockedPath",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "resizeMode": "contain",
+                            },
+                            {
+                              "borderRadius": 0,
+                              "height": 100,
+                              "width": 200,
+                            },
+                            [
+                              {
+                                "height": 24,
+                                "width": 24,
+                              },
+                              undefined,
+                            ],
+                          ]
+                        }
+                      />
+                    </View>
+                    <Text
+                      style={
+                        [
+                          {
+                            "color": "#000000",
+                            "fontSize": 10,
+                            "textAlignVertical": "center",
+                          },
+                          {
+                            "color": "#000000",
+                            "fontFamily": "VoltePlay-Regular",
+                            "fontSize": 14,
+                            "fontWeight": "400",
+                          },
+                          {
+                            "fontSize": 14,
+                          },
+                          undefined,
+                        ]
+                      }
+                    >
+                      strings.balanceTransferDetails
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "height": 25,
+                        "justifyContent": "center",
+                        "width": 25,
+                      }
+                    }
+                  >
+                    <View
+                      testID="image-test"
+                    >
+                      <Image
+                        defaultSource="mockedImagePath"
+                        onError={[Function]}
+                        resizeMode="contain"
+                        source={
+                          {
+                            "uri": "mockedPath",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "resizeMode": "contain",
+                            },
+                            {
+                              "borderRadius": 0,
+                              "height": 100,
+                              "width": 200,
+                            },
+                            {
+                              "height": 24,
+                              "width": 24,
+                            },
+                          ]
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  {
+                    "gap": 10,
+                    "paddingLeft": 10,
+                    "paddingRight": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#ffffff",
+                      "borderRadius": 4,
+                      "elevation": 4,
+                      "flexDirection": "row",
+                      "gap": 12,
+                      "justifyContent": "space-between",
+                      "minHeight": 48,
+                      "paddingHorizontal": 8,
+                      "shadowColor": "#000000",
+                      "shadowOffset": {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.12,
+                      "shadowRadius": 4,
+                      "width": "100%",
+                    }
+                  }
+                  testID="action-tile-card"
+                >
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "gap": 8,
+                      }
+                    }
+                  >
+                    <View
+                      testID="image-test"
+                    >
+                      <Image
+                        defaultSource="mockedImagePath"
+                        onError={[Function]}
+                        resizeMode="contain"
+                        source={
+                          {
+                            "uri": "mockedPath",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "resizeMode": "contain",
+                            },
+                            {
+                              "borderRadius": 0,
+                              "height": 100,
+                              "width": 200,
+                            },
+                            [
+                              {
+                                "height": 24,
+                                "width": 24,
+                              },
+                              undefined,
+                            ],
+                          ]
+                        }
+                      />
+                    </View>
+                    <Text
+                      style={
+                        [
+                          {
+                            "color": "#000000",
+                            "fontSize": 10,
+                            "textAlignVertical": "center",
+                          },
+                          {
+                            "color": "#000000",
+                            "fontFamily": "VoltePlay-Regular",
+                            "fontSize": 14,
+                            "fontWeight": "400",
+                          },
+                          {
+                            "fontSize": 14,
+                          },
+                          undefined,
+                        ]
+                      }
+                    >
+                      strings.consolidatedTransactions
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "height": 25,
+                        "justifyContent": "center",
+                        "width": 25,
+                      }
+                    }
+                  >
+                    <View
+                      testID="image-test"
+                    >
+                      <Image
+                        defaultSource="mockedImagePath"
+                        onError={[Function]}
+                        resizeMode="contain"
+                        source={
+                          {
+                            "uri": "mockedPath",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "resizeMode": "contain",
+                            },
+                            {
+                              "borderRadius": 0,
+                              "height": 100,
+                              "width": 200,
+                            },
+                            {
+                              "height": 24,
+                              "width": 24,
+                            },
+                          ]
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "elevation": 8,
+        "gap": 5,
+        "justifyContent": "center",
+        "marginTop": 12,
+        "paddingHorizontal": 16,
+        "paddingVertical": 5,
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": -4,
+          "width": 0,
+        },
+        "shadowOpacity": 0.14,
+        "shadowRadius": 25,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "rgba(255, 255, 255, 0)",
+          "borderColor": "#E20092",
+          "borderRadius": 5,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "minHeight": 40,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+          "width": 250,
+        }
+      }
+      testID="button-test"
+    >
+      <View
+        style={
+          {
+            "flexShrink": 1,
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                [
+                  {
+                    "alignSelf": "center",
+                    "fontFamily": "VoltePlay-Medium",
+                    "lineHeight": 20,
+                    "marginTop": 0,
+                    "textAlign": "center",
+                  },
+                  undefined,
+                  undefined,
+                  {
+                    "color": "#E20092",
+                  },
+                  false,
+                ],
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "color": "#E20092",
+                },
+              ]
+            }
+          >
+            strings.cancel
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

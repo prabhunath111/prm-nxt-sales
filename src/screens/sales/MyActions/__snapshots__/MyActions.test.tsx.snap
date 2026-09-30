@@ -1,0 +1,791 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyActions Component renders MyActions correctly and matches snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "center",
+        "flex": 1,
+        "height": "60%",
+      },
+      undefined,
+    ]
+  }
+  testID="MyActions"
+>
+  <View
+    style={
+      {
+        "paddingHorizontal": 10,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <View
+      testID="carousel"
+    >
+      <View
+        testID="carousel-item-1"
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#4B0082",
+              "borderRadius": 12,
+              "margin": 12,
+              "padding": 16,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginBottom": 8,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "white",
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  }
+                }
+              >
+                EVD balance (₹)
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "#fff",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    {
+                      "color": "#fff",
+                      "fontWeight": "700",
+                    }
+                  }
+                >
+                  ₹5000
+                </Text>
+              </Text>
+            </View>
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "backgroundColor": "#FF69B4",
+                  "borderRadius": 20,
+                  "paddingHorizontal": 12,
+                  "paddingVertical": 6,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "white",
+                    "fontSize": 14,
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                + Add Money
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "backgroundColor": "rgba(255,255,255,0.3)",
+                "height": 1,
+                "marginVertical": 8,
+              }
+            }
+          />
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginBottom": 8,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "white",
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  }
+                }
+              >
+                Recharge (₹)
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "#fff",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                FTD 
+                <Text
+                  style={
+                    {
+                      "color": "#fff",
+                      "fontWeight": "700",
+                    }
+                  }
+                >
+                  ₹100
+                </Text>
+                 | MTD 
+                <Text
+                  style={
+                    {
+                      "color": "#fff",
+                      "fontWeight": "700",
+                    }
+                  }
+                >
+                  ₹1000
+                </Text>
+              </Text>
+            </View>
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "backgroundColor": "#FF69B4",
+                  "borderRadius": 20,
+                  "paddingHorizontal": 12,
+                  "paddingVertical": 6,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "white",
+                    "fontSize": 14,
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                View Details
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        testID="carousel-item-2"
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#4B0082",
+              "borderRadius": 12,
+              "margin": 12,
+              "padding": 16,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginBottom": 8,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "white",
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  }
+                }
+              >
+                Activation (Qty)
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "#fff",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                FTD 
+                <Text
+                  style={
+                    {
+                      "color": "#fff",
+                      "fontWeight": "700",
+                    }
+                  }
+                >
+                  10
+                </Text>
+                 | MTD 
+                <Text
+                  style={
+                    {
+                      "color": "#fff",
+                      "fontWeight": "700",
+                    }
+                  }
+                >
+                  100
+                </Text>
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "backgroundColor": "rgba(255,255,255,0.3)",
+                "height": 1,
+                "marginVertical": 8,
+              }
+            }
+          />
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginBottom": 8,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "white",
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  }
+                }
+              >
+                TSK stock (Qty)
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "#fff",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    {
+                      "color": "#fff",
+                      "fontWeight": "700",
+                    }
+                  }
+                >
+                  50
+                </Text>
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "backgroundColor": "#F7F4FC",
+        "borderRadius": 10,
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "padding": 10,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "height": 70,
+          "width": "50%",
+        }
+      }
+    >
+      <View
+        testID="dashboard-icon-evdBalanceInfo"
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+        >
+          <Text>
+            EVD Balance
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "height": 70,
+          "width": "50%",
+        }
+      }
+    >
+      <View
+        testID="dashboard-icon-purchaseOrder"
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+        >
+          <Text>
+            Purchase Order
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "backgroundColor": "#fff",
+        "borderRadius": 12,
+        "elevation": 2,
+        "margin": 16,
+        "shadowColor": "#000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.05,
+        "shadowRadius": 4,
+      }
+    }
+  >
+    <RCTScrollView
+      showsVerticalScrollIndicator={false}
+      testID="home-scroll-view"
+    >
+      <View>
+        <RCTScrollView
+          ItemSeparatorComponent={[Function]}
+          data={
+            [
+              {
+                "isModel": undefined,
+                "menuIcon": "CREATE_CHANNEL_PARTNER",
+                "menuTitle": "Create Channel Partner",
+                "path": "createChannelPartner",
+              },
+              {
+                "isModel": undefined,
+                "menuIcon": "DEMO_BOX_DETAIL",
+                "menuTitle": "Demo Box Detail",
+                "path": "demoBoxDetail",
+              },
+              {
+                "isModel": undefined,
+                "menuIcon": "approval",
+                "menuTitle": "Partner Approval",
+                "path": "partnerApproval",
+              },
+              {
+                "isModel": undefined,
+                "menuIcon": "inventory",
+                "menuTitle": "TSRA Inventory",
+                "path": "tsraInventory",
+              },
+            ]
+          }
+          getItem={[Function]}
+          getItemCount={[Function]}
+          keyExtractor={[Function]}
+          onContentSizeChange={[Function]}
+          onLayout={[Function]}
+          onMomentumScrollBegin={[Function]}
+          onMomentumScrollEnd={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onScrollEndDrag={[Function]}
+          removeClippedSubviews={false}
+          renderItem={[Function]}
+          scrollEventThrottle={0.0001}
+          stickyHeaderIndices={[]}
+          viewabilityConfigCallbackPairs={[]}
+        >
+          <View>
+            <View
+              onFocusCapture={[Function]}
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                testID="action-tile-Create Channel Partner"
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                >
+                  <Text>
+                    Create Channel Partner
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  {
+                    "backgroundColor": "#eee",
+                    "height": 0.5,
+                  }
+                }
+              />
+            </View>
+            <View
+              onFocusCapture={[Function]}
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                testID="action-tile-Demo Box Detail"
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                >
+                  <Text>
+                    Demo Box Detail
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  {
+                    "backgroundColor": "#eee",
+                    "height": 0.5,
+                  }
+                }
+              />
+            </View>
+            <View
+              onFocusCapture={[Function]}
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                testID="action-tile-Partner Approval"
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                >
+                  <Text>
+                    Partner Approval
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  {
+                    "backgroundColor": "#eee",
+                    "height": 0.5,
+                  }
+                }
+              />
+            </View>
+            <View
+              onFocusCapture={[Function]}
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                testID="action-tile-TSRA Inventory"
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                >
+                  <Text>
+                    TSRA Inventory
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </RCTScrollView>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;

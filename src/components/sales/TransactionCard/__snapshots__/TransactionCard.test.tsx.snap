@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionCard Component Tests matches snapshot 1`] = `
+<View>
+  <View
+    style={
+      {
+        "minHeight": 70,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        [
+          4285202653,
+          4280418374,
+        ]
+      }
+      endPoint={
+        {
+          "x": 1,
+          "y": 0,
+        }
+      }
+      locations={null}
+      startPoint={
+        {
+          "x": 0,
+          "y": 0,
+        }
+      }
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          {
+            "borderRadius": 10,
+            "padding": 10,
+          },
+        ]
+      }
+      testID="gradient-test"
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "flex-start",
+              "flex": 1,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                [
+                  {
+                    "color": "#ffffff",
+                    "fontFamily": "VoltePlay-Regular",
+                    "fontSize": 14,
+                    "lineHeight": 25,
+                  },
+                  {},
+                ],
+                {
+                  "fontSize": 14,
+                },
+                undefined,
+              ]
+            }
+          >
+            strings.SnapshotHeader
+          </Text>
+          <View
+            style={
+              {
+                "flexDirection": "row",
+                "gap": 5,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "color": "#000000",
+                    "fontSize": 10,
+                    "textAlignVertical": "center",
+                  },
+                  [
+                    {
+                      "color": "#ffffff",
+                      "fontFamily": "VoltePlay-Regular",
+                      "fontSize": 14,
+                      "fontWeight": "400",
+                      "lineHeight": 25,
+                    },
+                    {},
+                  ],
+                  {
+                    "fontSize": 14,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              text:10
+            </Text>
+            <Text
+              style={
+                [
+                  {
+                    "color": "#000000",
+                    "fontSize": 10,
+                    "textAlignVertical": "center",
+                  },
+                  [
+                    {
+                      "color": "#ffffff",
+                      "flexShrink": 1,
+                      "flexWrap": "wrap",
+                      "fontFamily": "VoltePlay-Medium",
+                      "fontSize": 16,
+                      "lineHeight": 25,
+                    },
+                    {},
+                  ],
+                  {
+                    "fontSize": 16,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              text:20
+            </Text>
+            <View
+              style={
+                {
+                  "borderLeftColor": "#E8E5EC",
+                  "borderLeftWidth": 0.5,
+                }
+              }
+            />
+            <Text
+              style={
+                [
+                  {
+                    "color": "#000000",
+                    "fontSize": 10,
+                    "textAlignVertical": "center",
+                  },
+                  [
+                    {
+                      "color": "#ffffff",
+                      "fontFamily": "VoltePlay-Regular",
+                      "fontSize": 14,
+                      "fontWeight": "400",
+                      "lineHeight": 25,
+                    },
+                    {},
+                  ],
+                  {
+                    "fontSize": 14,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              text:30
+            </Text>
+            <Text
+              style={
+                [
+                  {
+                    "color": "#000000",
+                    "fontSize": 10,
+                    "textAlignVertical": "center",
+                  },
+                  [
+                    {
+                      "color": "#ffffff",
+                      "flexShrink": 1,
+                      "flexWrap": "wrap",
+                      "fontFamily": "VoltePlay-Medium",
+                      "fontSize": 16,
+                      "lineHeight": 25,
+                    },
+                    {},
+                  ],
+                  {
+                    "fontSize": 16,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              text:40
+            </Text>
+          </View>
+        </View>
+      </View>
+    </BVLinearGradient>
+  </View>
+</View>
+`;

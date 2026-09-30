@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component AppLoader snapshot tests for AppLoader 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+      "position": "absolute",
+    }
+  }
+  testID="loader-test"
+>
+  <Modal
+    hardwareAccelerated={false}
+    statusBarTranslucent={true}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#220046cc",
+          "height": "100%",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "height": 311,
+              "maxWidth": 450,
+              "width": 675,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": "100%",
+              "justifyContent": "center",
+              "padding": 10,
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            testID="image-test"
+          >
+            <Image
+              defaultSource="mockedImagePath"
+              onError={[Function]}
+              resizeMode="contain"
+              source={
+                {
+                  "uri": "mockedPath",
+                }
+              }
+              style={
+                [
+                  {
+                    "resizeMode": "contain",
+                  },
+                  {
+                    "borderRadius": 0,
+                    "height": 100,
+                    "width": 200,
+                  },
+                  undefined,
+                ]
+              }
+            />
+          </View>
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                {
+                  "color": "#000000",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 25,
+                  "marginTop": 6,
+                  "textAlign": "center",
+                },
+                {
+                  "fontSize": 25,
+                },
+                undefined,
+              ]
+            }
+          >
+            Loading..
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontSize": 10,
+                  "textAlignVertical": "center",
+                },
+                {
+                  "color": "#545454",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 16,
+                  "marginTop": 11,
+                  "textAlign": "center",
+                },
+                {
+                  "fontSize": 16,
+                },
+                undefined,
+              ]
+            }
+          >
+            alertMessages.loaderInfo
+          </Text>
+        </View>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;

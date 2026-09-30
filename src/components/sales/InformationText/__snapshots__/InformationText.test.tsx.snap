@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component InformationText snapshot tests for InformationText 1`] = `
+<View>
+  <View
+    style={
+      [
+        {},
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          [
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 14,
+            },
+            {},
+          ],
+          {
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    >
+      strings.undefined
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          [
+            {
+              "color": "#000000",
+              "flexShrink": 1,
+              "flexWrap": "wrap",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 16,
+              "lineHeight": 25,
+            },
+            {},
+          ],
+          {
+            "fontSize": 16,
+          },
+          undefined,
+        ]
+      }
+    >
+      NA
+    </Text>
+  </View>
+</View>
+`;

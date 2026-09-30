@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component IconTextInput snapshot tests for IconTextInput 1`] = `
+<View>
+  <View
+    style={
+      {
+        "gap": 12,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "flex-start",
+            "borderBottomWidth": 2,
+            "borderColor": "#C7C0D0",
+            "borderWidth": 0,
+            "flex": 1,
+            "flexDirection": "row",
+            "padding": 8,
+          },
+          undefined,
+          undefined,
+        ]
+      }
+    >
+      <TextInput
+        autoComplete="new-password"
+        keyboardType="default"
+        numberOfLines={1}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholderTextColor="#C7C0D0"
+        style={
+          [
+            {
+              "borderColor": "#C4C4C4",
+              "borderRadius": 3,
+              "borderWidth": 0.5,
+              "color": "#000000",
+              "minHeight": 40,
+              "outlineStyle": "none",
+              "paddingHorizontal": 10,
+              "paddingVertical": 0,
+            },
+            undefined,
+            [
+              {
+                "borderWidth": 0,
+                "flexGrow": 1,
+                "flexShrink": 100,
+                "minHeight": "auto",
+                "paddingHorizontal": 6,
+                "paddingVertical": 0,
+              },
+              undefined,
+            ],
+            undefined,
+            undefined,
+            {
+              "fontSize": 16,
+            },
+          ]
+        }
+        testID="input-test"
+        textAlignVertical="center"
+      />
+    </View>
+  </View>
+</View>
+`;

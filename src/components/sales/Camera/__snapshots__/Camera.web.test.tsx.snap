@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Camera Web Component snapshot test for camera mode 1`] = `
+<View>
+  <View />
+</View>
+`;
+
+exports[`Camera Web Component snapshot test for scanner mode 1`] = `<View />`;

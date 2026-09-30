@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Production Pinning -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.msales.tataplay.com</domain>
+        <domain includeSubdomains="true">d3oaantw5vj2sn.cloudfront.net</domain>
+        <domain includeSubdomains="true">uat-embed-dashboards.tataplay.com</domain>
+        <domain includeSubdomains="true">uatmanageapps.tataplay.com</domain>
+        <domain includeSubdomains="true">uat-api.msales.tataplay.com</domain>
+        
+        <pin-set expiration="2026-12-31">
+            <!-- Leaf Pin for api.msales.tataplay.com -->
+            <pin digest="SHA-256">JJPcv9/Un6XiBuG3U/laneLcs+B4jZKbv3D5oWYJ+tg=</pin>
+            <!-- Intermediate Pin for api.msales.tataplay.com (DigiCert) -->
+            <pin digest="SHA-256">Wec45nQiFwKvHtuHxSAMGkt19k+uPSw9JlEkxhvYPHk=</pin>
+            <!-- Leaf Pin for d3oaantw5vj2sn.cloudfront.net -->
+            <pin digest="SHA-256">6zbx07xg+bfsDk+vJhMMPK9JhWrLRqY0hSmEICPpi+k=</pin>
+            <!-- Intermediate Pin for *.cloudfront.net (Amazon) -->
+            <pin digest="SHA-256">DxH4tt40L+eduF6szpY6TONlxhZhBd+pJ9wbHlQ2fuw=</pin>
+            <!-- Leaf Pin for uat-embed-dashboards.tataplay.com -->
+            <pin digest="SHA-256">ABrGAacgB7U+wH5aN6m32SG6q3ja8/UhAetqz+2rE8M=</pin>
+        </pin-set>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">10.0.2.2</domain> <!-- Android Emulator Loopback -->
+    </domain-config>
+
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

@@ -1,0 +1,1687 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultipleSubId snapshot tests 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+  testID="multipleId-test-container"
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+          "fontSize": 10,
+          "textAlignVertical": "center",
+        },
+        [
+          {
+            "color": "#000000",
+            "fontFamily": "VoltePlay-Regular",
+            "fontSize": 15,
+            "textAlign": "flex-start",
+            "width": "100%",
+          },
+          undefined,
+        ],
+        {
+          "fontSize": 15,
+        },
+        undefined,
+      ]
+    }
+  >
+    strings.multipleSID
+  </Text>
+  <View
+    style={
+      [
+        {
+          "maxHeight": undefined,
+          "width": "100%",
+        },
+        false,
+        {
+          "flex": 1,
+          "maxHeight": 230,
+          "overflow": "hidden",
+          "paddingTop": 14,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={
+        {
+          "overflow": "scroll",
+        }
+      }
+      data={
+        [
+          {
+            "aliasName": "Home",
+            "statusNT": "Active",
+            "subId": "123",
+            "subscriberId": "sid1",
+          },
+          {
+            "aliasName": "Office",
+            "statusNT": "Blacklisted",
+            "subId": "456",
+            "subscriberId": "sid2",
+          },
+          {
+            "aliasName": "Shop",
+            "statusNT": "Cancelled",
+            "subId": "789",
+            "subscriberId": "sid3",
+          },
+          {
+            "aliasName": "Other",
+            "statusNT": "Cancel-Pending",
+            "subId": "000",
+            "subscriberId": "sid4",
+          },
+          {
+            "aliasName": "Main",
+            "statusNT": "Deactivated",
+            "subId": "111",
+            "subscriberId": "sid5",
+          },
+          {
+            "aliasName": "Guest",
+            "statusNT": "Pending",
+            "subId": "222",
+            "subscriberId": "sid6",
+          },
+          {
+            "aliasName": "Back",
+            "statusNT": "Suspended",
+            "subId": "333",
+            "subscriberId": "sid7",
+          },
+          {
+            "aliasName": "Front",
+            "statusNT": "Temp Suspension",
+            "subId": "444",
+            "subscriberId": "sid8",
+          },
+          {
+            "aliasName": "Unknown",
+            "statusNT": "UNKNOWN",
+            "subId": "555",
+            "subscriberId": "sid9",
+          },
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      keyExtractor={[Function]}
+      nestedScrollEnabled={true}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      persistentScrollbar={true}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEnabled={true}
+      scrollEventThrottle={0.0001}
+      showsVerticalScrollIndicator={true}
+      stickyHeaderIndices={[]}
+      viewabilityConfigCallbackPairs={[]}
+    >
+      <View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "borderColor": "#C4C4C4",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "gap": 10,
+                  "marginBottom": 10,
+                  "padding": 12,
+                  "width": "100%",
+                },
+                false,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#E20092",
+                  "borderRadius": 10,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "gap": 12,
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <View>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                      },
+                      {
+                        "fontSize": 16,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  123
+                </Text>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "lineHeight": 20,
+                      },
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  Home
+                </Text>
+              </View>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 12,
+                      "paddingVertical": 6,
+                    },
+                    {
+                      "backgroundColor": "#D7F9F0",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      [
+                        {
+                          "fontFamily": "VoltePlay-Medium",
+                          "fontSize": 14,
+                          "marginTop": 0,
+                          "textTransform": "uppercase",
+                        },
+                        {
+                          "color": "#057056",
+                        },
+                      ],
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  subscriberStatus.Active
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "borderColor": "#C4C4C4",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "gap": 10,
+                  "marginBottom": 10,
+                  "padding": 12,
+                  "width": "100%",
+                },
+                false,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#E20092",
+                  "borderRadius": 10,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "gap": 12,
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <View>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                      },
+                      {
+                        "fontSize": 16,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  456
+                </Text>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "lineHeight": 20,
+                      },
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  Office
+                </Text>
+              </View>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 12,
+                      "paddingVertical": 6,
+                    },
+                    {
+                      "backgroundColor": "#DDDDDD",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      [
+                        {
+                          "fontFamily": "VoltePlay-Medium",
+                          "fontSize": 14,
+                          "marginTop": 0,
+                          "textTransform": "uppercase",
+                        },
+                        {
+                          "color": "#424242",
+                        },
+                      ],
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  subscriberStatus.Blacklisted
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "borderColor": "#C4C4C4",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "gap": 10,
+                  "marginBottom": 10,
+                  "padding": 12,
+                  "width": "100%",
+                },
+                false,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#E20092",
+                  "borderRadius": 10,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "gap": 12,
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <View>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                      },
+                      {
+                        "fontSize": 16,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  789
+                </Text>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "lineHeight": 20,
+                      },
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  Shop
+                </Text>
+              </View>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 12,
+                      "paddingVertical": 6,
+                    },
+                    {
+                      "backgroundColor": "#DDDDDD",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      [
+                        {
+                          "fontFamily": "VoltePlay-Medium",
+                          "fontSize": 14,
+                          "marginTop": 0,
+                          "textTransform": "uppercase",
+                        },
+                        {
+                          "color": "#424242",
+                        },
+                      ],
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  subscriberStatus.Cancelled
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "borderColor": "#C4C4C4",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "gap": 10,
+                  "marginBottom": 10,
+                  "padding": 12,
+                  "width": "100%",
+                },
+                false,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#E20092",
+                  "borderRadius": 10,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "gap": 12,
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <View>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                      },
+                      {
+                        "fontSize": 16,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  000
+                </Text>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "lineHeight": 20,
+                      },
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  Other
+                </Text>
+              </View>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 12,
+                      "paddingVertical": 6,
+                    },
+                    {
+                      "backgroundColor": "#DDDDDD",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      [
+                        {
+                          "fontFamily": "VoltePlay-Medium",
+                          "fontSize": 14,
+                          "marginTop": 0,
+                          "textTransform": "uppercase",
+                        },
+                        {
+                          "color": "#424242",
+                        },
+                      ],
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  subscriberStatus.CancelPending
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "borderColor": "#C4C4C4",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "gap": 10,
+                  "marginBottom": 10,
+                  "padding": 12,
+                  "width": "100%",
+                },
+                false,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#E20092",
+                  "borderRadius": 10,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "gap": 12,
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <View>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                      },
+                      {
+                        "fontSize": 16,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  111
+                </Text>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "lineHeight": 20,
+                      },
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  Main
+                </Text>
+              </View>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 12,
+                      "paddingVertical": 6,
+                    },
+                    {
+                      "backgroundColor": "#DDDDDD",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      [
+                        {
+                          "fontFamily": "VoltePlay-Medium",
+                          "fontSize": 14,
+                          "marginTop": 0,
+                          "textTransform": "uppercase",
+                        },
+                        {
+                          "color": "#424242",
+                        },
+                      ],
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  subscriberStatus.Deactivated
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "borderColor": "#C4C4C4",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "gap": 10,
+                  "marginBottom": 10,
+                  "padding": 12,
+                  "width": "100%",
+                },
+                false,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#E20092",
+                  "borderRadius": 10,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "gap": 12,
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <View>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                      },
+                      {
+                        "fontSize": 16,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  222
+                </Text>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "lineHeight": 20,
+                      },
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  Guest
+                </Text>
+              </View>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 12,
+                      "paddingVertical": 6,
+                    },
+                    {
+                      "backgroundColor": "#FFF0CA",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      [
+                        {
+                          "fontFamily": "VoltePlay-Medium",
+                          "fontSize": 14,
+                          "marginTop": 0,
+                          "textTransform": "uppercase",
+                        },
+                        {
+                          "color": "#D18F0E",
+                        },
+                      ],
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  subscriberStatus.Pending
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "borderColor": "#C4C4C4",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "gap": 10,
+                  "marginBottom": 10,
+                  "padding": 12,
+                  "width": "100%",
+                },
+                false,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#E20092",
+                  "borderRadius": 10,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "gap": 12,
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <View>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                      },
+                      {
+                        "fontSize": 16,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  333
+                </Text>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "lineHeight": 20,
+                      },
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  Back
+                </Text>
+              </View>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 12,
+                      "paddingVertical": 6,
+                    },
+                    {
+                      "backgroundColor": "#DDDDDD",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      [
+                        {
+                          "fontFamily": "VoltePlay-Medium",
+                          "fontSize": 14,
+                          "marginTop": 0,
+                          "textTransform": "uppercase",
+                        },
+                        {
+                          "color": "#424242",
+                        },
+                      ],
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  subscriberStatus.Suspended
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "borderColor": "#C4C4C4",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "gap": 10,
+                  "marginBottom": 10,
+                  "padding": 12,
+                  "width": "100%",
+                },
+                false,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#E20092",
+                  "borderRadius": 10,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "gap": 12,
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <View>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                      },
+                      {
+                        "fontSize": 16,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  444
+                </Text>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "lineHeight": 20,
+                      },
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  Front
+                </Text>
+              </View>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 12,
+                      "paddingVertical": 6,
+                    },
+                    {
+                      "backgroundColor": "#DDDDDD",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      [
+                        {
+                          "fontFamily": "VoltePlay-Medium",
+                          "fontSize": 14,
+                          "marginTop": 0,
+                          "textTransform": "uppercase",
+                        },
+                        {
+                          "color": "#424242",
+                        },
+                      ],
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  subscriberStatus.TempSuspension
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "borderColor": "#C4C4C4",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "gap": 10,
+                  "marginBottom": 10,
+                  "padding": 12,
+                  "width": "100%",
+                },
+                false,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#E20092",
+                  "borderRadius": 10,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "gap": 12,
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <View>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                      },
+                      {
+                        "fontSize": 16,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  555
+                </Text>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      {
+                        "fontFamily": "VoltePlay-Regular",
+                        "fontSize": 14,
+                        "lineHeight": 20,
+                      },
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  Unknown
+                </Text>
+              </View>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 12,
+                      "paddingVertical": 6,
+                    },
+                    {
+                      "backgroundColor": "#DDDDDD",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#000000",
+                        "fontSize": 10,
+                        "textAlignVertical": "center",
+                      },
+                      [
+                        {
+                          "fontFamily": "VoltePlay-Medium",
+                          "fontSize": 14,
+                          "marginTop": 0,
+                          "textTransform": "uppercase",
+                        },
+                        {
+                          "color": "#424242",
+                        },
+                      ],
+                      {
+                        "fontSize": 14,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  UNKNOWN
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;

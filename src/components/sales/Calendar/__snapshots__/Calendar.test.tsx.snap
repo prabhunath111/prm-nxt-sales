@@ -1,0 +1,3344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component Calendar snapshot tests for Calendar 1`] = `
+<View>
+  <View
+    testID="calendar-test.container"
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "white",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+          },
+          {
+            "width": "100%",
+          },
+        ]
+      }
+      testID="calendar-test"
+    >
+      <View
+        accessibilityActions={
+          [
+            {
+              "label": "increment",
+              "name": "increment",
+            },
+            {
+              "label": "decrement",
+              "name": "decrement",
+            },
+          ]
+        }
+        accessibilityRole="adjustable"
+        accessible={true}
+        onAccessibilityAction={[Function]}
+        testID="calendar-test.header"
+      >
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginTop": 6,
+                "paddingLeft": 10,
+                "paddingRight": 10,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            hitSlop={
+              {
+                "bottom": 20,
+                "left": 20,
+                "right": 20,
+                "top": 20,
+              }
+            }
+            importantForAccessibility="no-hide-descendants"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "opacity": 1,
+                "padding": 10,
+              }
+            }
+            testID="calendar-test.header.leftArrow"
+          >
+            <View
+              testID="image-test"
+            >
+              <Image
+                defaultSource="mockedImagePath"
+                onError={[Function]}
+                resizeMode="contain"
+                source={
+                  {
+                    "uri": "mockedPath",
+                  }
+                }
+                style={
+                  [
+                    {
+                      "resizeMode": "contain",
+                    },
+                    {
+                      "borderRadius": 0,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    undefined,
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            importantForAccessibility="no-hide-descendants"
+            style={
+              {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                {
+                  "color": "#2d4150",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                  "fontWeight": "300",
+                  "margin": 10,
+                }
+              }
+              testID="calendar-test.header.title"
+            >
+              October 2024
+            </Text>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            hitSlop={
+              {
+                "bottom": 20,
+                "left": 20,
+                "right": 20,
+                "top": 20,
+              }
+            }
+            importantForAccessibility="no-hide-descendants"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "opacity": 1,
+                "padding": 10,
+              }
+            }
+            testID="calendar-test.header.rightArrow"
+          >
+            <View
+              testID="image-test"
+            >
+              <Image
+                defaultSource="mockedImagePath"
+                onError={[Function]}
+                resizeMode="contain"
+                source={
+                  {
+                    "uri": "mockedPath",
+                  }
+                }
+                style={
+                  [
+                    {
+                      "resizeMode": "contain",
+                    },
+                    {
+                      "borderRadius": 0,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    undefined,
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          importantForAccessibility="no-hide-descendants"
+          style={
+            [
+              {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+                "marginTop": 7,
+              },
+              undefined,
+            ]
+          }
+          testID="calendar-test.header.dayNames"
+        >
+          <Text
+            accessibilityLabel=""
+            allowFontScaling={false}
+            numberOfLines={1}
+            style={
+              [
+                {
+                  "color": "#b6c1cd",
+                  "fontFamily": "System",
+                  "fontSize": 13,
+                  "fontWeight": undefined,
+                  "marginBottom": 7,
+                  "marginTop": 2,
+                  "textAlign": "center",
+                  "width": 32,
+                },
+              ]
+            }
+            testID="calendar-test.header.dayName_Sun"
+          >
+            Sun
+          </Text>
+          <Text
+            accessibilityLabel=""
+            allowFontScaling={false}
+            numberOfLines={1}
+            style={
+              [
+                {
+                  "color": "#b6c1cd",
+                  "fontFamily": "System",
+                  "fontSize": 13,
+                  "fontWeight": undefined,
+                  "marginBottom": 7,
+                  "marginTop": 2,
+                  "textAlign": "center",
+                  "width": 32,
+                },
+              ]
+            }
+            testID="calendar-test.header.dayName_Mon"
+          >
+            Mon
+          </Text>
+          <Text
+            accessibilityLabel=""
+            allowFontScaling={false}
+            numberOfLines={1}
+            style={
+              [
+                {
+                  "color": "#b6c1cd",
+                  "fontFamily": "System",
+                  "fontSize": 13,
+                  "fontWeight": undefined,
+                  "marginBottom": 7,
+                  "marginTop": 2,
+                  "textAlign": "center",
+                  "width": 32,
+                },
+              ]
+            }
+            testID="calendar-test.header.dayName_Tue"
+          >
+            Tue
+          </Text>
+          <Text
+            accessibilityLabel=""
+            allowFontScaling={false}
+            numberOfLines={1}
+            style={
+              [
+                {
+                  "color": "#b6c1cd",
+                  "fontFamily": "System",
+                  "fontSize": 13,
+                  "fontWeight": undefined,
+                  "marginBottom": 7,
+                  "marginTop": 2,
+                  "textAlign": "center",
+                  "width": 32,
+                },
+              ]
+            }
+            testID="calendar-test.header.dayName_Wed"
+          >
+            Wed
+          </Text>
+          <Text
+            accessibilityLabel=""
+            allowFontScaling={false}
+            numberOfLines={1}
+            style={
+              [
+                {
+                  "color": "#b6c1cd",
+                  "fontFamily": "System",
+                  "fontSize": 13,
+                  "fontWeight": undefined,
+                  "marginBottom": 7,
+                  "marginTop": 2,
+                  "textAlign": "center",
+                  "width": 32,
+                },
+              ]
+            }
+            testID="calendar-test.header.dayName_Thu"
+          >
+            Thu
+          </Text>
+          <Text
+            accessibilityLabel=""
+            allowFontScaling={false}
+            numberOfLines={1}
+            style={
+              [
+                {
+                  "color": "#b6c1cd",
+                  "fontFamily": "System",
+                  "fontSize": 13,
+                  "fontWeight": undefined,
+                  "marginBottom": 7,
+                  "marginTop": 2,
+                  "textAlign": "center",
+                  "width": 32,
+                },
+              ]
+            }
+            testID="calendar-test.header.dayName_Fri"
+          >
+            Fri
+          </Text>
+          <Text
+            accessibilityLabel=""
+            allowFontScaling={false}
+            numberOfLines={1}
+            style={
+              [
+                {
+                  "color": "#b6c1cd",
+                  "fontFamily": "System",
+                  "fontSize": 13,
+                  "fontWeight": undefined,
+                  "marginBottom": 7,
+                  "marginTop": 2,
+                  "textAlign": "center",
+                  "width": 32,
+                },
+              ]
+            }
+            testID="calendar-test.header.dayName_Sat"
+          >
+            Sat
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "white",
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+              "marginVertical": 7,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Sunday 29 September 2024 "
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-09-29"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                    {
+                      "color": "#d9e1e8",
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-09-29.text"
+              >
+                29
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Monday 30 September 2024 "
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-09-30"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                    {
+                      "color": "#d9e1e8",
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-09-30.text"
+              >
+                30
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Tuesday 1 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-01"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-01.text"
+              >
+                1
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Wednesday 2 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-02"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-02.text"
+              >
+                2
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Thursday 3 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-03"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-03.text"
+              >
+                3
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Friday 4 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-04"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-04.text"
+              >
+                4
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Saturday 5 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-05"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-05.text"
+              >
+                5
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+              "marginVertical": 7,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Sunday 6 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-06"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-06.text"
+              >
+                6
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Monday 7 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-07"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-07.text"
+              >
+                7
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Tuesday 8 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-08"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-08.text"
+              >
+                8
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Wednesday 9 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-09"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-09.text"
+              >
+                9
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Thursday 10 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-10"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-10.text"
+              >
+                10
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Friday 11 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-11"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-11.text"
+              >
+                11
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Saturday 12 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-12"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-12.text"
+              >
+                12
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+              "marginVertical": 7,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Sunday 13 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-13"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-13.text"
+              >
+                13
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Monday 14 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-14"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-14.text"
+              >
+                14
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Tuesday 15 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-15"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-15.text"
+              >
+                15
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Wednesday 16 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-16"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-16.text"
+              >
+                16
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Thursday 17 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-17"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-17.text"
+              >
+                17
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Friday 18 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-18"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-18.text"
+              >
+                18
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Saturday 19 October 2024 selected You have no entries for this day "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#000000",
+                  "borderRadius": 16,
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-19"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                    {
+                      "color": "white",
+                    },
+                    {
+                      "color": "#ffffff",
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-19.text"
+              >
+                19
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+              "marginVertical": 7,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Sunday 20 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-20"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-20.text"
+              >
+                20
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Monday 21 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-21"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-21.text"
+              >
+                21
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Tuesday 22 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-22"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-22.text"
+              >
+                22
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Wednesday 23 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-23"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-23.text"
+              >
+                23
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Thursday 24 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-24"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-24.text"
+              >
+                24
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Friday 25 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-25"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-25.text"
+              >
+                25
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Saturday 26 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-26"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-26.text"
+              >
+                26
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+              "marginVertical": 7,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Sunday 27 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-27"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-27.text"
+              >
+                27
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Monday 28 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-28"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-28.text"
+              >
+                28
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Tuesday 29 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-29"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-29.text"
+              >
+                29
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Wednesday 30 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-30"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-30.text"
+              >
+                30
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Thursday 31 October 2024 "
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-10-31"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-10-31.text"
+              >
+                31
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Friday 1 November 2024 "
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-11-01"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                    {
+                      "color": "#d9e1e8",
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-11-01.text"
+              >
+                1
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Saturday 2 November 2024 "
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="calendar-test.day_2024-11-02"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(0, 0, 0, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                    {
+                      "color": "#d9e1e8",
+                    },
+                  ]
+                }
+                testID="calendar-test.day_2024-11-02.text"
+              >
+                2
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

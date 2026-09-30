@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Component snapshot test 1`] = `
+<View>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+          "fontSize": 10,
+          "textAlignVertical": "center",
+        },
+        undefined,
+        {
+          "fontSize": 14,
+        },
+        undefined,
+      ]
+    }
+  >
+    snapshot test
+  </Text>
+</View>
+`;
+
+exports[`Text Component snapshot test with all props 1`] = `
+<Text
+  numberOfLines={3}
+  onPress={[Function]}
+  style={
+    [
+      {
+        "color": "#000000",
+        "fontSize": 10,
+        "textAlignVertical": "center",
+      },
+      {
+        "color": "red",
+        "fontSize": 18,
+      },
+      {
+        "fontSize": 18,
+      },
+      {
+        "color": "blue",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+          "fontSize": 10,
+          "textAlignVertical": "center",
+        },
+        {
+          "color": "#E24C4B",
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    *
+  </Text>
+  full test
+</Text>
+`;

@@ -1,0 +1,493 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BoxInfoTab Component snapshot test 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "borderRadius": 8,
+      "padding": 10,
+      "width": "100%",
+    }
+  }
+  testID="BoxInfoTab"
+>
+  <Text
+    style={
+      {
+        "color": "#000000",
+        "paddingBottom": 4,
+      }
+    }
+  >
+    strings.setTopBox
+  </Text>
+  <View
+    style={
+      {
+        "borderColor": "#E8E5EC",
+        "borderWidth": 1,
+        "marginBottom": 10,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+          {
+            "paddingTop": 3,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#220046",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 14,
+              "fontWeight": "400",
+              "lineHeight": 18,
+              "paddingLeft": 10,
+              "width": 180,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.addBoxPrice
+      </Text>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 16,
+              "fontWeight": "500",
+              "paddingRight": 10,
+              "textAlign": "right",
+            }
+          }
+        >
+          ₹1000
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "backgroundColor": "#E8E5EC",
+          "height": 1,
+          "marginVertical": 3,
+        }
+      }
+    />
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 14,
+                  "fontWeight": "400",
+                  "lineHeight": 18,
+                  "paddingLeft": 10,
+                  "width": 180,
+                },
+                undefined,
+              ],
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.tskValue
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "flexShrink": 1,
+                "flexWrap": "wrap",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "lineHeight": 25,
+              },
+              {
+                "color": "#000000",
+                "flex": 1,
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "paddingRight": 10,
+                "textAlign": "right",
+                "width": 180,
+              },
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        12
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "paddingBottom": 4,
+        }
+      }
+    >
+      strings.networkCapicity
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "borderColor": "#E8E5EC",
+        "borderWidth": 1,
+        "marginBottom": 10,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+              },
+              [
+                {
+                  "color": "#220046",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 14,
+                  "fontWeight": "400",
+                  "lineHeight": 18,
+                  "paddingLeft": 10,
+                  "width": 180,
+                },
+                undefined,
+              ],
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.NCF Text
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "flexShrink": 1,
+                "flexWrap": "wrap",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "lineHeight": 25,
+              },
+              {
+                "color": "#000000",
+                "flex": 1,
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "paddingRight": 10,
+                "textAlign": "right",
+                "width": 180,
+              },
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        ₹10/strings.month
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "color": "#000000",
+        "paddingBottom": 4,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+              },
+              [
+                {
+                  "color": "#000000",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                  "lineHeight": 16,
+                },
+                undefined,
+              ],
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.yourPacks
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#000000",
+                "flexShrink": 1,
+                "flexWrap": "wrap",
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "lineHeight": 25,
+              },
+              {
+                "color": "#220046",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+                "fontWeight": "400",
+                "lineHeight": 16,
+                "paddingLeft": 10,
+                "textAlign": "right",
+              },
+            ],
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.total ₹0
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "borderColor": "#E8E5EC",
+        "borderWidth": 1,
+        "marginBottom": 10,
+      }
+    }
+  />
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          [
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 14,
+            },
+            [
+              {
+                "color": "#000000",
+                "flex": 2,
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 14,
+                "fontWeight": "400",
+                "lineHeight": 18,
+                "paddingLeft": 10,
+              },
+              undefined,
+              {
+                "flex": 1,
+              },
+            ],
+          ],
+          {
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    >
+      strings.total
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          [
+            {
+              "color": "#000000",
+              "flexShrink": 1,
+              "flexWrap": "wrap",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 16,
+              "lineHeight": 25,
+            },
+            [
+              {
+                "color": "#000000",
+                "flex": 1,
+                "fontFamily": "VoltePlay-Medium",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "paddingRight": 10,
+                "textAlign": "right",
+                "width": 180,
+              },
+              {
+                "flex": 2,
+              },
+            ],
+          ],
+          {
+            "fontSize": 16,
+          },
+          undefined,
+        ]
+      }
+    >
+      ₹5000 (Dhamaka)
+    </Text>
+  </View>
+</View>
+`;

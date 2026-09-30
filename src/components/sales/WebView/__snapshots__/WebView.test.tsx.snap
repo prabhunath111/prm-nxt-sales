@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component WebView snapshot tests for WebView 1`] = `
+<View>
+  <View
+    style={
+      {
+        "height": "100%",
+        "position": "absolute",
+        "width": "100%",
+        "zIndex": 1,
+      }
+    }
+    testID="WebView-test"
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#E24C4B",
+              "fontSize": 16,
+            },
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.invalidUrl
+      </Text>
+    </View>
+  </View>
+</View>
+`;

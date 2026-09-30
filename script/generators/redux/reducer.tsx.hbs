@@ -1,0 +1,68 @@
+/**
+ * {{ componentDescription }}
+ *
+ * @module store/{{folder}}/reducer/{{camelCase name}}
+ * @memberof - Common reducer
+ */
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { {{camelCase name}}Type } from 'store/{{folder}}/types/{{camelCase name}}';
+
+/**
+ * Initial state for the {{camelCase name}} reducer.
+ *
+ * @type {object}
+ * @property {string} text - Default text for the initial state.
+ */
+const initialState: {{camelCase name}}Type = {
+  text: 'reducer created',
+};
+
+/**
+ * Slice representing the {{camelCase name}} reducer.
+ *
+ * @constant
+ * @type {Slice}
+ * @param {object} state - The current state of the reducer.
+ * @param {PayloadAction} action - The action dispatched to the reducer.
+ * @returns {Slice}
+ *
+ * @example
+ * import { actions } from 'store/{{folder}}/reducer/{{camelCase name}}';
+ * dispatch(actions.{{camelCase name}}Start());
+ * dispatch(actions.{{camelCase name}}Success(data));
+ */
+const {{camelCase name}}Slice = createSlice({
+  name: '{{camelCase name}}',
+  initialState,
+  reducers: {
+    /**
+     * Action to handle the start of a process.
+     *
+     * @function
+     * @param {object} state - The current state of the reducer.
+     * @returns {object} The updated state.
+     */
+    {{camelCase name}}Start(state) {
+      return { ...state };
+    },
+
+    /**
+     * Action to handle successful completion of a process.
+     *
+     * @function
+     * @param {object} state - The current state of the reducer.
+     * @param {PayloadAction<any>} action - The action containing the payload data.
+     * @returns {object} The updated state with the payload data.
+     */
+    {{camelCase name}}Success(state, action: PayloadAction<any>) {
+      return {
+        ...state,
+        payloadDate: action.payload,
+      };
+    },
+  },
+});
+
+export const { actions } = {{camelCase name}}Slice;
+
+export default {{camelCase name}}Slice.reducer;

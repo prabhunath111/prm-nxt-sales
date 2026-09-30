@@ -1,0 +1,37 @@
+/**
+ * {{ componentDescription }}
+ *
+ * @module store/{{folder}}/actions/{{camelCase name}}
+ * 
+ */
+import { sliceActions } from 'store/{{folder}}/reducer/{{camelCase name}}';
+import uiActions from 'store/{{folder}}/actions/ui';
+import { AppThunk } from 'store';
+import { api } from 'services/apolloClient';
+import queries from 'store/{{folder}}/query';
+import { {{camelCase name}}Type } from 'store/{{folder}}/types/{{camelCase name}}';
+import { refactorResponse } from 'utils/responseHelper';
+
+/**
+ * Represents an asynchronous action to fetch and process data
+ *
+ * @param {object} params - Parameters for the query
+ * @param {string} params.exampleParam - Example parameter to illustrate structure
+ * @returns {AppThunk} A thunk that dispatches actions based on API response
+ *
+ * @example
+ * dispatch({{camelCase name}}Action({ exampleParam: 'exampleValue' }));
+ */
+export const {{camelCase name}}Action =
+  (params: {{camelCase name}}Type): AppThunk =>
+  (dispatch) => {
+    dispatch(sliceActions.{{camelCase name}}Start());
+    return api
+      .get(queries.SAMPLE_QUERY, params)
+      .then((response) => {
+        const data = refactorResponse(response);
+        dispatch(sliceActions.{{camelCase name}}Success(data));
+        return data;
+      })
+      .catch((error) => dispatch(uiActions.showErrorPage(error.message)));
+  };

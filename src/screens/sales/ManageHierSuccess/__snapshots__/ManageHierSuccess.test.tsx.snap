@@ -1,0 +1,411 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ManageHierSuccess Component matches snapshot 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#ffffff",
+        "flex": 1,
+        "gap": 10,
+        "marginTop": 14,
+      }
+    }
+  >
+    <RCTScrollView>
+      <View>
+        <View
+          style={
+            {
+              "backgroundColor": "#ffffff",
+              "flex": 1,
+              "gap": 15,
+              "paddingHorizontal": 16,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <View>
+            <Text>
+              Success
+            </Text>
+          </View>
+          <View
+            style={
+              [
+                {
+                  "alignItems": "flex-start",
+                  "alignSelf": "center",
+                  "backgroundColor": "#FBF8FF",
+                  "borderRadius": 5,
+                  "elevation": 4,
+                  "gap": 10,
+                  "paddingHorizontal": 13,
+                  "paddingVertical": 8,
+                  "shadowColor": "#000000",
+                  "shadowOffset": {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.12,
+                  "shadowRadius": 4,
+                  "width": 328,
+                },
+                {
+                  "alignSelf": "center",
+                  "gap": 12,
+                  "margin": 0,
+                  "paddingHorizontal": 16,
+                  "width": 328,
+                },
+                {
+                  "alignSelf": "center",
+                  "gap": 12,
+                  "margin": 0,
+                  "paddingHorizontal": 16,
+                  "width": 328,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "gap": 6,
+                }
+              }
+            >
+              <Text>
+                strings.pendingApprovalWith
+              </Text>
+              <View
+                style={
+                  {
+                    "flexDirection": "row",
+                    "gap": 10,
+                  }
+                }
+              >
+                <Text />
+                <View
+                  style={
+                    {
+                      "borderLeftColor": "#C7C0D0",
+                      "borderLeftWidth": 1,
+                    }
+                  }
+                />
+                <Text />
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              [
+                {
+                  "alignItems": "flex-start",
+                  "alignSelf": "center",
+                  "backgroundColor": "#FBF8FF",
+                  "borderRadius": 5,
+                  "elevation": 4,
+                  "gap": 10,
+                  "paddingHorizontal": 13,
+                  "paddingVertical": 8,
+                  "shadowColor": "#000000",
+                  "shadowOffset": {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.12,
+                  "shadowRadius": 4,
+                  "width": 328,
+                },
+                {
+                  "alignSelf": "center",
+                  "gap": 12,
+                  "margin": 0,
+                  "paddingHorizontal": 16,
+                  "width": 328,
+                },
+                {
+                  "alignSelf": "center",
+                  "gap": 12,
+                  "margin": 0,
+                  "paddingHorizontal": 16,
+                  "width": 328,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "gap": 6,
+                }
+              }
+            >
+              <Text>
+                strings.dealerNameId
+              </Text>
+              <View
+                style={
+                  {
+                    "flexDirection": "row",
+                    "gap": 10,
+                  }
+                }
+              >
+                <Text />
+                <View
+                  style={
+                    {
+                      "borderLeftColor": "#C7C0D0",
+                      "borderLeftWidth": 1,
+                    }
+                  }
+                />
+                <Text />
+              </View>
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#ffffff",
+                  "borderRadius": 4,
+                  "elevation": 4,
+                  "flexDirection": "row",
+                  "padding": 8,
+                  "shadowColor": "#000000",
+                  "shadowOffset": {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.12,
+                  "shadowRadius": 4,
+                  "width": 328,
+                },
+                {
+                  "alignSelf": "center",
+                  "gap": 12,
+                  "margin": 0,
+                  "paddingHorizontal": 16,
+                  "width": 328,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 25,
+                  "justifyContent": "center",
+                  "width": 25,
+                }
+              }
+            />
+            <Text>
+              strings.createAnotherChannelPartner
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 25,
+                  "justifyContent": "center",
+                  "marginLeft": "auto",
+                  "width": 25,
+                }
+              }
+            />
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#ffffff",
+                  "borderRadius": 4,
+                  "elevation": 4,
+                  "flexDirection": "row",
+                  "padding": 8,
+                  "shadowColor": "#000000",
+                  "shadowOffset": {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.12,
+                  "shadowRadius": 4,
+                  "width": 328,
+                },
+                {
+                  "alignSelf": "center",
+                  "gap": 12,
+                  "margin": 0,
+                  "paddingHorizontal": 16,
+                  "width": 328,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 25,
+                  "justifyContent": "center",
+                  "width": 25,
+                }
+              }
+            />
+            <Text>
+              strings.viewMyTeamDetails
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "height": 25,
+                  "justifyContent": "center",
+                  "marginLeft": "auto",
+                  "width": 25,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "elevation": 8,
+        "gap": 10,
+        "paddingHorizontal": 16,
+        "paddingVertical": 20,
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": -4,
+          "width": 0,
+        },
+        "shadowOpacity": 0.14,
+        "shadowRadius": 25,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="home-button"
+    >
+      <Text>
+        strings.backToHome
+      </Text>
+    </View>
+  </View>
+</View>
+`;

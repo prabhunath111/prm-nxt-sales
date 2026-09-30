@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component Carousel snapshot tests for Carousel 1`] = `
+<View>
+  <View
+    style={
+      [
+        {
+          "overflow": "hidden",
+        },
+        {
+          "height": 200,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+    testID="carousel-test"
+  >
+    <RCTScrollView
+      horizontal={true}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      pagingEnabled={true}
+      scrollEventThrottle={20}
+      showsHorizontalScrollIndicator={false}
+    >
+      <View />
+    </RCTScrollView>
+    <View
+      style={
+        {
+          "alignSelf": "center",
+          "flexDirection": "row",
+        }
+      }
+    />
+  </View>
+</View>
+`;

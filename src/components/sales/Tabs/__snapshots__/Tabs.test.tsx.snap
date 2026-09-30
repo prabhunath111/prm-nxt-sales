@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component Tabs snapshot tests for Tabs 1`] = `
+<View>
+  <View
+    style={
+      [
+        {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+    testID="tabs-test"
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#ffffff",
+          },
+          [
+            {
+              "elevation": 6,
+              "flexDirection": "row",
+              "marginBottom": 8,
+              "shadowColor": "#C4C4C4",
+              "shadowOffset": {
+                "height": 4,
+                "width": 0,
+              },
+              "shadowOpacity": 0.4,
+              "shadowRadius": 5.65,
+            },
+            undefined,
+          ],
+        ]
+      }
+    >
+      <RCTScrollView
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+      >
+        <View />
+      </RCTScrollView>
+    </View>
+    <RCTScrollView
+      contentContainerStyle={
+        {
+          "flexGrow": 1,
+        }
+      }
+      horizontal={false}
+      showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          style={
+            [
+              {
+                "flex": 100,
+              },
+              {
+                "flexDirection": "row",
+              },
+            ]
+          }
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;

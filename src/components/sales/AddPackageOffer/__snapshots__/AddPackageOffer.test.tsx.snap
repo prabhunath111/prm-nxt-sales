@@ -1,0 +1,862 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddPackageOffer Component Tests Snapshot Tests matches snapshot for desktop view with offer added 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#ffffff",
+        "borderLeftColor": "#E8E5EC",
+        "borderLeftWidth": 1,
+        "borderRadius": 8,
+        "borderRightColor": "#E8E5EC",
+        "borderRightWidth": 1,
+        "elevation": 4,
+        "flex": 1,
+        "flexGrow": 1,
+        "margin": 2,
+        "marginBottom": 10,
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.12,
+        "shadowRadius": 2,
+        "width": "100%",
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderLeftColor": "#E8E5EC",
+        "borderLeftWidth": 1,
+        "borderRadius": 8,
+        "borderRightColor": "#E8E5EC",
+        "borderRightWidth": 1,
+        "elevation": 4,
+        "flex": 1,
+        "flexGrow": 1,
+        "margin": 2,
+        "marginBottom": 10,
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.12,
+        "shadowRadius": 2,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#F3F2F5",
+        "borderBottomColor": "#E8E5EC",
+        "borderBottomWidth": 1,
+        "borderTopLeftRadius": 8,
+        "borderTopRightRadius": 8,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "minHeight": 36,
+        "paddingHorizontal": 12,
+        "paddingVertical": 6,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#220046",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 16,
+          "fontWeight": "500",
+        }
+      }
+    >
+      Test Offer
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <Image
+        height={18}
+        iconName="icons/pinkIIcon.png"
+        isDimension={false}
+        width={18}
+      />
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "borderBottomColor": "#E8E5EC",
+        "borderBottomWidth": 1,
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 12,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          undefined,
+          undefined,
+        ]
+      }
+    >
+      <TextContainer
+        data={
+          {
+            "friendlyName": "Friendly Name",
+            "name": "Test Name",
+            "offerType": "Test Offer",
+          }
+        }
+        dataArray={
+          [
+            {
+              "key": "stdPriUnit",
+              "type": "amount",
+            },
+            {
+              "key": "boxType",
+            },
+            {
+              "key": "uom",
+            },
+            {
+              "key": "margin",
+            },
+            {
+              "key": "bonusDetails",
+            },
+          ]
+        }
+        itemContainerStyle={
+          {
+            "flexDirection": "row",
+          }
+        }
+        primaryStyle={
+          {
+            "color": "#220046",
+            "fontFamily": "VoltePlay-Regular",
+            "fontSize": 12,
+            "fontWeight": "400",
+            "lineHeight": 20,
+            "minWidth": 90,
+          }
+        }
+        secondaryStyle={
+          {
+            "color": "#000000",
+            "flexShrink": 1,
+            "fontFamily": "VoltePlay-Medium",
+            "fontSize": 14,
+            "fontWeight": "500",
+            "lineHeight": 20,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "justifyContent": "space-between",
+          "paddingVertical": 8,
+        }
+      }
+    >
+      <Text
+        onPress={[Function]}
+      >
+        strings.remove
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`AddPackageOffer Component Tests Snapshot Tests matches snapshot for desktop view with offer not added 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#ffffff",
+        "borderLeftColor": "#E8E5EC",
+        "borderLeftWidth": 1,
+        "borderRadius": 8,
+        "borderRightColor": "#E8E5EC",
+        "borderRightWidth": 1,
+        "elevation": 4,
+        "flex": 1,
+        "flexGrow": 1,
+        "margin": 2,
+        "marginBottom": 10,
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.12,
+        "shadowRadius": 2,
+        "width": "100%",
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderLeftColor": "#E8E5EC",
+        "borderLeftWidth": 1,
+        "borderRadius": 8,
+        "borderRightColor": "#E8E5EC",
+        "borderRightWidth": 1,
+        "elevation": 4,
+        "flex": 1,
+        "flexGrow": 1,
+        "margin": 2,
+        "marginBottom": 10,
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.12,
+        "shadowRadius": 2,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#F3F2F5",
+        "borderBottomColor": "#E8E5EC",
+        "borderBottomWidth": 1,
+        "borderTopLeftRadius": 8,
+        "borderTopRightRadius": 8,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "minHeight": 36,
+        "paddingHorizontal": 12,
+        "paddingVertical": 6,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#220046",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 16,
+          "fontWeight": "500",
+        }
+      }
+    >
+      Test Offer
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <Image
+        height={18}
+        iconName="icons/pinkIIcon.png"
+        isDimension={false}
+        width={18}
+      />
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "borderBottomColor": "#E8E5EC",
+        "borderBottomWidth": 1,
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 12,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          undefined,
+          undefined,
+        ]
+      }
+    >
+      <TextContainer
+        data={
+          {
+            "friendlyName": "Friendly Name",
+            "name": "Test Name",
+            "offerType": "Test Offer",
+          }
+        }
+        dataArray={
+          [
+            {
+              "key": "stdPriUnit",
+              "type": "amount",
+            },
+            {
+              "key": "boxType",
+            },
+            {
+              "key": "uom",
+            },
+            {
+              "key": "margin",
+            },
+            {
+              "key": "bonusDetails",
+            },
+          ]
+        }
+        itemContainerStyle={
+          {
+            "flexDirection": "row",
+          }
+        }
+        primaryStyle={
+          {
+            "color": "#220046",
+            "fontFamily": "VoltePlay-Regular",
+            "fontSize": 12,
+            "fontWeight": "400",
+            "lineHeight": 20,
+            "minWidth": 90,
+          }
+        }
+        secondaryStyle={
+          {
+            "color": "#000000",
+            "flexShrink": 1,
+            "fontFamily": "VoltePlay-Medium",
+            "fontSize": 14,
+            "fontWeight": "500",
+            "lineHeight": 20,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "justifyContent": "space-between",
+          "paddingVertical": 8,
+        }
+      }
+    >
+      <Text
+        onPress={[Function]}
+      >
+        strings.add
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`AddPackageOffer Component Tests Snapshot Tests matches snapshot for mobile view 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#ffffff",
+        "borderLeftColor": "#E8E5EC",
+        "borderLeftWidth": 1,
+        "borderRadius": 8,
+        "borderRightColor": "#E8E5EC",
+        "borderRightWidth": 1,
+        "elevation": 4,
+        "flex": 1,
+        "flexGrow": 1,
+        "margin": 2,
+        "marginBottom": 10,
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.12,
+        "shadowRadius": 2,
+        "width": "100%",
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderLeftColor": "#E8E5EC",
+        "borderLeftWidth": 1,
+        "borderRadius": 8,
+        "borderRightColor": "#E8E5EC",
+        "borderRightWidth": 1,
+        "elevation": 4,
+        "flex": 1,
+        "flexGrow": 1,
+        "margin": 2,
+        "marginBottom": 10,
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.12,
+        "shadowRadius": 2,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#F3F2F5",
+          "borderBottomColor": "#E8E5EC",
+          "borderBottomWidth": 1,
+          "borderTopLeftRadius": 8,
+          "borderTopRightRadius": 8,
+          "justifyContent": "center",
+          "minHeight": 36,
+          "paddingHorizontal": 12,
+          "paddingVertical": 6,
+        },
+        {},
+      ]
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#220046",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 16,
+          "fontWeight": "500",
+        }
+      }
+    >
+      Test Offer
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "borderBottomColor": "#E8E5EC",
+          "borderBottomWidth": 1,
+          "paddingHorizontal": 12,
+          "paddingVertical": 8,
+        },
+        {},
+      ]
+    }
+  >
+    <TextContainer
+      data={
+        {
+          "friendlyName": "Friendly Name",
+          "name": "Test Name",
+          "offerType": "Test Offer",
+        }
+      }
+      dataArray={
+        [
+          {
+            "key": "stdPriUnit",
+            "type": "amount",
+          },
+          {
+            "key": "boxType",
+          },
+          {
+            "key": "uom",
+          },
+          {
+            "key": "margin",
+          },
+          {
+            "key": "bonusDetails",
+          },
+        ]
+      }
+      itemContainerStyle={
+        {
+          "flexDirection": "row",
+        }
+      }
+      primaryStyle={
+        {
+          "color": "#220046",
+          "fontFamily": "VoltePlay-Regular",
+          "fontSize": 12,
+          "fontWeight": "400",
+          "lineHeight": 20,
+          "minWidth": 90,
+        }
+      }
+      secondaryStyle={
+        {
+          "color": "#000000",
+          "flexShrink": 1,
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 14,
+          "fontWeight": "500",
+          "lineHeight": 20,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 8,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <Text
+        style={
+          {
+            "color": "#E20092",
+            "fontFamily": "VoltePlay-Medium",
+            "fontSize": 16,
+            "fontWeight": "500",
+          }
+        }
+      >
+        strings.viewDetails
+      </Text>
+    </View>
+    <Text
+      onPress={[Function]}
+    >
+      strings.add
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`AddPackageOffer Component Tests Snapshot Tests matches snapshot for rechargeWinback offer type 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#ffffff",
+        "borderLeftColor": "#E8E5EC",
+        "borderLeftWidth": 1,
+        "borderRadius": 8,
+        "borderRightColor": "#E8E5EC",
+        "borderRightWidth": 1,
+        "elevation": 4,
+        "flex": 1,
+        "flexGrow": 1,
+        "margin": 2,
+        "marginBottom": 10,
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.12,
+        "shadowRadius": 2,
+        "width": "100%",
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderLeftColor": "#E8E5EC",
+        "borderLeftWidth": 1,
+        "borderRadius": 8,
+        "borderRightColor": "#E8E5EC",
+        "borderRightWidth": 1,
+        "elevation": 4,
+        "flex": 1,
+        "flexGrow": 1,
+        "margin": 2,
+        "marginBottom": 10,
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.12,
+        "shadowRadius": 2,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#F3F2F5",
+        "borderBottomColor": "#E8E5EC",
+        "borderBottomWidth": 1,
+        "borderTopLeftRadius": 8,
+        "borderTopRightRadius": 8,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "minHeight": 36,
+        "paddingHorizontal": 12,
+        "paddingVertical": 6,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#220046",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 16,
+          "fontWeight": "500",
+        }
+      }
+    >
+      Friendly Name
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <Image
+        height={18}
+        iconName="icons/pinkIIcon.png"
+        isDimension={false}
+        width={18}
+      />
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "borderBottomColor": "#E8E5EC",
+        "borderBottomWidth": 1,
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 12,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          undefined,
+          undefined,
+        ]
+      }
+    >
+      <TextContainer
+        data={
+          {
+            "friendlyName": "Friendly Name",
+            "name": "Test Name",
+            "offerType": "Test Offer",
+          }
+        }
+        dataArray={
+          [
+            {
+              "key": "stdPriUnit",
+              "type": "amount",
+            },
+            {
+              "key": "margin",
+            },
+            {
+              "key": "detailsType",
+            },
+            {
+              "key": "bonus",
+            },
+          ]
+        }
+        itemContainerStyle={
+          {
+            "flexDirection": "row",
+          }
+        }
+        primaryStyle={
+          {
+            "color": "#220046",
+            "fontFamily": "VoltePlay-Regular",
+            "fontSize": 12,
+            "fontWeight": "400",
+            "lineHeight": 20,
+            "minWidth": 90,
+          }
+        }
+        secondaryStyle={
+          {
+            "color": "#000000",
+            "flexShrink": 1,
+            "fontFamily": "VoltePlay-Medium",
+            "fontSize": 14,
+            "fontWeight": "500",
+            "lineHeight": 20,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "justifyContent": "space-between",
+          "paddingVertical": 8,
+        }
+      }
+    >
+      <Text
+        onPress={[Function]}
+      >
+        strings.remove
+      </Text>
+    </View>
+  </View>
+</View>
+`;

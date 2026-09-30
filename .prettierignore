@@ -1,0 +1,12 @@
+build
+script
+node_modules
+.husky
+.storybook
+.vscode
+ios
+android
+.ondevice
+vendor
+web
+**/index.*

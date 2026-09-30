@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionDetails Component snapshot matches 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "gap": 8,
+      "marginTop": 5,
+      "padding": 8,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "gap": 5,
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "gap": 5,
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 12,
+              "fontWeight": "400",
+              "lineHeight": 25,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        2025-09-18
+      </Text>
+      <View
+        style={
+          {
+            "borderLeftColor": "#E8E5EC",
+            "borderLeftWidth": 1,
+          }
+        }
+      />
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#000000",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 12,
+              "fontWeight": "400",
+              "lineHeight": 25,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        Primary TV
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "gap": 5,
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      mock-image
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#FF2424",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 12,
+              "fontWeight": "500",
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        Success
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "gap": 5,
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          {
+            "color": "#000000",
+            "fontFamily": "VoltePlay-Medium",
+            "fontSize": 14,
+            "fontWeight": "500",
+          },
+          {
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+    >
+      TXN123
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "color": "#FF2424",
+          "flexDirection": "row",
+          "fontFamily": "VoltePlay-Medium",
+          "fontSize": 12,
+          "fontWeight": "500",
+        }
+      }
+    >
+      mock-image
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#16D45A",
+              "fontFamily": "VoltePlay-Medium",
+              "fontSize": 12,
+              "fontWeight": "500",
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        ₹500
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "backgroundColor": "#F7F4FC",
+        "maxWidth": 300,
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    mock-information
+  </View>
+</View>
+`;

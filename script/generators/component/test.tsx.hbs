@@ -1,0 +1,19 @@
+import {View} from 'react-native';
+import {{pascalCase name}} from './{{pascalCase name}}';
+import { render, screen } from '@testing-library/react-native';
+
+describe( 'Test for the component {{pascalCase name}}', () => {
+    test('render component {{pascalCase name}}', () => {
+        render(<{{pascalCase name}} />)
+        expect(screen.getByText("{{pascalCase name}}"))
+    });
+
+    test('snapshot tests for {{pascalCase name}}', () => {
+        const component = render(
+            <View>
+                <{{properCase name}} />
+            </View>
+        )
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+});

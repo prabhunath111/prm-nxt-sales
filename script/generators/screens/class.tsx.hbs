@@ -1,0 +1,43 @@
+import React, {PureComponent} from "react";
+import {View, Text} from "react-native";
+import styles from "./styles";
+
+/**
+ * Component type definitions
+ *
+ * @typedef {object} Props
+ * // Add any prop types if necessary
+ */
+interface Props {}
+
+/**
+ * Component state definitions
+ *
+ * @typedef {object} State
+ * // Add any state types if necessary
+ */
+interface State {}
+
+
+/**
+ * Represents a {{pascalCase name}} component
+ *
+ * @class
+ * @extends PureComponent<Props, State>
+ */
+class {{pascalCase name}} extends PureComponent<Props,State> {
+    /**
+     * Renders the {{pascalCase name}} component.
+     *
+     * @method
+     * @returns {JSX.Element}
+     */
+    render() {
+        return(
+            <View style={styles.container}>
+                <Text>{{pascalCase name}}</Text>
+            </View>
+        )
+    }
+}
+export default {{pascalCase name}};

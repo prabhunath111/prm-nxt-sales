@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component Footer snapshot tests for Footer 1`] = `
+<View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#220046",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 20,
+        "paddingVertical": 8,
+        "width": "100%",
+      }
+    }
+  >
+    <View>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#ffffff",
+                "fontSize": 16,
+              },
+              undefined,
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        © Tata Play
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            [
+              {
+                "color": "#ffffff",
+                "fontSize": 16,
+              },
+              undefined,
+            ],
+            {
+              "fontSize": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        Supervisor contact: Not available
+      </Text>
+    </View>
+  </View>
+</View>
+`;

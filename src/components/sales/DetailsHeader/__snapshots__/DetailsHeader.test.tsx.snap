@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component DetailsHeader snapshot tests for DetailsHeader 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#564372",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 6,
+        "paddingVertical": 2,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "flex": 1,
+          "flexDirection": "row",
+          "gap": 8,
+          "justifyContent": "space-between",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "borderRightColor": "#8E81A1",
+            "borderRightWidth": 1,
+            "flex": 1,
+            "paddingRight": 6,
+          },
+          undefined,
+          {
+            "borderRightColor": "#8E81A1",
+            "borderRightWidth": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#ffffff",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 10,
+              "lineHeight": 16,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings. ID: 
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#ffffff",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 10,
+              "lineHeight": 16,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        [
+          {
+            "borderRightColor": "#8E81A1",
+            "borderRightWidth": 1,
+            "flex": 2.4,
+            "flexDirection": "row",
+            "gap": 8,
+            "paddingHorizontal": 8,
+          },
+          undefined,
+        ]
+      }
+      testID="text-test"
+    >
+      <View
+        style={
+          [
+            [
+              [
+                {
+                  "flex": 1,
+                  "flexDirection": "column",
+                  "paddingRight": 6,
+                },
+                undefined,
+              ],
+              undefined,
+            ],
+          ]
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontSize": 10,
+                "textAlignVertical": "center",
+              },
+              [
+                {
+                  "color": "#000000",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 14,
+                },
+                {
+                  "color": "#ffffff",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 10,
+                  "lineHeight": 16,
+                },
+              ],
+              {
+                "fontSize": 14,
+              },
+              undefined,
+            ]
+          }
+        >
+          strings.mobileNoInHeader: 
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontSize": 10,
+                "textAlignVertical": "center",
+              },
+              [
+                {
+                  "color": "#000000",
+                  "flexShrink": 1,
+                  "flexWrap": "wrap",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 16,
+                  "lineHeight": 25,
+                },
+                {
+                  "color": "#ffffff",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 10,
+                  "lineHeight": 16,
+                },
+              ],
+              {
+                "fontSize": 14,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#E8E5EC",
+            "marginHorizontal": 5,
+            "width": 1,
+          }
+        }
+      />
+      <View
+        style={
+          [
+            [
+              [
+                {
+                  "flex": 1,
+                  "flexDirection": "column",
+                  "paddingRight": 6,
+                },
+                undefined,
+              ],
+              undefined,
+            ],
+          ]
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontSize": 10,
+                "textAlignVertical": "center",
+              },
+              [
+                {
+                  "color": "#000000",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 14,
+                },
+                {
+                  "color": "#ffffff",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 10,
+                  "lineHeight": 16,
+                },
+              ],
+              {
+                "fontSize": 14,
+              },
+              undefined,
+            ]
+          }
+        >
+          strings.name: 
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontSize": 10,
+                "textAlignVertical": "center",
+              },
+              [
+                {
+                  "color": "#000000",
+                  "flexShrink": 1,
+                  "flexWrap": "wrap",
+                  "fontFamily": "VoltePlay-Medium",
+                  "fontSize": 16,
+                  "lineHeight": 25,
+                },
+                {
+                  "color": "#ffffff",
+                  "fontFamily": "VoltePlay-Regular",
+                  "fontSize": 10,
+                  "lineHeight": 16,
+                },
+              ],
+              {
+                "fontSize": 14,
+              },
+              undefined,
+            ]
+          }
+        >
+          strings.
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "flex": 0.6,
+            "justifyContent": "center",
+            "paddingLeft": 6,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 10,
+              "textAlignVertical": "center",
+            },
+            {
+              "color": "#ffffff",
+              "fontFamily": "VoltePlay-Regular",
+              "fontSize": 10,
+              "lineHeight": 16,
+            },
+            {
+              "fontSize": 14,
+            },
+            undefined,
+          ]
+        }
+      >
+        strings.version : 0.0.1
+      </Text>
+    </View>
+  </View>
+</View>
+`;

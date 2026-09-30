@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EvdMdnChangeSuccess Component matches snapshot 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "gap": 18,
+            "padding": 16,
+            "paddingTop": 30,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#220046",
+              "fontFamily": "VoltePlay-SemiBold",
+              "fontSize": 18,
+              "fontWeight": "500",
+            }
+          }
+        >
+          Success Message
+        </Text>
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "backgroundColor": "#FBF8FF",
+                "borderColor": "#E8E5EC",
+                "borderRadius": 8,
+                "borderWidth": 1,
+                "gap": 6,
+                "justifyContent": "center",
+                "marginTop": 10,
+                "padding": 10,
+                "width": "100%",
+              },
+              {
+                "alignItems": "center",
+                "backgroundColor": "#FBF8FF",
+                "borderColor": "#E8E5EC",
+                "borderRadius": 8,
+                "borderWidth": 1,
+                "gap": 6,
+                "justifyContent": "center",
+                "marginTop": 10,
+                "padding": 10,
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              {
+                "color": "#220046",
+                "fontFamily": "VoltePlay-Regular",
+                "fontSize": 14,
+                "fontWeight": "400",
+              }
+            }
+          >
+            strings.newEvdMdn
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#000000",
+                "fontFamily": "VoltePlay-SemiBold",
+                "fontSize": 16,
+                "fontWeight": "500",
+              }
+            }
+          >
+            123
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      {
+        "backgroundColor": "#ffffff",
+        "elevation": 8,
+        "gap": 10,
+        "paddingHorizontal": 16,
+        "paddingVertical": 20,
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": -4,
+          "width": 0,
+        },
+        "shadowOpacity": 0.14,
+        "shadowRadius": 25,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="proceed-button"
+    >
+      <Text>
+        strings.okProceedToLogin
+      </Text>
+    </View>
+  </View>
+</View>
+`;

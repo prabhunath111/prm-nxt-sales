@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the component CalendarNew snapshot tests for CalendarNew 1`] = `
+<View>
+  <View
+    testID="calendar-test"
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 10,
+            "textAlignVertical": "center",
+          },
+          {
+            "color": "#000000",
+            "fontSize": 18,
+            "fontWeight": {
+              "fontWeight": "600",
+            },
+            "paddingVertical": 8,
+          },
+          {
+            "fontSize": 18,
+          },
+          undefined,
+        ]
+      }
+    >
+      June
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="calendar-day-press"
+    />
+    <View
+      testID="calendar-arrow-left"
+    >
+      <View
+        testID="image-test"
+      >
+        <Image
+          defaultSource="mockedImagePath"
+          onError={[Function]}
+          resizeMode="contain"
+          source={
+            {
+              "uri": "mockedPath",
+            }
+          }
+          style={
+            [
+              {
+                "resizeMode": "contain",
+              },
+              {
+                "borderRadius": 0,
+                "height": 15,
+                "width": 15,
+              },
+              {
+                "tintColor": "#E10092",
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+    <View
+      testID="calendar-arrow-right"
+    >
+      <View
+        testID="image-test"
+      >
+        <Image
+          defaultSource="mockedImagePath"
+          onError={[Function]}
+          resizeMode="contain"
+          source={
+            {
+              "uri": "mockedPath",
+            }
+          }
+          style={
+            [
+              {
+                "resizeMode": "contain",
+              },
+              {
+                "borderRadius": 0,
+                "height": 15,
+                "width": 15,
+              },
+              {
+                "tintColor": "#E10092",
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+    <View
+      testID="calendar-arrow-other"
+    />
+    <View
+      accessibilityLabel="{}"
+      accessible={true}
+      testID="calendar-theme-check"
+    />
+  </View>
+</View>
+`;
